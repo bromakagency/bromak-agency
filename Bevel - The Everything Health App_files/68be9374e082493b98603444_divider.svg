@@ -1,0 +1,59 @@
+<svg width="1260" height="22" viewBox="0 0 1260 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_43928_12471" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="8" y="7" width="553" height="8">
+<rect x="8" y="7.5" width="553" height="7" fill="url(#paint0_linear_43928_12471)"/>
+</mask>
+<g mask="url(#mask0_43928_12471)">
+<circle cx="11.5" cy="11" r="3.5" fill="#222326" fill-opacity="0.1"/>
+<circle cx="53.5" cy="11" r="3.5" fill="#222326" fill-opacity="0.1"/>
+<circle cx="95.5" cy="11" r="3.5" fill="#222326" fill-opacity="0.1"/>
+<circle cx="137.5" cy="11" r="3.5" fill="#222326" fill-opacity="0.1"/>
+<circle cx="179.5" cy="11" r="3.5" fill="#222326" fill-opacity="0.1"/>
+<circle cx="221.5" cy="11" r="3.5" fill="#222326" fill-opacity="0.1"/>
+<circle cx="263.5" cy="11" r="3.5" fill="#222326" fill-opacity="0.1"/>
+<circle cx="305.5" cy="11" r="3.5" fill="#222326" fill-opacity="0.1"/>
+<circle cx="347.5" cy="11" r="3.5" fill="#222326" fill-opacity="0.1"/>
+<circle cx="389.5" cy="11" r="3.5" fill="#222326" fill-opacity="0.1"/>
+<circle cx="431.5" cy="11" r="3.5" fill="#222326" fill-opacity="0.1"/>
+<circle cx="473.5" cy="11" r="3.5" fill="#222326" fill-opacity="0.1"/>
+<circle cx="515.5" cy="11" r="3.5" fill="#222326" fill-opacity="0.1"/>
+<circle cx="557.5" cy="11" r="3.5" fill="#222326" fill-opacity="0.1"/>
+</g>
+<g filter="url(#filter0_f_43928_12471)">
+<circle cx="630" cy="11" r="8" stroke="#B7D8DC" stroke-opacity="0.6" stroke-width="2"/>
+</g>
+<circle cx="630" cy="11" r="3.5" fill="#B7D8DC"/>
+<mask id="mask1_43928_12471" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="699" y="7" width="553" height="8">
+<rect x="699" y="7.5" width="553" height="7" fill="url(#paint1_linear_43928_12471)"/>
+</mask>
+<g mask="url(#mask1_43928_12471)">
+<circle cx="702.5" cy="11" r="3.5" fill="#222326" fill-opacity="0.1"/>
+<circle cx="744.5" cy="11" r="3.5" fill="#222326" fill-opacity="0.1"/>
+<circle cx="786.5" cy="11" r="3.5" fill="#222326" fill-opacity="0.1"/>
+<circle cx="828.5" cy="11" r="3.5" fill="#222326" fill-opacity="0.1"/>
+<circle cx="870.5" cy="11" r="3.5" fill="#222326" fill-opacity="0.1"/>
+<circle cx="912.5" cy="11" r="3.5" fill="#222326" fill-opacity="0.1"/>
+<circle cx="954.5" cy="11" r="3.5" fill="#222326" fill-opacity="0.1"/>
+<circle cx="996.5" cy="11" r="3.5" fill="#222326" fill-opacity="0.1"/>
+<circle cx="1038.5" cy="11" r="3.5" fill="#222326" fill-opacity="0.1"/>
+<circle cx="1080.5" cy="11" r="3.5" fill="#222326" fill-opacity="0.1"/>
+<circle cx="1122.5" cy="11" r="3.5" fill="#222326" fill-opacity="0.1"/>
+<circle cx="1164.5" cy="11" r="3.5" fill="#222326" fill-opacity="0.1"/>
+<circle cx="1206.5" cy="11" r="3.5" fill="#222326" fill-opacity="0.1"/>
+<circle cx="1248.5" cy="11" r="3.5" fill="#222326" fill-opacity="0.1"/>
+</g>
+<defs>
+<filter id="filter0_f_43928_12471" x="619.25" y="0.25" width="21.5" height="21.5" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="0.875" result="effect1_foregroundBlur_43928_12471"/>
+</filter>
+<linearGradient id="paint0_linear_43928_12471" x1="8" y1="11" x2="561" y2="11" gradientUnits="userSpaceOnUse">
+<stop stop-color="#737373" stop-opacity="0"/>
+<stop offset="1" stop-color="#D9D9D9"/>
+</linearGradient>
+<linearGradient id="paint1_linear_43928_12471" x1="699" y1="11" x2="1252" y2="11" gradientUnits="userSpaceOnUse">
+<stop stop-color="#D9D9D9"/>
+<stop offset="1" stop-color="#737373" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>

@@ -1,0 +1,225 @@
+/* Blog Specific Styles - Light Theme */
+.blog-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 140px 24px 80px;
+  min-height: 100vh;
+  background: #fff;
+  color: #111;
+}
+
+.blog-header {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.blog-title {
+  font-family: var(--font-neue-leiden), var(--font-graphik), sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+  color: #111;
+}
+
+.blog-subtitle {
+  font-size: 1.125rem;
+  color: #71717a;
+}
+
+.blog-section-title {
+  font-family: var(--font-neue-leiden), var(--font-graphik), sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 28px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e4e4e7;
+  color: #111;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .blog-grid .featured-post {
+    grid-column: span 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .blog-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .blog-grid .featured-post {
+    grid-column: span 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+}
+
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #e4e4e7;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+}
+
+.blog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+  border-color: #d4d4d8;
+}
+
+.blog-card-image-placeholder {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: linear-gradient(135deg, #f4f4f5, #e4e4e7);
+}
+
+.blog-card-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.blog-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.8rem;
+  color: #71717a;
+  margin-bottom: 10px;
+}
+
+.blog-card-category {
+  color: #e5221a;
+  font-weight: 600;
+}
+
+.blog-card-title {
+  font-family: var(--font-neue-leiden), var(--font-graphik), sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  line-height: 1.35;
+  color: #111;
+}
+
+.blog-card-summary {
+  font-size: 0.95rem;
+  color: #52525b;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.blog-card-readmore {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #111;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Post Detail Styles */
+.post-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 140px 24px 80px;
+  background: #fff;
+  color: #111;
+  min-height: 100vh;
+}
+
+.post-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #71717a;
+  text-decoration: none;
+  font-size: 0.875rem;
+  margin-bottom: 40px;
+  transition: color 0.2s;
+}
+
+.post-back-link:hover {
+  color: #111;
+}
+
+.post-header {
+  margin-bottom: 48px;
+}
+
+.post-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #71717a;
+  margin-bottom: 16px;
+  font-size: 0.875rem;
+}
+
+.post-title {
+  font-family: var(--font-neue-leiden), var(--font-graphik), sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  color: #111;
+}
+
+@media (min-width: 768px) {
+  .post-title {
+    font-size: 3.2rem;
+  }
+}
+
+.post-image-placeholder {
+  width: 100%;
+  aspect-ratio: 21/9;
+  background: linear-gradient(135deg, #f4f4f5, #e4e4e7);
+  border-radius: 16px;
+  margin-bottom: 48px;
+}
+
+.post-content {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: #27272a;
+}
+
+.post-content p {
+  margin-bottom: 24px;
+}
+
+.post-content h2 {
+  font-family: var(--font-neue-leiden), var(--font-graphik), sans-serif;
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 40px 0 16px;
+  color: #111;
+}
+
+.post-content h3 {
+  font-family: var(--font-neue-leiden), var(--font-graphik), sans-serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin: 32px 0 12px;
+  color: #111;
+}

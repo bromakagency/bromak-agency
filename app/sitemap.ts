@@ -1,9 +1,8 @@
 import type { MetadataRoute } from "next";
-import { works } from "@/app/isler/works-data";
 import { prisma } from "@/app/lib/prisma";
 
 const siteUrl = "https://bromakagency.com";
-const lastModified = new Date("2026-06-26");
+const lastModified = new Date(); // Use current date for static routes
 
 const staticRoutes: Array<{
   path: string;
@@ -16,7 +15,8 @@ const staticRoutes: Array<{
   { path: "/hizmetler/dijital-reklam-yonetimi", changeFrequency: "monthly", priority: 0.85 },
   { path: "/hizmetler/web-tasarim-ve-yazilim", changeFrequency: "monthly", priority: 0.85 },
   { path: "/hizmetler/arama-motoru-optimizasyonu-seo", changeFrequency: "monthly", priority: 0.85 },
-  { path: "/isler", changeFrequency: "monthly", priority: 0.8 },
+  { path: "/isler", changeFrequency: "weekly", priority: 0.8 },
+  { path: "/basari-hikayeleri", changeFrequency: "weekly", priority: 0.8 },
   { path: "/blog", changeFrequency: "weekly", priority: 0.8 },
   { path: "/hakkimizda", changeFrequency: "monthly", priority: 0.75 },
   { path: "/iletisim", changeFrequency: "monthly", priority: 0.9 },
@@ -34,13 +34,33 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: route.priority,
   }));
 
-  const workPages = works.map((work) => ({
+  // Fetch Works from Database
+  const dbWorks = await prisma.work.findMany({
+    where: { published: true },
+    select: { slug: true, updatedAt: true },
+  });
+
+  const workPages = dbWorks.map((work) => ({
     url: `${siteUrl}/isler/${work.slug}`,
-    lastModified,
+    lastModified: work.updatedAt,
     changeFrequency: "monthly" as const,
     priority: 0.7,
   }));
 
+  // Fetch Success Stories from Database
+  const dbStories = await prisma.story.findMany({
+    where: { published: true },
+    select: { slug: true, updatedAt: true },
+  });
+
+  const storyPages = dbStories.map((story) => ({
+    url: `${siteUrl}/basari-hikayeleri/${story.slug}`,
+    lastModified: story.updatedAt,
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
+  // Fetch Blogs from Database
   const dbPosts = await prisma.post.findMany({
     where: { published: true },
     select: { slug: true, updatedAt: true },
@@ -53,5 +73,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.65,
   }));
 
-  return [...staticPages, ...workPages, ...blogPages];
+  return [...staticPages, ...workPages, ...storyPages, ...blogPages];
 }

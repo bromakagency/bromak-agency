@@ -1,0 +1,392 @@
+/* ==========================================================================
+   SEO COMPONENTS CSS
+   Contains styles for Tool Ecosystem, Roadmap, and Performance components.
+   ========================================================================== */
+
+/* --- 1. SEO TOOL ECOSYSTEM --- */
+.seo-tool-section {
+  padding: 80px 5% 40px;
+  background: #fbfaf5;
+  color: #111;
+  font-family: var(--font-tt-firs-neue), Inter, Arial, sans-serif;
+  overflow: hidden;
+}
+
+.seo-tool-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.seo-tool-heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.seo-tool-heading h2 {
+  font-family: var(--font-neue-leiden), Georgia, serif;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 600;
+  margin-bottom: 16px;
+  letter-spacing: -1px;
+}
+
+.seo-tool-heading p {
+  color: #555;
+  font-size: 17px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.seo-tool-marquee-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+}
+
+.seo-tool-marquee {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+}
+
+.left-to-right {
+  animation: scroll-left-right 40s linear infinite;
+}
+
+.right-to-left {
+  animation: scroll-right-left 40s linear infinite;
+}
+
+@keyframes scroll-left-right {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
+}
+
+@keyframes scroll-right-left {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.seo-tool-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 24px;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 100px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.seo-tool-badge:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 40px rgba(95,208,130,0.15); /* Subtle green glow */
+  border-color: rgba(95,208,130,0.3);
+}
+
+.seo-tool-logo {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.seo-tool-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.seo-tool-badge span {
+  font-weight: 600;
+  font-size: 16px;
+  color: #222;
+}
+
+
+/* --- 2. SEO ROADMAP --- */
+.seo-roadmap-section {
+  padding: 80px 5% 100px;
+  background: #0a0a0a; /* Premium Dark */
+  color: #fff;
+  font-family: var(--font-tt-firs-neue), Inter, Arial, sans-serif;
+}
+
+.seo-roadmap-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.seo-roadmap-heading {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.seo-roadmap-heading span {
+  color: #5fd082;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.seo-roadmap-heading h2 {
+  margin: 16px 0 18px;
+  font-family: var(--font-neue-leiden), Georgia, serif;
+  font-size: clamp(32px, 4vw, 56px);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -1.5px;
+}
+
+.seo-roadmap-heading p {
+  color: rgba(255,255,255,0.6);
+  font-size: 17px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.roadmap-container {
+  position: relative;
+  padding-left: 40px;
+}
+
+.roadmap-line {
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 19px;
+  width: 2px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 2px;
+}
+
+.roadmap-item {
+  position: relative;
+  padding-bottom: 60px;
+  opacity: 0.3;
+  transform: translateY(20px);
+  transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.roadmap-item.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.roadmap-item:last-child {
+  padding-bottom: 0;
+}
+
+.roadmap-dot {
+  position: absolute;
+  left: -26px; /* 40px padding - 14px dot shift */
+  top: 4px;
+  width: 12px;
+  height: 12px;
+  background: #222;
+  border: 2px solid rgba(255,255,255,0.2);
+  border-radius: 50%;
+  z-index: 2;
+  transition: all 0.8s ease;
+}
+
+.roadmap-item.animate-in .roadmap-dot {
+  background: #5fd082;
+  border-color: #5fd082;
+  box-shadow: 0 0 15px rgba(95,208,130,0.6);
+}
+
+/* Subtle glow for the line segment as it animates */
+.roadmap-item.animate-in::before {
+  content: "";
+  position: absolute;
+  left: -22px;
+  top: 16px;
+  bottom: -4px;
+  width: 2px;
+  background: linear-gradient(to bottom, #5fd082, transparent);
+  z-index: 1;
+}
+
+.roadmap-item:last-child::before {
+  display: none;
+}
+
+.roadmap-month {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  color: #5fd082;
+  background: rgba(95,208,130,0.1);
+  padding: 4px 12px;
+  border-radius: 99px;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+.roadmap-content h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.roadmap-content p {
+  font-size: 16px;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.6;
+}
+
+
+/* --- 3. SEO PERFORMANCE (BEFORE/AFTER) --- */
+.seo-performance-section {
+  padding: 80px 5% 100px;
+  background: #111;
+  color: #fff;
+  font-family: var(--font-tt-firs-neue), Inter, Arial, sans-serif;
+}
+
+.seo-performance-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.seo-performance-heading {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.seo-performance-heading span {
+  color: #e30613;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.seo-performance-heading h2 {
+  margin: 16px 0 18px;
+  font-family: var(--font-neue-leiden), Georgia, serif;
+  font-size: clamp(32px, 4vw, 56px);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -1.5px;
+}
+
+.seo-performance-heading p {
+  color: rgba(255,255,255,0.6);
+  font-size: 17px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.performance-comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.perf-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 24px;
+  padding: 40px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Glassmorphism subtle glow */
+.perf-card.before-card {
+  box-shadow: inset 0 0 80px rgba(227, 6, 19, 0.02);
+}
+
+.perf-card.after-card {
+  box-shadow: inset 0 0 80px rgba(95, 208, 130, 0.03), 0 20px 60px rgba(0,0,0,0.4);
+  border-color: rgba(95, 208, 130, 0.2);
+  transform: scale(1.02); /* Slight pop out */
+}
+
+.perf-card-header {
+  margin-bottom: 40px;
+}
+
+.perf-badge {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding: 6px 14px;
+  border-radius: 99px;
+}
+
+.badge-red {
+  background: rgba(227, 6, 19, 0.1);
+  color: #ff4d4f;
+}
+
+.badge-green {
+  background: rgba(95, 208, 130, 0.1);
+  color: #5fd082;
+  box-shadow: 0 0 15px rgba(95, 208, 130, 0.2);
+}
+
+.perf-metrics {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.perf-metric {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.metric-label {
+  font-size: 15px;
+  color: rgba(255,255,255,0.6);
+}
+
+.metric-value {
+  font-size: 32px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.metric-value span {
+  font-size: 24px;
+}
+
+.text-red { color: #ff4d4f; }
+.text-green { color: #5fd082; }
+
+.metric-bar {
+  width: 100%;
+  height: 6px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.metric-bar .fill {
+  height: 100%;
+  border-radius: 99px;
+}
+
+.fill-red { background: #ff4d4f; }
+.fill-orange { background: #faad14; }
+.fill-green { background: #5fd082; box-shadow: 0 0 10px rgba(95,208,130,0.5); }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .performance-comparison {
+    grid-template-columns: 1fr;
+  }
+  .perf-card.after-card {
+    transform: scale(1);
+  }
+}

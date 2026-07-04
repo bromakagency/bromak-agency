@@ -76,3 +76,5 @@ Thumbs.db
 node_modules
 tsconfig.tsbuildinfo
 
+
+/app/generated/prisma

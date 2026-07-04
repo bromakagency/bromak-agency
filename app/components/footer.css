@@ -1,0 +1,459 @@
+/* ── Footer CSS ──────────────────────────────────────────────────── */
+
+.bromak-footer {
+  background: #fff;
+  color: #111;
+  padding: 64px 6vw 28px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-top: 1px solid rgba(0, 0, 0, 0.08); /* Sayfayı footer'dan ayıran hafif çizgi */
+}
+
+/* ── CTA ─────────────────────────────────────────────────────────── */
+
+.footer-cta-wrapper {
+  position: relative;
+  width: 100%;
+  margin: 40px 0 80px;
+}
+
+.footer-cta {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 48px;
+  align-items: center;
+  min-height: 440px;
+  padding: 60px 6%;
+  border-radius: 48px;
+  background:
+    radial-gradient(circle at 48% 50%, rgba(226, 19, 10, 0.15), transparent 35%),
+    linear-gradient(90deg, #0a0a0a 0%, #111111 45%, #0a0a0a 100%);
+  overflow: hidden;
+  color: #fff;
+  border: 1px solid rgba(226, 19, 10, 0.2);
+}
+
+.footer-cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.02) 1px, transparent 1px);
+  background-size: 80px 80px;
+  opacity: .4;
+  pointer-events: none;
+}
+
+.footer-cta-content {
+  z-index: 2;
+  position: relative;
+}
+
+.footer-cta-label {
+  color: #e2130a;
+  font-weight: 800;
+  font-size: 13px;
+  display: block;
+  margin-bottom: 16px;
+  letter-spacing: 0.08em;
+}
+
+.footer-cta h2 {
+  font-size: clamp(30px, 3.5vw, 54px);
+  line-height: 1.1;
+  margin: 0;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -1.5px;
+  font-family: var(--font-neue-leiden), serif;
+}
+
+.footer-cta-red {
+  color: #e2130a;
+}
+
+.footer-cta-desc {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.75;
+  margin: 18px 0 26px;
+}
+
+.footer-cta-btn {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  background: #111; /* Siyahımsı premium arka plan */
+  text-decoration: none;
+  padding: 18px 32px;
+  border-radius: 10px;
+  font-weight: 800;
+  white-space: nowrap;
+  font-size: 15px;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px; /* Simge ile yazı arası boşluk */
+}
+
+.footer-cta-btn:hover {
+  background: #e2130a; /* Hover olunca marka kırmızısına dönme efekti */
+  border-color: #e2130a;
+  transform: translateY(-2px);
+}
+
+/* Visual grid sliding image tracks */
+.footer-visual-grid-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  z-index: 1;
+}
+
+.footer-image-track-top,
+.footer-image-track-bottom {
+  display: flex;
+  width: max-content;
+}
+
+.footer-track-inner {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-track-inner img {
+  width: 150px;
+  height: 150px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,.05);
+  filter: brightness(.7);
+  transition: filter 0.4s ease, transform 0.4s ease;
+  flex-shrink: 0;
+}
+
+.footer-track-inner img:hover {
+  filter: brightness(1);
+  transform: scale(1.05);
+}
+
+.footer-image-track-top .footer-track-inner {
+  animation: footerMarqueeRight 40s linear infinite;
+}
+
+.footer-image-track-bottom .footer-track-inner {
+  animation: footerMarqueeLeft 40s linear infinite;
+}
+
+@keyframes footerMarqueeRight {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes footerMarqueeLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ── MAIN ────────────────────────────────────────────────────────── */
+
+.footer-main {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1.25fr;
+  gap: 56px;
+  margin-top: 80px;
+}
+
+.footer-brand-logo {
+  max-width: 150px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.footer-brand-desc {
+  color: #444;
+  line-height: 1.8;
+  font-size: 14px;
+  margin: 0 0 20px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.footer-social a {
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(226, 19, 10, 0.4);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #e2130a;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.footer-social a:hover {
+  background: #e2130a;
+  color: #fff;
+}
+
+/* ── COLUMNS ──────────────────────────────────────────────────────── */
+
+.footer-col-desktop h4,
+.footer-contact h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 24px;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.footer-col-desktop h4::after,
+.footer-contact h4::after {
+  content: "";
+  width: 22px;
+  height: 2px;
+  background: #e2130a;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.footer-col-desktop a {
+  display: block;
+  color: #333;
+  text-decoration: none;
+  margin-bottom: 12px;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.footer-col-desktop a::after {
+  content: " ›";
+  color: #e2130a;
+}
+
+.footer-col-desktop a:hover {
+  color: #e2130a;
+}
+
+/* ── ACCORDION (mobile only) ─────────────────────────────────────── */
+
+.footer-accordion {
+  display: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.footer-accordion-btn {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 18px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #111;
+  cursor: pointer;
+  font-family: var(--font-tt-firs-neue), var(--font-neue-leiden), var(--font-graphik), sans-serif;
+}
+
+.footer-accordion-chevron {
+  transition: transform 0.25s;
+  color: #e2130a;
+  flex-shrink: 0;
+}
+
+.footer-accordion-chevron.open {
+  transform: rotate(180deg);
+}
+
+.footer-accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.footer-accordion-body.open {
+  max-height: 600px;
+}
+
+.footer-accordion-body a {
+  display: block;
+  color: #333;
+  text-decoration: none;
+  padding: 10px 0;
+  font-size: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.footer-accordion-body a:last-child {
+  border-bottom: none;
+}
+
+/* ── CONTACT ──────────────────────────────────────────────────────── */
+
+.footer-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #444;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+/* Adres için üstten hizala (çok satırlı) */
+.footer-contact-item:last-child {
+  align-items: flex-start;
+}
+
+.footer-contact-icon {
+  color: #e2130a;
+  font-size: 17px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* Tıklanabilir e-posta & telefon */
+.footer-contact-link {
+  text-decoration: none;
+  color: #444;
+  transition: color 0.2s;
+  /* .footer-col-desktop a'nın display:block override'ını sıfırla */
+  display: flex !important;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.footer-contact-link:hover {
+  color: #e2130a;
+}
+
+/* .footer-col-desktop a::after 'un eklediği ›  işaretini kaldır */
+.footer-contact-link::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* ── BOTTOM ───────────────────────────────────────────────────────── */
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 28px;
+  color: #666;
+  font-size: 13px;
+  gap: 20px;
+}
+
+.footer-bottom-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.footer-bottom-links a {
+  color: #666;
+  text-decoration: none;
+  padding: 0 4px;
+}
+
+.footer-bottom-links a:hover {
+  color: #e2130a;
+}
+
+.footer-bottom-dot {
+  color: #e2130a;
+}
+
+/* ── DESKTOP ONLY ─────────────────────────────────────────────────── */
+
+.footer-col-desktop {
+  display: block;
+}
+
+/* ── RESPONSIVE ───────────────────────────────────────────────────── */
+
+@media (max-width: 900px) {
+  .bromak-footer {
+    padding: 36px 20px 24px;
+  }
+
+  .footer-cta {
+    grid-template-columns: 1fr;
+    padding: 40px 24px;
+    gap: 32px;
+    border-radius: 32px;
+  }
+
+  .footer-visual-grid-container {
+    mask-image: none;
+    -webkit-mask-image: none;
+    margin-top: 10px;
+    gap: 12px;
+  }
+
+  .footer-track-inner img {
+    width: 110px;
+    height: 110px;
+    border-radius: 14px;
+  }
+
+  .footer-image-track-top .footer-track-inner {
+    animation-duration: 25s;
+  }
+
+  .footer-image-track-bottom .footer-track-inner {
+    animation-duration: 25s;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin-top: 44px;
+  }
+
+  .footer-brand {
+    padding-bottom: 28px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 4px;
+  }
+
+  .footer-col-desktop {
+    display: none;
+  }
+
+  .footer-accordion {
+    display: block;
+  }
+
+  .footer-contact {
+    padding-top: 8px;
+  }
+
+  .footer-contact h4 {
+    padding-top: 18px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 20px;
+  }
+}

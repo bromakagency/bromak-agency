@@ -6,11 +6,8 @@ export default function SliderSection() {
       <div className="padding-global">
         <div className="container-large">
           <div className="slider_layout">
-            <div className="slider_head-wrap">
-              <h2 className="slider_head heading-2">Built for Better Fitness</h2>
-            </div>
             <div className="spacer-large" />
-
+            <div className="spacer-large" />
             {/* Desktop Swiper */}
             <div className="slider_wrap swiper">
               <div className="slider_list swiper-wrapper">

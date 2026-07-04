@@ -1,0 +1,133 @@
+.home-blog-section {
+  padding: 6rem 5%;
+  background-color: #fff;
+}
+
+.home-blog-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.home-blog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 1.5rem;
+}
+
+.home-blog-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #111;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.home-blog-all-btn {
+  background-color: #ffeded;
+  color: #111;
+  font-weight: 700;
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.home-blog-all-btn:hover {
+  background-color: #fcd4d4;
+  color: #e2130a;
+}
+
+.home-blog-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .home-blog-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.home-blog-card {
+  background-color: #ffeded; /* Light red/pink matching the screenshot style */
+  border-radius: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.home-blog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(226, 19, 10, 0.1);
+}
+
+.home-blog-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0 0.25rem;
+}
+
+.home-blog-category {
+  background-color: #fcd4d4; /* Slightly darker pink for the badge */
+  color: #111;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.home-blog-date {
+  font-size: 0.75rem;
+  color: #444;
+  font-weight: 500;
+}
+
+.home-blog-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.home-blog-image {
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.home-blog-card:hover .home-blog-image {
+  transform: scale(1.05);
+}
+
+.home-blog-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.5rem 0.25rem;
+}
+
+.home-blog-post-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #111;
+  margin: 0;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

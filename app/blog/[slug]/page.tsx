@@ -1,51 +1,100 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Link from "next/link";
-import Navbar from "@/app/components/Navbar";
+import { prisma } from "@/app/lib/prisma";
 import Footer from "@/app/components/Footer";
-import { getPostBySlug, blogPosts } from "@/app/lib/blogData";
-import "../blog.css";
+import Navbar from "@/app/components/Navbar";
+import "./blog-detail.css";
+import BlogDetailDB from "./BlogDetailDB";
+import ReadingProgress from "@/app/components/ReadingProgress";
+
+type Props = {
+  params: Promise<{ slug: string }>;
+};
 
 export async function generateStaticParams() {
-  return blogPosts.map((post) => ({
-    slug: post.slug,
-  }));
+  const posts = await prisma.post.findMany({
+    where: { published: true },
+    select: { slug: true },
+  });
+  return posts.map((p: any) => ({ slug: p.slug }));
 }
 
-export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const post = getPostBySlug(slug);
+  const post = await prisma.post.findUnique({ where: { slug } });
 
-  if (!post) {
-    notFound();
-  }
+  if (!post) return { title: "Blog yazısı bulunamadı | Bromak Agency" };
+
+  return {
+    title: `${post.title} | Bromak Agency`,
+    description: post.summary,
+    alternates: { canonical: `/blog/${post.slug}` },
+    openGraph: {
+      title: post.title,
+      description: post.summary,
+      url: `/blog/${post.slug}`,
+      type: "article",
+      images: [{ url: post.image }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.summary,
+      images: [post.image],
+    },
+  };
+}
+
+export default async function BlogDetailPage({ params }: Props) {
+  const { slug } = await params;
+  const post = await prisma.post.findUnique({ where: { slug } });
+
+  if (!post || !post.published) notFound();
+
+  const relatedPosts = await prisma.post.findMany({
+    where: { published: true, id: { not: post.id } },
+    orderBy: { createdAt: "desc" },
+    take: 3,
+  });
+
+  const mappedRelated = relatedPosts.map((p: any) => ({
+    slug: p.slug,
+    title: p.title,
+    summary: p.summary,
+    image: p.image,
+    category: p.category,
+    date: new Date(p.createdAt).toLocaleDateString("tr-TR", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    }),
+  }));
+
+  const mappedPost = {
+    title: post.title,
+    summary: post.summary,
+    content: post.content,
+    image: post.image,
+    category: post.category,
+    author: post.author,
+    authorRole: post.authorRole,
+    readTime: post.readTime,
+    date: new Date(post.createdAt).toLocaleDateString("tr-TR", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    }),
+    createdAtIso: post.createdAt.toISOString(),
+    updatedAtIso: post.updatedAt.toISOString(),
+    slug: post.slug,
+    faqJson: post.faqJson,
+  };
 
   return (
     <>
+      <ReadingProgress />
       <Navbar />
-      <main className="post-container">
-        <Link href="/blog" className="post-back-link">
-          &larr; Back to Blog
-        </Link>
-        
-        <article>
-          <header className="post-header">
-            <div className="post-meta">
-              <span className="blog-card-category">{post.category}</span>
-              <span>•</span>
-              <span>{post.date}</span>
-            </div>
-            <h1 className="post-title">{post.title}</h1>
-          </header>
-          
-          <div className="post-image-placeholder"></div>
-          
-          <div className="post-content">
-            {post.content.split("\n\n").map((paragraph, idx) => (
-              <p key={idx}>{paragraph}</p>
-            ))}
-          </div>
-        </article>
-      </main>
+      <BlogDetailDB post={mappedPost} relatedPosts={mappedRelated} />
       <Footer />
     </>
   );

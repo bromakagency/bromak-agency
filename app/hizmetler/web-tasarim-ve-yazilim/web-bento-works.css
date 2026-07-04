@@ -1,0 +1,173 @@
+/* ==========================================================================
+   WEB BENTO WORKS CSS
+   ========================================================================== */
+
+.web-bento-works-section {
+  padding: 120px 5%;
+  background: #050505;
+  color: #fff;
+}
+
+.web-bento-works-header {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.web-bento-works-header h2 {
+  font-family: var(--font-neue-leiden), Georgia, serif;
+  font-size: clamp(36px, 4vw, 56px);
+  margin-bottom: 16px;
+}
+
+.web-bento-works-header p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 18px;
+}
+
+.bento-works-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.bento-work-card {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 400px;
+  text-decoration: none;
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.bento-work-card:hover {
+  transform: translateY(-8px);
+}
+
+.work-1 { grid-column: span 2; }
+.work-2 { grid-column: span 4; }
+.work-3 { grid-column: span 2; }
+.work-4 { grid-column: span 2; }
+.work-5 { grid-column: span 2; }
+
+.work-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.bento-work-card:hover .work-bg {
+  transform: scale(1.05);
+}
+
+.work-overlay {
+  position: relative;
+  z-index: 2;
+  padding: 32px;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
+  width: 100%;
+}
+
+.work-brand {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: -1px;
+}
+
+.work-category {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.8);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.work-metric {
+  display: flex;
+  flex-direction: column;
+}
+
+.work-metric strong {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.work-metric small {
+  font-size: 14px;
+  color: rgba(255,255,255,0.7);
+}
+
+.bento-works-action {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.works-primary-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: transparent;
+  color: #fff;
+  padding: 16px 32px 16px 40px;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.works-primary-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: #E30A17; /* Kırmızı Bromak vurgusu */
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: -1;
+}
+
+.works-primary-btn:hover {
+  border-color: #E30A17;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(227, 10, 23, 0.3);
+}
+
+.works-primary-btn:hover::before {
+  width: 100%;
+}
+
+.works-primary-btn svg {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.works-primary-btn:hover svg {
+  transform: translateX(6px);
+}
+
+@media (max-width: 1000px) {
+  .bento-works-grid {
+    grid-template-columns: 1fr;
+  }
+  .work-1, .work-2, .work-3, .work-4, .work-5 {
+    grid-column: span 1;
+  }
+}

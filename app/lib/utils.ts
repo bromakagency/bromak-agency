@@ -4,34 +4,34 @@ export const A = (name: string) => `/assets/${name}`;
 // Reviews data
 export const reviewsData = [
   {
-    title: "Never leaving",
-    user: "Isaac_andy97, Sep 09, 2025",
+    title: "Stratejik ve hızlı ekip",
+    user: "Kurumsal marka projesi",
     quote:
-      "\u201c24 hours into using Bevel! Absolutely incredible. It is beautifully designed, easy to use, easy to understand. Such a new app too so I\u2019m so excited to see how it grows!\u201d",
+      "Brief aşamasından yayına kadar süreci net yöneten, hızlı dönüş yapan ve markanın ihtiyacını iyi anlayan bir ekiple çalıştık.",
   },
   {
-    title: "Great and Useful App",
-    user: "Chinatiger0000, Sep 01, 2025",
+    title: "Tasarım dili güçlendi",
+    user: "Sosyal medya yönetimi",
     quote:
-      "\u201cThis app is incredibly useful for tracking my sleep and workouts! I think that the numbers are incredibly accurate compared to other apps and it really helps me plan my day.\u201d",
+      "İçeriklerimiz daha tutarlı, daha profesyonel ve hedef kitleye daha uygun bir dile kavuştu.",
   },
   {
-    title: "Amazing slick app with a great roadmap for the future",
-    user: "Ghosal, Aug 31, 2025",
+    title: "Reklam tarafında net raporlama",
+    user: "Dijital reklam yönetimi",
     quote:
-      "\u201cThis app is superb. It\u2019s not long been released but is very polished. Great interface and the developer has a great roadmap that aspires to be the best of its kind.\u201d",
+      "Kampanyaların neye hizmet ettiğini, hangi kreatiflerin çalıştığını ve bütçenin nasıl yönetildiğini düzenli şekilde görebildik.",
   },
   {
-    title: "This is the Health app you are looking for",
-    user: "the real wayne",
+    title: "Web sitesi süreci rahattı",
+    user: "Web tasarım ve yazılım",
     quote:
-      "\u201cTruly wellness at mind is what this app is for. Metrics to back it up. Are you recovered? Recovery over time? Stress over time. It\u2019s got it all. The best health and wellness app that Apple should\u2019ve had built right into the Apple Watch all along.\u201d",
+      "Tasarım, içerik ve teknik geliştirme aynı akışta ilerlediği için süreç bizim açımızdan oldukça rahat geçti.",
   },
   {
-    title: "Fantastic App",
-    user: "CFHW, Aug 12, 2025",
+    title: "Fikirden yayına güçlü takip",
+    user: "Kampanya üretimi",
     quote:
-      "\u201cThis app does exactly what it needs to do. If you wear the Apple Watch, the data is not processed, shown in an appropriate way in Apple health and is basically useless. With this app you can get a fantastic overview of sleep, recovery and strain.\u201d",
+      "Kampanya fikrini sadece tasarlamakla kalmadılar; içerik formatlarına ve yayın planına kadar uygulanabilir hale getirdiler.",
   },
 ];
 
@@ -39,72 +39,72 @@ export const reviewsData = [
 export const sliderData = [
   {
     img: "68bc1a447e73b0da2a032983_4a1b85609c37dd9208c86781cff90ba9_Slide-01-p.avif",
-    title: "Balance Your Cardio Load",
-    desc: "Go beyond minutes and miles. Cardio Load uses heart rate and effort to measure what your training actually does for your body.",
+    title: "Strateji ve Konumlandırma",
+    desc: "Markanızın hedef kitlesini, mesajını ve dijitalde nasıl görünmesi gerektiğini birlikte netleştiriyoruz.",
   },
   {
     img: "68bc1a447e73b0da2a032972_e5ec3c28e19e2802236ac649d7ac2d24_Slide-02.avif",
-    title: "Built for Strength",
-    desc: "Whether you\u2019re lifting heavy or just getting started, Bevel keeps track of your strength and shows how you\u2019re progressing.",
+    title: "Tasarım ve İçerik Üretimi",
+    desc: "Sosyal medya, web ve reklam alanları için markaya uygun görsel ve metinsel içerikler üretiyoruz.",
   },
   {
     img: "68bc1a447e73b0da2a03297a_b38e858c04f8cc4c39820c679c7f3281_Slide-03.avif",
-    title: "Watch Your Body Change",
-    desc: "Get a clearer picture of progress by monitoring body composition trends over time, from muscle gain to fat loss.",
+    title: "Web Tasarım ve Yazılım",
+    desc: "Hızlı, anlaşılır ve dönüşüm odaklı web siteleriyle markanızın dijital vitrininizi güçlendiriyoruz.",
   },
   {
     img: "68bc2d1544edbd27a9e38d9a_81e0279ad80b28d13135c29defc31d01_Slide-04.avif",
-    title: "Dial In Your Cardio Focus",
-    desc: "Train with intention by staying in the right heart rate zone to build aerobic fitness and cardiovascular strength.",
+    title: "Reklam ve Performans",
+    desc: "Dijital reklam kampanyalarını hedef, bütçe ve sonuç odağında planlayıp optimize ediyoruz.",
   },
 ];
 
 export const sliderMobileData = [
   {
     img: "68bc1a447e73b0da2a03298b_mobile-slide-01.avif",
-    title: "Balance Your Cardio Load",
-    desc: "Go beyond minutes and miles.",
+    title: "Strateji",
+    desc: "Markanız için net yön.",
     isWide: true,
   },
   {
     img: "68bc1a447e73b0da2a032991_mobile-slide-02.avif",
-    title: "Built for Strength",
-    desc: "Track your strength and progress.",
+    title: "Tasarım",
+    desc: "Tutarlı görsel dil.",
     isWide: false,
   },
   {
     img: "68bc1a447e73b0da2a032997_mobile-slide-03.avif",
-    title: "Watch Your Body Change",
-    desc: "Monitor body composition trends.",
+    title: "Web",
+    desc: "Dijital vitrin.",
     isWide: false,
   },
   {
     img: "68bc2d1704b889cae02c2774_mobile-slide-04.avif",
-    title: "Dial In Your Cardio Focus",
-    desc: "Stay in the right heart rate zone.",
+    title: "Performans",
+    desc: "Ölçülebilir büyüme.",
     isWide: true,
   },
 ];
 
 export const usesData = [
   {
-    eye: "Stress",
-    title: "Identify your\nstress triggers",
-    img: "68bc1a447e73b0da2a0328ff_uses-01.avif",
+    eye: "",
+    title: "",
+    img: "../images/tuana_gida_social.webp",
   },
   {
-    eye: "Energy Bank",
-    title: "Know when to push,\nand when to rest",
+    eye: "Tasarım",
+    title: "Tutarlı bir\ngörsel dil kurun",
     img: "68bc1a447e73b0da2a032909_uses-02.avif",
   },
   {
-    eye: "Smart Alarm",
-    title: "Wake up feeling\nrefreshed",
+    eye: "İçerik",
+    title: "Doğru mesajı\ndoğru formatla yayınlayın",
     img: "68bc1a447e73b0da2a032913_uses-03.avif",
   },
   {
-    eye: "Journal",
-    title: "Track and build \nhealthy habits",
+    eye: "Performans",
+    title: "Sonuçları takip edin\nve iyileştirin",
     img: "68bc1a447e73b0da2a032919_uses-04.avif",
   },
 ];
@@ -112,26 +112,26 @@ export const usesData = [
 export const phoneHeaders = [
   {
     n: "1",
-    title: "Smarter Recovery",
-    desc: "Know when to push, when to pause, and when you\u2019re ready to perform, backed by real-time metrics and biomarkers.",
+    title: "Strateji",
+    desc: "Hedef kitle, marka dili ve iletişim hedeflerini netleştirerek üretim sürecine sağlam bir başlangıç yapıyoruz.",
     active: true,
   },
   {
     n: "2",
-    title: "Fuel That Moves You Forward",
-    desc: "Track what you eat and get actionable feedback that helps you build a better relationship with food.",
+    title: "Tasarım",
+    desc: "Markanın dijitalde tutarlı görünmesi için görsel sistem, şablon ve kreatif üretim akışını kuruyoruz.",
     active: false,
   },
   {
     n: "3",
-    title: "Dial In Your Sleep",
-    desc: "Improve your sleep by understanding patterns, identifying disruptions, and building habits that support deeper rest.",
+    title: "İçerik",
+    desc: "Sosyal medya, web ve reklam kanallarına uygun içerikleri planlıyor ve yayınlanabilir hale getiriyoruz.",
     active: false,
   },
   {
     n: "4",
-    title: "Push With Purpose",
-    desc: "Understand how much strain you\u2019re under, how it affects your body, and how to adjust for progress without burnout.",
+    title: "Performans",
+    desc: "Yayınlanan işlerin sonucunu izliyor, reklam ve içerik kararlarını ölçülebilir verilere göre geliştiriyoruz.",
     active: false,
   },
 ];

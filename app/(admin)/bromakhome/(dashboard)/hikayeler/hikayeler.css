@@ -1,0 +1,72 @@
+.metrics-card .metrics-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.metric-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr auto;
+  gap: 12px;
+  align-items: center;
+}
+
+.color-pickers {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.color-input-wrap {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.color-input-wrap input[type="color"] {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: transparent;
+}
+
+.color-input-wrap input[type="text"] {
+  flex: 1;
+}
+
+.preview-container.dark-bg {
+  background-color: #111;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preview-container.dark-bg img {
+  max-height: 80px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* Premium dark background wrapper for transparent/white logos */
+.image-preview-wrapper.dark-bg {
+  background-color: #111;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 180px;
+}
+
+.image-preview-wrapper.dark-bg .image-preview-img {
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+

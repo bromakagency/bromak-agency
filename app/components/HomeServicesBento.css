@@ -1,0 +1,235 @@
+/* ── HOME SERVICES BENTO — exact copy of service-showcase-mosaic ── */
+
+.home-services-section {
+  width: min(100% - 96px, 1280px);
+  margin: 120px auto 78px;
+}
+
+.home-services-header {
+  margin-bottom: 24px;
+  padding-left: 12px;
+}
+
+.home-services-title {
+  font-size: clamp(32px, 4vw, 56px);
+  font-weight: 500;
+  color: #111;
+  margin: 0;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.home-services-bento-wrapper {
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1.15fr);
+  gap: 10px;
+  border-radius: 24px;
+  background: #111;
+  color: #fff;
+  box-shadow: 0 28px 80px rgba(10, 10, 10, 0.16);
+}
+
+/* All other classes (.showcase-panel, .showcase-panel-copy, etc.)
+   are already defined globally via the hizmetler detay.css import
+   — but since that CSS is only loaded on /hizmetler/* routes,
+   we re-declare the needed rules here scoped to home use. */
+
+.home-services-bento-wrapper .showcase-panel {
+  position: relative;
+  overflow: hidden;
+  min-height: 220px;
+  border-radius: 8px;
+  background: #121212;
+  isolation: isolate;
+  transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.3s ease;
+}
+
+.home-services-bento-wrapper .showcase-panel:hover {
+  transform: scale(1.02);
+  z-index: 10;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.4);
+}
+
+.home-services-bento-wrapper .showcase-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    radial-gradient(circle at 18% 16%, rgba(255, 255, 255, 0.1), transparent 20%),
+    linear-gradient(180deg, rgba(0,0,0,0.02) 0%, rgba(0,0,0,0.18) 42%, rgba(0,0,0,0.86) 100%);
+  pointer-events: none;
+}
+
+.home-services-bento-wrapper .showcase-panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  opacity: 0.38;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle, rgba(245, 64, 64, 0.75) 0 1px, transparent 1.5px),
+    radial-gradient(circle, rgba(95, 208, 130, 0.55) 0 1px, transparent 1.5px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.36) 0 1px, transparent 1.5px);
+  background-size: 92px 96px, 124px 118px, 70px 82px;
+  background-position: 9px 18px, 38px 52px, 16px 34px;
+  mix-blend-mode: screen;
+}
+
+.home-services-bento-wrapper .showcase-panel img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.92) brightness(0.84);
+  transform: scale(1.01);
+}
+
+.home-services-bento-wrapper .showcase-panel-copy {
+  position: absolute;
+  z-index: 3;
+  left: 28px;
+  right: 28px;
+  bottom: 25px;
+}
+
+.home-services-bento-wrapper .showcase-panel-copy h2,
+.home-services-bento-wrapper .showcase-panel-copy h3 {
+  margin: 0 0 8px;
+  color: #fff;
+  font-size: clamp(28px, 3.5vw, 44px);
+  line-height: 0.92;
+  font-weight: 850;
+  letter-spacing: -1px;
+}
+
+.home-services-bento-wrapper .showcase-panel-copy h3 {
+  font-size: clamp(26px, 2.5vw, 36px);
+}
+
+.home-services-bento-wrapper .showcase-panel-copy p {
+  max-width: 420px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 14px;
+  line-height: 1.45;
+  font-weight: 800;
+}
+
+.home-services-bento-wrapper .showcase-panel-main {
+  min-height: 560px;
+  border-radius: 16px 8px 8px 16px;
+}
+
+.home-services-bento-wrapper .showcase-panel-main .showcase-panel-copy {
+  left: 34px;
+  bottom: 32px;
+}
+
+.home-services-bento-wrapper .showcase-side-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  grid-template-rows: 215px 165px 172px;
+  gap: 10px;
+}
+
+.home-services-bento-wrapper .showcase-panel-wide {
+  grid-column: 1 / -1;
+}
+
+.home-services-bento-wrapper .showcase-panel-2d {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.home-services-bento-wrapper .showcase-panel-3d {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.home-services-bento-wrapper .showcase-panel-tall {
+  grid-column: 2;
+  grid-row: 2 / span 2;
+  border-radius: 8px 16px 16px 8px;
+}
+
+.home-services-bento-wrapper .showcase-panel-tall .showcase-panel-copy {
+  bottom: 34px;
+}
+
+/* ── RESPONSIVE ── */
+
+@media (min-width: 721px) {
+  .home-services-bento-wrapper .showcase-side-grid .showcase-panel {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 1050px) {
+  .home-services-section {
+    width: min(100% - 48px, 760px);
+  }
+
+  .home-services-bento-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .home-services-bento-wrapper .showcase-panel-main {
+    min-height: 480px;
+    border-radius: 16px;
+  }
+
+  .home-services-bento-wrapper .showcase-side-grid {
+    grid-template-rows: 230px 205px 205px;
+  }
+
+  .home-services-bento-wrapper .showcase-panel,
+  .home-services-bento-wrapper .showcase-panel-tall {
+    border-radius: 18px;
+  }
+}
+
+@media (max-width: 720px) {
+  .home-services-section {
+    width: calc(100% - 24px);
+    margin-top: 54px;
+  }
+
+  .home-services-bento-wrapper {
+    padding: 8px;
+    gap: 6px;
+    border-radius: 18px;
+  }
+
+  .home-services-bento-wrapper .showcase-panel-main {
+    min-height: 360px;
+  }
+
+  .home-services-bento-wrapper .showcase-side-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    gap: 6px;
+  }
+
+  .home-services-bento-wrapper .showcase-panel,
+  .home-services-bento-wrapper .showcase-panel-wide,
+  .home-services-bento-wrapper .showcase-panel-small,
+  .home-services-bento-wrapper .showcase-panel-tall {
+    min-height: 260px;
+    grid-column: auto;
+    grid-row: auto;
+    border-radius: 16px;
+  }
+
+  .home-services-bento-wrapper .showcase-panel-copy,
+  .home-services-bento-wrapper .showcase-panel-main .showcase-panel-copy {
+    left: 22px;
+    right: 22px;
+    bottom: 22px;
+  }
+}

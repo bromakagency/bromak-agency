@@ -1,64 +1,80 @@
 import type { Metadata } from "next";
-import { Archivo } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
+import CookieBanner from "./components/CookieBanner";
 
-const archivo = Archivo({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  display: "swap",
-  variable: "--font-archivo",
-});
-
-const graphik = localFont({
+const ttFirsNeue = localFont({
   src: [
     {
-      path: "../public/fonts/Graphik-Regular.woff2",
+      path: "../public/fonts/TTFirsNeue/TT Firs Neue Trial Regular.ttf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/TTFirsNeue/TT Firs Neue Trial Regular.ttf",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../public/fonts/Graphik-Medium.woff2",
+      path: "../public/fonts/TTFirsNeue/TT Firs Neue Trial Medium.ttf",
       weight: "500",
       style: "normal",
     },
+    {
+      path: "../public/fonts/TTFirsNeue/TT Firs Neue Trial DemiBold.ttf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/TTFirsNeue/TT Firs Neue Trial Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/TTFirsNeue/TT Firs Neue Trial Bold.ttf",
+      weight: "800",
+      style: "normal",
+    },
   ],
-  variable: "--font-graphik",
+  variable: "--font-manrope",
   display: "swap",
-});
-
-const neueLeiden = localFont({
-  src: [
-    { path: "../public/fonts/neueleiden/NeueLeiden-Thin.woff2",       weight: "100", style: "normal" },
-    { path: "../public/fonts/neueleiden/NeueLeiden-ExtraLight.woff2", weight: "200", style: "normal" },
-    { path: "../public/fonts/neueleiden/NeueLeiden-Light.woff2",      weight: "300", style: "normal" },
-    { path: "../public/fonts/neueleiden/NeueLeiden-Regular.woff2",    weight: "400", style: "normal" },
-    { path: "../public/fonts/neueleiden/NeueLeiden-Medium.woff2",     weight: "500", style: "normal" },
-    { path: "../public/fonts/neueleiden/NeueLeiden-SemiBold.woff2",   weight: "600", style: "normal" },
-    { path: "../public/fonts/neueleiden/NeueLeiden-Bold.woff2",       weight: "700", style: "normal" },
-  ],
-  variable: "--font-neue-leiden",
-  display: "swap",
+  preload: true,
 });
 
 export const metadata: Metadata = {
-  title: "Bevel - The Everything Health App",
+  title: "Bromak Agency - Konya Reklam Ajans\u0131",
   description:
-    "Bevel is the AI health companion that turns your data into personalized insights and recommendations across sleep, fitness, nutrition, and more.",
-  metadataBase: new URL("https://bevelhealth.com"),
+    "Bromak Agency, Konya merkezli bir reklam ve dijital pazarlama ajans\u0131d\u0131r. Strateji, tasar\u0131m, dijital pazarlama ve i\u00e7erik \u00fcretimi hizmetleri sunuyoruz.",
+  metadataBase: new URL("https://bromakagency.com"),
   openGraph: {
-    title: "Bevel - The Everything Health App",
+    title: "Bromak Agency - Konya Reklam Ajans\u0131",
     description:
-      "Bevel is the AI health companion that turns your data into personalized insights and recommendations across sleep, fitness, nutrition, and more.",
+      "Bromak Agency, Konya merkezli bir reklam ve dijital pazarlama ajans\u0131d\u0131r. Strateji, tasar\u0131m, dijital pazarlama ve i\u00e7erik \u00fcretimi hizmetleri sunuyoruz.",
     type: "website",
-    url: "https://bevelhealth.com",
+    url: "https://bromakagency.com",
+    locale: "tr_TR",
+    siteName: "Bromak Agency",
+    images: [
+      {
+        url: "/images/bromak-og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Bromak Agency - Dijital Reklam Ajansı",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bevel - The Everything Health App",
+    title: "Bromak Agency - Konya Reklam Ajans\u0131",
     description:
-      "Bevel is the AI health companion that turns your data into personalized insights and recommendations across sleep, fitness, nutrition, and more.",
+      "Bromak Agency, Konya merkezli bir reklam ve dijital pazarlama ajans\u0131d\u0131r.",
+    site: "@bromakagency",
+    images: ["/images/bromak-og-image.jpg"],
   },
+  applicationName: "Bromak Agency",
+  authors: [{ name: "Bromak Agency" }],
+  creator: "Bromak Agency",
+  publisher: "Bromak Agency",
   robots: {
     index: true,
     follow: true,
@@ -74,9 +90,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`lenis ${archivo.variable} ${graphik.variable} ${neueLeiden.variable}`} suppressHydrationWarning>
-      <body data-scrolling-started="false" data-scrolling-direction="up">
+    <html
+      lang="tr"
+      className={`lenis ${ttFirsNeue.variable}`}
+      suppressHydrationWarning
+    >
+      <body data-scrolling-started="false" data-scrolling-direction="up" suppressHydrationWarning>
         {children}
+        <CookieBanner />
       </body>
     </html>
   );

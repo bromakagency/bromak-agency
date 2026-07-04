@@ -1,0 +1,99 @@
+.rich-text-editor {
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  background-color: #ffffff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.editor-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.editor-toolbar button {
+  background: transparent;
+  border: 1px solid transparent;
+  color: #555;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-family: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.editor-toolbar button:hover {
+  background: #ebebeb;
+  color: #111;
+}
+
+.editor-toolbar button.is-active {
+  background: #ffffff;
+  color: #e30613;
+  border-color: #dddddd;
+}
+
+.editor-content-area {
+  padding: 20px;
+  min-height: 300px;
+  color: #111;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Tiptap default styles */
+.ProseMirror {
+  outline: none;
+  min-height: 300px;
+}
+
+.ProseMirror p {
+  margin-bottom: 1em;
+}
+
+.ProseMirror h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.ProseMirror h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+.ProseMirror ul {
+  padding-left: 20px;
+  margin-bottom: 1em;
+}
+
+.ProseMirror blockquote {
+  border-left: 3px solid #e30613;
+  padding-left: 16px;
+  margin-left: 0;
+  font-style: italic;
+  color: #555;
+}
+
+.ProseMirror img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 1em 0;
+}
+
+.ProseMirror a {
+  color: #3b82f6;
+  text-decoration: underline;
+  cursor: pointer;
+}

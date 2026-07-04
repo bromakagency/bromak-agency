@@ -1,4 +1,4 @@
-/* Base styles — fonts loaded via next/font (Archivo) and local woff2 (Graphik) */
+/* Base styles — fonts loaded via next/font */
 
 :root {
   --black: #222326;
@@ -8,6 +8,9 @@
   --dark-3: #8b8c8f;
   --dark-2: #cacbce;
   --v3-bento-radius: 36px;
+  --font-tt-firs-neue: var(--font-manrope);
+  --font-neue-leiden: var(--font-manrope);
+  --font-graphik: var(--font-manrope);
 }
 
 *,
@@ -29,7 +32,7 @@ body {
   color: var(--white);
   letter-spacing: .01em;
   background-color: var(--black);
-  font-family: var(--font-neue-leiden), var(--font-graphik), var(--font-archivo), sans-serif;
+  font-family: var(--font-manrope), sans-serif;
   font-size: 17px;
   font-weight: 400;
   line-height: 1.4;
@@ -200,8 +203,8 @@ html.lenis body {
 }
 
 .nav_menu {
-  -webkit-backdrop-filter: blur(1.25rem);
-  backdrop-filter: blur(1.25rem);
+  
+  
   background-color: #ffffff1a;
   border: 2px solid #ffffff1a;
   border-radius: 50vw;
@@ -933,8 +936,8 @@ html.lenis body {
 
 .preview_blob_wrap {
   z-index: 20;
-  -webkit-backdrop-filter: blur(.5rem);
-  backdrop-filter: blur(.5rem);
+  
+  
   color: #fff;
   border-radius: 1.75rem;
   padding: .125rem;
@@ -1941,8 +1944,8 @@ html.lenis body {
   }
 
   .nav_component {
-    -webkit-backdrop-filter: blur(.5rem);
-    backdrop-filter: blur(.5rem);
+    
+    
     background-image: linear-gradient(#fff3, #fff0);
     padding: 1.5rem 1.25rem;
     position: absolute;
@@ -2076,9 +2079,10 @@ html.lenis body {
     grid-template-columns: 1fr;
     height: auto;
     min-height: 38rem;
-    margin-bottom: 0;
+    margin-bottom: 15vh;
     padding: 2rem 1.25rem 1.5rem;
-    position: relative;
+    position: sticky;
+    top: 10vh;
   }
 
   .preview_card.is-2 {
@@ -2171,19 +2175,28 @@ html.lenis body {
 
   .slider_mobile_list {
     grid-column-gap: 1rem;
-    grid-row-gap: 1rem;
-    flex-flow: column;
     display: flex;
+    flex-flow: row nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 1rem;
+    /* Hide scrollbar for cleaner look if desired, or keep it */
+    scrollbar-width: none; 
+  }
+  .slider_mobile_list::-webkit-scrollbar {
+    display: none;
   }
 
   .slider_mobile_slide {
+    flex: 0 0 85%;
+    scroll-snap-align: center;
     aspect-ratio: 4.1/6.52;
     border-radius: 1.5rem;
     flex-flow: column;
-    width: 100%;
     display: flex;
     position: relative;
-    overflow: clip;
+    overflow: hidden;
   }
 
   .slider_mobile_slide.is-1 {

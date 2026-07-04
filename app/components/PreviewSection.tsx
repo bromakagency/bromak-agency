@@ -38,246 +38,89 @@ export default function PreviewSection() {
           <div className="preview_layout">
             {/* Header */}
             <div className="preview_head-wrap">
-              <div className="preview_chip_wrap">
-                <div className="preview_chip_icon">
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <path
-                      d="M4.57596 9.80078C5.33893 11.0234 6.58104 11.8242 8.00001 11.8242C9.41897 11.8242 10.6611 11.0234 11.4241 9.80078C11.5104 9.66016 11.4932 9.47656 11.3628 9.38672C11.2325 9.27344 11.0519 9.27344 10.9216 9.39453C10.2621 10.4844 9.17439 11.1172 8.00001 11.1172C6.82564 11.1172 5.73791 10.4844 5.07845 9.39453C4.94814 9.27344 4.76752 9.27344 4.63721 9.38672C4.50689 9.47656 4.48955 9.66016 4.57596 9.80078ZM8.00001 1C4.13673 1 1 4.14062 1 8C1 11.8594 4.13673 15 8.00001 15C11.8633 15 15 11.8594 15 8C15 4.14062 11.8633 1 8.00001 1Z"
-                      fill="#FF9500"
-                    />
-                  </svg>
-                </div>
-                <span>AI Intelligence</span>
-                <div className="preview_chip_blob" />
-              </div>
-              <h2 className="heading-2">
-                Meet Your Personal
+              <h2 className="heading-2" style={{ color: "#111" }}>
+                Markanız İçin
                 <br />
-                Health Companion
+                Stratejik Üretim Alanı
               </h2>
-              <p className="subhead">
-                From workouts to meals to sleep, Bevel&apos;s AI connects the
-                dots between your daily choices and how your body responds.
+              <p className="subhead" style={{ color: "#444" }}>
+                Öncü bir Konya reklam ajansı olarak; fikir, tasarım, içerik ve performans kararlarını aynı yaratıcı
+                akışta birleştirerek markanızın dijital varlığını güçlendiriyoruz.
               </p>
             </div>
             <div className="spacer-xlarge" />
 
             {/* Cards grid */}
             <div className="preview_grid">
-              {/* Card 1 — Training */}
+              {/* Card 1 — Strategy */}
               <div
                 className="preview_card"
                 data-parallax="trigger"
                 data-parallax-disable="tablet"
               >
-                <div className="preview_text-wrap">
-                  <h3 className="preview_card-title">Training</h3>
-                </div>
-                <div className="preview_01-content">
-                  <div className="preview_blob_wrap is-11">
-                    <BlobBg />
-                    <div className="preview_blob_inner">
-                      <div className="preview_01-blob-header">
-                        <div>
-                          <div className="preview_blob_text is-title">
-                            Planned Workout ⚡️
-                          </div>
-                          <div className="preview_blob-subtext">
-                            Based on your goals
-                          </div>
-                        </div>
-                        <div className="preview_01-icon">
-                          <svg width="38" height="38" viewBox="0 0 38 38" fill="none">
-                            <rect width="38" height="38" rx="19" fill="white" fillOpacity="0.15" />
-                            <path d="M23.5625 13.1875L22.625 14.375L18.6875 19.625H15.125L14.7188 19.0625C14.1875 18.2812 13.3125 17.8125 12.375 17.8125H12.0312L10.4375 19.9375L11 20.375C11.625 20.8438 12 21.5625 12 22.3438V22.625L12.8125 23.625L14.3125 22.625L15.1562 23.4375H18.75L20.0312 22.0937L21.4375 23.4375L23.5 19.625H25.1875V23.1562C25.1875 23.5 25.4375 23.75 25.75 23.75H26.1562C26.5 23.75 26.75 23.5 26.75 23.1562V17.2812C26.75 16.9375 26.5 16.6875 26.1562 16.6875H25.75C25.4375 16.6875 25.1875 16.9375 25.1875 17.2812V18.625H24.0312L23.5625 13.1875Z" fill="white" fillOpacity="0.55" />
-                          </svg>
-                        </div>
-                      </div>
-                      <div className="preview_01-sublist">
-                        {["Back Squat", "Plank", "Arch Hold"].map((ex) => (
-                          <div key={ex} className="preview_01-subitem">
-                            <div className="preview_blob-subitem-title">
-                              <strong>{ex}</strong>
-                            </div>
-                            <div className="preview_blob-subitem-subtext">
-                              {ex === "Back Squat" ? "Barbell" : "Bodyweight"}{" "}
-                              <span className="preview_01-subitem-middot">•</span>{" "}
-                              5 sets
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                  <div className="preview_blob_wrap is-12">
-                    <BlobBg />
-                    <div className="preview_blob_inner">
-                      <div className="preview_blob_text">
-                        Let me know if you need anything else!
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <img src={A("68bc1a447e73b0da2a0329b0_prev-01-bg.avif")}
-                  alt=""
-                  className="preview_card-bg"
-                />
+                {/* Overlays removed per user request */}
+                <picture>
+                  <source media="(max-width: 767px)" srcSet="/images/dizgiline_elektronik_websitesi_mobil.webp" />
+                  <img src="/images/dizgiline_elektonik_website.webp"
+                    alt="Dizgiline Elektronik web sitesi"
+                    className="preview_card-bg"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+                {/* 
                 <img src={A("68bc1a447e73b0da2a0329a2_prev-01-person.avif")}
                   alt=""
-                  className="preview_01-person"
+                  className="preview_01-object is-2"
+                  loading="lazy"
+                  decoding="async"
                   data-parallax="trigger"
                   data-parallax-start="5"
                   data-parallax-end="-10"
                 />
+                */}
               </div>
 
-              {/* Card 2 — Fueling Tomorrow */}
+              {/* Card 2 — Content */}
               <div className="preview_card is-2">
-                <div className="preview_text-wrap is-2">
-                  <h3 className="preview_card-title">Fueling Tomorrow</h3>
-                </div>
-                <div className="preview_blob_wrap is-21">
-                  <BlobBg />
-                  <div className="preview_blob_inner">
-                    <div className="preview_blob-02-header">
-                      <div className="preview_blob_text is-title">
-                        Very protein-rich 💪
-                      </div>
-                      <div className="preview_blob-02-icon">
-                        <ExpandIcon />
-                      </div>
-                    </div>
-                    <div className="preview_blob_text">
-                      This Salmon Poke Bowl is a powerhouse with{" "}
-                      <strong>over 34 g of protein</strong> to support muscle
-                      repair after your long run, but since you had it only 50
-                      minutes before bedtime, aim for lighter meals next time for
-                      smoother digestion and restful sleep.
-                    </div>
-                  </div>
-                </div>
-                <img src={A("68bc1a447e73b0da2a0329cc_preview-2-bg.avif")}
-                  alt=""
-                  className="preview_card-bg is-2"
-                />
-                <img src={A("68bc1a447e73b0da2a0329d8_preview-2-hand.avif")}
-                  alt=""
-                  className="preview_02-object"
-                  data-parallax="trigger"
-                  data-parallax-start="15"
-                  data-parallax-end="0"
-                />
-                <img src={A("68bc1a447e73b0da2a0329bf_preview-2-callouts.avif")}
-                  alt=""
-                  className="preview_02-object"
-                  data-parallax="trigger"
-                  data-parallax-start="15"
-                  data-parallax-end="0"
-                />
-                <img src={A("68c0b9da017bf48e8264a08f_1543a61efd8a0df2f643e0c78a2a382c_Intelligence.avif")}
-                  alt=""
-                  className="preview_02-mobile-bg"
-                />
+                {/* Overlays removed per user request */}
+                <picture>
+                  <source media="(max-width: 767px)" srcSet="/images/tuana_gida_websitesi_mobil.webp" />
+                  <img src="/images/tuana_gida_website.webp"
+                    alt="Tuana Gıda web sitesi"
+                    className="preview_card-bg"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
               </div>
 
-              {/* Card 3 — Resetting */}
+              {/* Card 3 — Design */}
               <div className="preview_card is-2">
-                <div className="preview_text-wrap">
-                  <h3 className="preview_card-title">Resetting</h3>
-                </div>
-                <img src={A("68bc1a447e73b0da2a0329e9_c7418a4efee799d8dab406d33c6aaa9d_preview-03-bg.avif")}
-                  alt=""
-                  className="preview_card-bg is-3"
-                  data-parallax="trigger"
-                  data-parallax-start="0"
-                  data-parallax-end="-10"
-                />
-                <div className="preview_03-list">
-                  <div className="preview_blob_wrap is-21">
-                    <div className="preview_blob_bg-wrap">
-                      <div className="preview_blob_bg-m1" />
-                      <div className="preview_blob_bg-reset-blue" />
-                      <div className="preview_blob_bg-m2" />
-                      <div className="preview_blob_bg-m3" />
-                    </div>
-                    <div className="preview_blob_inner">
-                      <div className="preview_blob-02-header">
-                        <div className="preview_blob_text is-title">
-                          Almost a full recharge ⚡️
-                        </div>
-                        <div className="preview_blob-02-icon">
-                          <ExpandIcon />
-                        </div>
-                      </div>
-                      <div className="preview_blob_text">
-                        You gave your body time to recharge, with{" "}
-                        <strong>strong REM</strong> and{" "}
-                        <strong>deep sleep</strong>. While your heart rate stayed
-                        a bit elevated, possibly due to your late meal, your
-                        overall sleep quality was still solid.
-                      </div>
-                    </div>
-                  </div>
-                  {[
-                    "How does this compare to last month?",
-                    "Any tips for falling asleep faster?",
-                    "What\u2019s my usual sleep baseline?",
-                  ].map((q, i) => (
-                    <div key={i} className="preview_blob_wrap is-32">
-                      <BlobBg />
-                      <div className="preview_blob_inner">
-                        <div className="preview_blob-02-header">
-                          <div className="preview_blob_text is-title">{q}</div>
-                          <div className="preview_blob-03-icon">
-                            <ArrowUpIcon />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
+                {/* Overlays removed per Proje Galerisi (Sürükle Bırak)user request */}
+                <picture>
+                  <source media="(max-width: 767px)" srcSet="/images/konfiat_web_sitesi_mobil.webp" />
+                  <img src="/images/konfiat_web_sitesi.webp"
+                    alt="Konfiat web sitesi"
+                    className="preview_card-bg"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
               </div>
 
-              {/* Card 4 — Finding Balance */}
+              {/* Card 4 — Growth */}
               <div className="preview_card is-2 is-last">
-                <div className="preview_text-wrap is-2">
-                  <h3 className="preview_card-title">Finding Balance</h3>
-                </div>
-                <div className="preview_blob_wrap is-21">
-                  <BlobBg />
-                  <div className="preview_blob_inner">
-                    <div className="preview_blob-02-header">
-                      <div className="preview_blob_text is-title">
-                        Late caffeine, lower recovery 📉
-                      </div>
-                      <div className="preview_blob-02-icon">
-                        <ExpandIcon />
-                      </div>
-                    </div>
-                    <div className="preview_blob_text">
-                      It seems like your HRV has been{" "}
-                      <strong>decreasing significantly for the last 7 days</strong>.
-                      Your sleep looks fine to me, but I&apos;ve noticed that you
-                      recently started caffeine late into the afternoon which could
-                      have impacted your sleep restfulness.
-                    </div>
-                  </div>
-                </div>
-                <img src={A("68bc1a447e73b0da2a032a07_prev-04-bg.avif")}
-                  alt=""
-                  className="preview_card-bg"
-                />
-                <img src={A("68bc1a447e73b0da2a0329f1_prev-04-illustration.svg")}
-                  alt=""
-                  className="preview_04-person"
-                />
-                <img src={A("68bc1a447e73b0da2a0329f9_prev-04-person.avif")}
-                  alt=""
-                  className="preview_04-person"
-                  data-parallax="trigger"
-                  data-parallax-start="15"
-                  data-parallax-end="0"
-                />
+                <picture>
+                  <source media="(max-width: 767px)" srcSet="/images/parlak_mobilya_web_sitesi_mobil.webp" />
+                  <img src="/images/parlak_mobilya_web_sitesi.webp"
+                    alt="Parlak Mobilya web sitesi"
+                    className="preview_card-bg"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+
               </div>
             </div>
           </div>

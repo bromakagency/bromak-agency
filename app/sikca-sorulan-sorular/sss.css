@@ -1,0 +1,432 @@
+/* ==========================================================================
+   SSS (FAQ) PAGE CSS
+   ========================================================================== */
+
+.sss-page {
+  background-color: #050505;
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* SSS HERO */
+.sss-hero {
+  padding: 160px 5% 100px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.sss-hero h1 {
+  font-family: var(--font-neue-leiden), Georgia, serif;
+  font-size: clamp(48px, 6vw, 80px);
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+
+.sss-hero p {
+  font-size: clamp(16px, 2vw, 20px);
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* SSS CONTENT AREA */
+.sss-content {
+  padding: 100px 5%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* CATEGORY FILTERS */
+.sss-categories {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+.sss-cat-btn {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.6);
+  padding: 12px 24px;
+  border-radius: 100px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sss-cat-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.sss-cat-btn.active {
+  background: #E30A17;
+  border-color: #E30A17;
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(227, 10, 23, 0.3);
+}
+
+/* ACCORDION LIST */
+.sss-accordion-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sss-accordion-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.sss-accordion-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.sss-accordion-item.open {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(227, 10, 23, 0.5);
+}
+
+.sss-accordion-header {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  color: #fff;
+  padding: 24px 32px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+}
+
+.sss-icon {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  flex-shrink: 0;
+  margin-left: 16px;
+}
+
+.sss-icon::before,
+.sss-icon::after {
+  content: '';
+  position: absolute;
+  background: #E30A17;
+  transition: transform 0.3s ease;
+}
+
+/* Vertical line of the plus */
+.sss-icon::before {
+  top: 4px;
+  bottom: 4px;
+  left: 11px;
+  width: 2px;
+}
+
+/* Horizontal line of the plus */
+.sss-icon::after {
+  left: 4px;
+  right: 4px;
+  top: 11px;
+  height: 2px;
+}
+
+.sss-accordion-item.open .sss-icon::before {
+  transform: rotate(90deg);
+  opacity: 0;
+}
+
+.sss-accordion-item.open .sss-icon::after {
+  transform: rotate(180deg);
+}
+
+.sss-accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+  padding: 0 32px;
+}
+
+.sss-accordion-item.open .sss-accordion-body {
+  max-height: 500px;
+  opacity: 1;
+  padding: 0 32px 32px;
+}
+
+.sss-accordion-body p {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  font-size: 16px;
+  margin: 0;
+}
+
+/* CTA PREMIUM BLOCK */
+.sss-cta-premium {
+  margin-top: 100px;
+  position: relative;
+  padding: 80px 40px;
+  background: #0a0a0a;
+  border-radius: 32px;
+  text-align: center;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.sss-cta-bg-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(227, 10, 23, 0.15) 0%, transparent 60%);
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.sss-cta-content {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.sss-cta-content h3 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-family: var(--font-neue-leiden), serif;
+}
+
+.sss-cta-content p {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 40px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.sss-cta-magic-btn {
+  background: #fff;
+  color: #000;
+  border: none;
+  padding: 18px 48px;
+  border-radius: 100px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+}
+
+.sss-cta-magic-btn:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(255, 255, 255, 0.2);
+}
+
+/* MODAL STYLES */
+.sss-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.sss-modal-content {
+  background: #111;
+  border: 1px solid rgba(227, 10, 23, 0.25);
+  border-radius: 24px;
+  width: 100%;
+  max-width: 500px;
+  padding: 40px;
+  position: relative;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), inset 0 0 40px rgba(227, 10, 23, 0.02);
+  animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.sss-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 24px;
+  cursor: pointer;
+  transition: color 0.3s;
+  z-index: 10;
+  padding: 8px;
+}
+
+.sss-modal-close:hover {
+  color: #fff;
+}
+
+.sss-modal-header {
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 32px;
+  padding: 0 16px;
+}
+
+.sss-modal-header h2 {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.sss-modal-header p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.sss-modal-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.sss-modal-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.modal-group-title {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.modal-btn-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sss-modal-action-btn {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 16px 20px;
+  border-radius: 16px;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.sss-modal-action-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateX(4px);
+}
+
+.sss-modal-action-btn.wa:hover {
+  background: rgba(37, 211, 102, 0.1);
+  border-color: rgba(37, 211, 102, 0.3);
+  color: #25D366;
+}
+
+.sss-modal-action-btn.map:hover {
+  background: rgba(227, 10, 23, 0.1);
+  border-color: rgba(227, 10, 23, 0.3);
+}
+
+.sss-modal-action-btn.mail:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.action-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+}
+
+.action-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.action-text strong {
+  font-size: 16px;
+  margin-bottom: 2px;
+}
+
+.action-text span {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 768px) {
+  .sss-hero {
+    padding: 120px 5% 60px;
+  }
+  .sss-content {
+    padding: 60px 5%;
+  }
+  .sss-categories {
+    gap: 12px;
+    margin-bottom: 40px;
+  }
+  .sss-cat-btn {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+  .sss-accordion-header {
+    padding: 20px;
+    font-size: 16px;
+  }
+  .sss-accordion-item.open .sss-accordion-body {
+    padding: 0 20px 20px;
+  }
+  .sss-cta-premium {
+    padding: 60px 20px;
+    margin-top: 60px;
+  }
+  .sss-cta-content h3 {
+    font-size: 28px;
+  }
+  .sss-modal-content {
+    padding: 32px 20px 24px;
+  }
+  .sss-modal-header h2 {
+    font-size: 22px;
+    padding: 0 12px;
+  }
+}

@@ -1,0 +1,78 @@
+.seo-text-section {
+  padding: 60px 20px;
+  background-color: #ffffff;
+  color: #333333;
+  border-top: 1px solid #eaeaea;
+}
+
+.seo-text-container {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.seo-text-container h2 {
+  font-family: var(--font-tt-firs-neue), sans-serif;
+  font-size: clamp(24px, 3vw, 32px);
+  margin-bottom: 30px;
+  text-align: center;
+  color: #1a1a1a;
+  letter-spacing: -0.02em;
+}
+
+.seo-text-scroll-area {
+  max-height: 250px;
+  overflow-y: auto;
+  padding-right: 15px;
+}
+
+/* Custom Scrollbar */
+.seo-text-scroll-area::-webkit-scrollbar {
+  width: 6px;
+}
+
+.seo-text-scroll-area::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.seo-text-scroll-area::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+.seo-text-scroll-area::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+
+.seo-text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.seo-text-content p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #555555;
+  text-align: justify;
+}
+
+.seo-text-content strong {
+  color: #e30613; /* Bromak red */
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .seo-text-section {
+    padding: 50px 20px;
+  }
+  
+  .seo-text-container h2 {
+    margin-bottom: 25px;
+  }
+  
+  .seo-text-content p {
+    font-size: 14px;
+    text-align: left;
+  }
+}

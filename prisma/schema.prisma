@@ -1,0 +1,120 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+}
+
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  password  String
+  name      String?
+  role      String   @default("ADMIN")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Post {
+  id          String   @id @default(uuid())
+  slug        String   @unique
+  title       String
+  summary     String
+  content     String   // Tiptap HTML content
+  category    String
+  image       String   // Cloudflare R2 URL
+  readTime    String
+  author      String
+  authorRole  String
+  quote       String?
+  faqJson     String?  // JSON string for FAQs [{question: "", answer: ""}]
+  published   Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Work {
+  id          String   @id @default(uuid())
+  slug        String   @unique
+  title       String
+  client      String
+  service     String
+  duration    String
+  website     String?
+  summary     String
+  coverImage  String   // Cloudflare R2 URL
+  heroImage   String   // Cloudflare R2 URL
+  challenge   String
+  solution    String
+  result      String
+  gallery     String[] // Array of R2 URLs
+  published   Boolean  @default(false)
+  order       Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model SeoSettings {
+  id          String   @id @default(uuid())
+  page        String   @unique // e.g., "home", "about", "services"
+  title       String
+  description String
+  ogImage     String?
+  keywords    String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Story {
+  id          String   @id @default(uuid())
+  slug        String   @unique
+  title       String
+  summary     String?
+  content     String   // Tiptap HTML content
+  logo        String?  // Cloudflare R2 URL for logo
+  coverImage  String?  // Cloudflare R2 URL for background
+  color1      String?  // Blob 1 color (e.g. #e30613)
+  color2      String?  // Blob 2 color (e.g. #800000)
+  metricsJson String?  // JSON array of metrics [{value: "70%", label: "Trafik"}]
+  published   Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model ContactMessage {
+  id        String   @id @default(uuid())
+  name      String
+  email     String
+  phone     String?
+  service   String?
+  message   String
+  isRead    Boolean  @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model NewsletterSubscriber {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  status    String   @default("SUBSCRIBED")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model CareerApplication {
+  id           String   @id @default(uuid())
+  name         String
+  email        String
+  phone        String
+  type         String   // "job" or "internship"
+  portfolioUrl String?
+  cvUrl        String   // Link to PDF on R2
+  message      String?
+  status       String   @default("UNREAD") // "UNREAD", "READ", "CONTACTED", "REJECTED"
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}

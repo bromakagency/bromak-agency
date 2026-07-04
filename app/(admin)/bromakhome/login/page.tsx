@@ -3,6 +3,7 @@ import "./login.css"
 
 export const metadata = {
   title: "Admin Girişi | Bromak",
+  robots: { index: false, follow: false },
 }
 
 export default function LoginPage() {

@@ -5,6 +5,7 @@ import AdminLayoutClient from "./AdminLayoutClient"
 
 export const metadata = {
   title: "Admin Panel | Bromak",
+  robots: { index: false, follow: false },
 }
 
 export default async function AdminLayout({ children }: { children: React.ReactNode }) {

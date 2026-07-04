@@ -77,10 +77,17 @@ export default function WorkForm({ work }: { work?: any }) {
 
     try {
       const uploadPromises = Array.from(files).map(async (file) => {
+        if (file.size > 4.5 * 1024 * 1024) {
+          throw new Error(`'${file.name}' dosyası çok büyük (Max 4.5MB). Lütfen daha küçük bir görsel yükleyin.`);
+        }
         const formData = new FormData()
         formData.append("file", file)
         formData.append("folder", "works")
         const res = await fetch("/api/upload", { method: "POST", body: formData })
+        if (!res.ok) {
+          if (res.status === 413) throw new Error("Görsel çok büyük (Sunucu sınırı 4.5MB). Lütfen görseli küçültüp tekrar deneyin.");
+          throw new Error(`Yükleme başarısız oldu (Hata Kodu: ${res.status}).`);
+        }
         const data = await res.json()
         if (data.error) throw new Error(data.error)
         return data.url

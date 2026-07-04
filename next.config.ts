@@ -4,6 +4,11 @@ const nextConfig: NextConfig = {
   // Geliştirme ortamında (npm run dev) yerel ağdan girilebilmesi için güvenlik izni
   allowedDevOrigins: ["192.168.1.218"],
   compress: true, // Sıkıştırma (hosting Vercel/Cloudflare değilse de çalışması için)
+  experimental: {
+    serverActions: {
+      bodySizeLimit: "10mb",
+    },
+  },
   images: {
     formats: ["image/avif", "image/webp"],
     minimumCacheTTL: 60 * 60 * 24 * 30, // 30 days

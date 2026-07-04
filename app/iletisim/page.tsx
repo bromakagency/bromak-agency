@@ -72,7 +72,7 @@ export default function ContactPage() {
           <div className="hero-visual">
             <div className="hero-m-wrap">
               <img
-                src="/assets/m.svg"
+                src="/assets/logos/bromak_app_icon.png"
                 alt="Bromak"
                 className="hero-m-svg"
               />

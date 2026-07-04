@@ -48,7 +48,13 @@ export default function AwardsShowcase() {
               className="awards-wheel-item"
               style={{ '--rotate-deg': `${i * 15}deg` } as React.CSSProperties}
             >
-              <img src={img.src} alt={img.alt} loading="lazy" decoding="async" />
+              <img 
+                src={img.src} 
+                alt={img.alt} 
+                loading={i < 8 ? undefined : "lazy"}
+                fetchPriority={i < 8 ? "high" : "auto"}
+                decoding="async" 
+              />
             </div>
           ))}
         </div>

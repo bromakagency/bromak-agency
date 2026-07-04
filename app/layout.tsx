@@ -82,6 +82,11 @@ export const metadata: Metadata = {
   icons: {
     icon: "/assets/logos/bromak-favicon.svg",
   },
+  verification: {
+    other: {
+      "facebook-domain-verification": ["lkkm69em7i1c8l5vjge2j15a0prkin"],
+    },
+  },
 };
 
 export default function RootLayout({

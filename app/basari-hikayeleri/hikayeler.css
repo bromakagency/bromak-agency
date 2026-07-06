@@ -1,0 +1,197 @@
+.stories-hero {
+  padding: 120px 5vw 60px;
+  background-color: #fafafa;
+  text-align: center;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.stories-hero .hero-title {
+  font-size: 48px;
+  font-weight: 800;
+  color: #111;
+  letter-spacing: -0.03em;
+  margin-bottom: 16px;
+}
+
+.stories-hero .hero-title span {
+  color: #e2130a;
+}
+
+.stories-hero .hero-subtitle {
+  font-size: 18px;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.stories-grid-section {
+  padding: 80px 5vw;
+  background-color: #fff;
+}
+
+.no-stories {
+  text-align: center;
+  font-size: 18px;
+  color: #777;
+  padding: 60px 0;
+}
+
+.stories-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.story-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  text-decoration: none;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #f0f0f0;
+}
+
+.story-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+}
+
+.story-card-image {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+}
+
+.story-card-image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.story-card:hover .story-card-image > img {
+  transform: scale(1.05);
+}
+
+.story-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+}
+
+.story-card-logo {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: 48px;
+  height: 48px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.story-card-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.story-card-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.story-card-content h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.story-card-content p {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+.story-card-metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding-top: 20px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.story-metric strong {
+  display: block;
+  font-size: 24px;
+  font-weight: 800;
+  color: #e2130a;
+  letter-spacing: -0.02em;
+  margin-bottom: 4px;
+}
+
+.story-metric span {
+  display: block;
+  font-size: 13px;
+  color: #777;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.story-card-link {
+  font-size: 14px;
+  font-weight: 700;
+  color: #111;
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+  transition: color 0.2s ease;
+}
+
+.story-card:hover .story-card-link {
+  color: #e2130a;
+}
+
+@media (max-width: 1024px) {
+  .stories-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .stories-hero {
+    padding: 100px 5vw 40px;
+  }
+  .stories-hero .hero-title {
+    font-size: 36px;
+  }
+  .stories-grid {
+    grid-template-columns: 1fr;
+  }
+  .story-card-image {
+    height: 200px;
+  }
+}

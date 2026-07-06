@@ -12,7 +12,7 @@ import { getSeoMetadata } from "@/app/lib/seo";
 
 export async function generateMetadata() {
   return getSeoMetadata("hizmetler-seo", {
-    title: "Konya SEO Ajansı | Arama Motoru Optimizasyonu | Bromak",
+    title: "Konya SEO Ajansı | Arama Motoru Optimizasyonu",
     description: "Google'da üst sıralarda yer alarak organik trafiğinizi artırın. Güvenilir Konya SEO ve dijital pazarlama ajansı ile çalışın.",
     keywords: "seo, konya seo, konya seo ajansı, arama motoru optimizasyonu, google sıralama"
   });
@@ -57,7 +57,7 @@ export default async function SeoDetay() {
                 <strong>Zirveye Yerleşin.</strong>
               </h1>
               <p>
-                Konya SEO ajansı olarak, sürdürülebilir SEO stratejileriyle arama motorlarında bulunabilirliğinizi 
+                Konya SEO ajansı olarak, sürdürülebilir SEO stratejileriyle arama motorlarında bulunabilirliğinizi
                 artırıyor, rakiplerinizi geride bırakmanızı sağlıyoruz.
               </p>
             </div>
@@ -153,8 +153,8 @@ export default async function SeoDetay() {
                 Organik trafiğinizi tesadüfe bırakmıyoruz<span>.</span>
               </h2>
               <p>
-                Detaylı site analizi, anahtar kelime stratejisi ve teknik geliştirmelerle 
-                sitenizin otoritesini artırıyor, hedef kitleniz arama yaptığında ilk sırada 
+                Detaylı site analizi, anahtar kelime stratejisi ve teknik geliştirmelerle
+                sitenizin otoritesini artırıyor, hedef kitleniz arama yaptığında ilk sırada
                 çıkmanızı sağlıyoruz.
               </p>
             </div>
@@ -164,7 +164,7 @@ export default async function SeoDetay() {
                 <span>01 / Teknik Analiz</span>
                 <h3>Site hızı ve kod optimizasyonu</h3>
                 <p>
-                  Arama motoru botlarının sitenizi kolayca taraması ve anlaması için 
+                  Arama motoru botlarının sitenizi kolayca taraması ve anlaması için
                   teknik tüm hataları gideriyor, sayfa yüklenme hızını maksimuma çıkarıyoruz.
                 </p>
               </article>
@@ -192,7 +192,7 @@ export default async function SeoDetay() {
                   <span>04 / Raporlama</span>
                   <h3>Şeffaf SEO İlerleme Raporu</h3>
                   <p>
-                    Hangi kelimede kaçıncı sıraya yükseldik, organik trafiğimiz yüzde kaç arttı? 
+                    Hangi kelimede kaçıncı sıraya yükseldik, organik trafiğimiz yüzde kaç arttı?
                     Tüm verileri karmaşadan uzak, okunabilir bir raporda her ay size sunuyoruz.
                   </p>
                 </div>
@@ -233,8 +233,8 @@ export default async function SeoDetay() {
                 <details className="social-faq-item" open>
                   <summary>SEO ne kadar sürede etki gösterir?</summary>
                   <p>
-                    SEO uzun vadeli bir yatırımdır. Sektördeki rekabet durumuna ve web sitenizin 
-                    mevcut otoritesine bağlı olarak, belirgin sonuçlar görmeye genellikle 3 ila 6 ay 
+                    SEO uzun vadeli bir yatırımdır. Sektördeki rekabet durumuna ve web sitenizin
+                    mevcut otoritesine bağlı olarak, belirgin sonuçlar görmeye genellikle 3 ila 6 ay
                     içerisinde başlarız.
                   </p>
                 </details>
@@ -242,8 +242,8 @@ export default async function SeoDetay() {
                 <details className="social-faq-item">
                   <summary>Garanti 1. sıra sözü veriyor musunuz?</summary>
                   <p>
-                    Hiçbir profesyonel SEO ajansı veya uzmanı Google'da garanti 1. sıra sözü veremez. 
-                    Çünkü Google'ın algoritması bağımsızdır. Bizim garantimiz, teknik olarak kusursuz, 
+                    Hiçbir profesyonel SEO ajansı veya uzmanı Google'da garanti 1. sıra sözü veremez.
+                    Çünkü Google'ın algoritması bağımsızdır. Bizim garantimiz, teknik olarak kusursuz,
                     Google yönergelerine %100 uyumlu, güvenilir ve sürdürülebilir yükseliş sağlayan bir çalışmadır.
                   </p>
                 </details>
@@ -251,8 +251,8 @@ export default async function SeoDetay() {
                 <details className="social-faq-item">
                   <summary>Lokal (Yerel) SEO nedir?</summary>
                   <p>
-                    Eğer fiziksel bir mağazanız veya bölgesel hizmet veren bir işletmeniz varsa, 
-                    "Kadıköy kuaför" veya "Ankara nakliyat" gibi bölgesel aramalarda sizi 
+                    Eğer fiziksel bir mağazanız veya bölgesel hizmet veren bir işletmeniz varsa,
+                    "Kadıköy kuaför" veya "Ankara nakliyat" gibi bölgesel aramalarda sizi
                     Haritalar'da ve arama sonuçlarında üst sıralara çıkaran özel optimizasyondur.
                   </p>
                 </details>
@@ -260,8 +260,8 @@ export default async function SeoDetay() {
                 <details className="social-faq-item">
                   <summary>Çalışmalar bitince sıram düşer mi?</summary>
                   <p>
-                    SEO bir kerede yapılıp biten bir işlem değil, sürekli bir yarıştır. Rakipleriniz 
-                    de çalışmaya devam edeceği için, SEO faaliyetleri durduğunda zamanla sıralamalarda 
+                    SEO bir kerede yapılıp biten bir işlem değil, sürekli bir yarıştır. Rakipleriniz
+                    de çalışmaya devam edeceği için, SEO faaliyetleri durduğunda zamanla sıralamalarda
                     gerileme yaşanması doğaldır. Sürdürülebilirlik esastır.
                   </p>
                 </details>

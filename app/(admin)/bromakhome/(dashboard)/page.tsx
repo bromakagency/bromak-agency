@@ -50,6 +50,16 @@ export default async function AdminDashboard() {
         </div>
       </div>
 
+      <div style={{ background: "#fffbeb", borderLeft: "4px solid #f59e0b", padding: "16px", borderRadius: "8px", color: "#b45309", fontSize: "14px", display: "flex", flexDirection: "column", gap: "8px" }}>
+        <strong style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+          <span>⚠️</span> SEO ve Site Mimarisi Notu
+        </strong>
+        <p style={{ margin: 0 }}>
+          Footer menüsünden SEO açısından içi boş ve ölü olan linkler geçici olarak kaldırılmıştır: <strong>Ekibimiz, Yaklaşımımız, Rehberler</strong>. 
+          Bu sayfaların içerikleri hazırlandığında mutlaka yeniden linklenmesi gerekmektedir.
+        </p>
+      </div>
+
       <div className="stats-grid">
         <Link href="/bromakhome/messages" className="stat-card" style={{ textDecoration: "none" }}>
           <div className="stat-icon" style={{ background: unreadMessages > 0 ? "#fee2e2" : "#f1f5f9", color: unreadMessages > 0 ? "#ef4444" : "#64748b" }}>

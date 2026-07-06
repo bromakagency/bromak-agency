@@ -58,17 +58,15 @@ const serviceLinks = (
 const agencyLinks = (
   <>
     <Link href="/hakkimizda">Hakkımızda</Link>
-    <Link href="#">Ekibimiz</Link>
-    <Link href="#">Yaklaşımımız</Link>
     <Link href="/kariyer">Kariyer</Link>
     <Link href="/isler">Referanslar</Link>
+    <Link href="/basari-hikayeleri">Başarı Hikayeleri</Link>
   </>
 );
 
 const resourceLinks = (
   <>
     <Link href="/blog">Blog</Link>
-    <Link href="#">Rehberler</Link>
     <Link href="/sikca-sorulan-sorular">Sıkça Sorulan Sorular</Link>
   </>
 );

@@ -7,6 +7,10 @@ import Link from "@tiptap/extension-link"
 import Placeholder from "@tiptap/extension-placeholder"
 import { Color } from "@tiptap/extension-color"
 import { TextStyle } from "@tiptap/extension-text-style"
+import { Table } from '@tiptap/extension-table'
+import { TableRow } from '@tiptap/extension-table-row'
+import { TableCell } from '@tiptap/extension-table-cell'
+import { TableHeader } from '@tiptap/extension-table-header'
 import { useState, useCallback, useTransition, useRef } from "react"
 import { useRouter } from "next/navigation"
 import { createPost, updatePost } from "@/app/actions/blog"
@@ -95,6 +99,10 @@ export default function BlogForm({ post }: { post?: PostData }) {
       Placeholder.configure({ placeholder: "Blog içeriğini buraya yazın..." }),
       TextStyle,
       Color,
+      Table.configure({ resizable: true }),
+      TableRow,
+      TableHeader,
+      TableCell,
     ],
     content: post?.content || "",
     onUpdate: ({ editor }) => {
@@ -353,6 +361,18 @@ export default function BlogForm({ post }: { post?: PostData }) {
                 onChange={handleEditorImageUpload} 
                 style={{ display: "none" }} 
               />
+              
+              <div className="toolbar-divider" />
+              <button type="button" onClick={() => editor?.chain().focus().insertTable({ rows: 3, cols: 3, withHeaderRow: true }).run()} className="toolbar-btn" style={{fontSize:'12px', width:'auto', padding:'0 8px'}} title="Tablo Ekle">Tablo</button>
+              {editor?.isActive('table') && (
+                <>
+                  <button type="button" onClick={() => editor?.chain().focus().addColumnAfter().run()} disabled={!editor?.can().addColumnAfter()} className="toolbar-btn" style={{fontSize:'12px', width:'auto', padding:'0 8px'}} title="Sütun Ekle">Sütun +</button>
+                  <button type="button" onClick={() => editor?.chain().focus().deleteColumn().run()} disabled={!editor?.can().deleteColumn()} className="toolbar-btn" style={{fontSize:'12px', width:'auto', padding:'0 8px'}} title="Sütun Sil">Sütun -</button>
+                  <button type="button" onClick={() => editor?.chain().focus().addRowAfter().run()} disabled={!editor?.can().addRowAfter()} className="toolbar-btn" style={{fontSize:'12px', width:'auto', padding:'0 8px'}} title="Satır Ekle">Satır +</button>
+                  <button type="button" onClick={() => editor?.chain().focus().deleteRow().run()} disabled={!editor?.can().deleteRow()} className="toolbar-btn" style={{fontSize:'12px', width:'auto', padding:'0 8px'}} title="Satır Sil">Satır -</button>
+                  <button type="button" onClick={() => editor?.chain().focus().deleteTable().run()} disabled={!editor?.can().deleteTable()} className="toolbar-btn" style={{fontSize:'12px', width:'auto', padding:'0 8px'}} title="Tablo Sil">Tabloyu Sil</button>
+                </>
+              )}
               
               <div className="toolbar-divider" />
               <button type="button" onClick={() => editor?.chain().focus().undo().run()} disabled={!editor?.can().undo()} className="toolbar-btn" title="Geri Al"><LuUndo2 /></button>

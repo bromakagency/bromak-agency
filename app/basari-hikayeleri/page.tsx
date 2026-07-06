@@ -4,6 +4,7 @@ import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 import Animations from "@/app/components/Animations";
 import Link from "next/link";
+import Image from "next/image";
 import "./hikayeler.css";
 
 export const metadata: Metadata = {
@@ -50,11 +51,21 @@ export default async function BasariHikayeleriPage() {
                   return (
                     <Link href={`/basari-hikayeleri/${story.slug}`} key={story.id} className="story-card animate-fade-up" style={{ animationDelay: `${i * 0.1}s` }}>
                       <div className="story-card-image">
-                        <img loading="lazy" decoding="async" src={story.coverImage || "/assets/images/placeholder.jpg"} alt={story.title} />
+                        <Image 
+                          src={story.coverImage || "/assets/images/placeholder.jpg"} 
+                          alt={story.title}
+                          fill
+                          style={{ objectFit: 'cover' }}
+                        />
                         <div className="story-card-overlay" style={{ background: `linear-gradient(to top, ${story.color2 || '#000'} 0%, transparent 100%)` }}></div>
                         {story.logo && (
                           <div className="story-card-logo">
-                            <img loading="lazy" decoding="async" src={story.logo} alt="Logo" />
+                            <Image 
+                              src={story.logo} 
+                              alt="Logo"
+                              fill
+                              style={{ objectFit: 'contain' }}
+                            />
                           </div>
                         )}
                       </div>

@@ -56,6 +56,7 @@
   height: 420px;
   border-radius: 16px;
   overflow: hidden;
+  position: relative;
 }
 
 .blog-slide-image-col img {
@@ -317,6 +318,7 @@
   height: 240px;
   border-radius: 12px;
   overflow: hidden;
+  position: relative;
   margin-bottom: 16px;
 }
 

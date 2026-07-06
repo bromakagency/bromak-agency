@@ -84,14 +84,15 @@ function BlogSlider({ posts }: { posts: Post[] }) {
           {featuredPosts.map((post, index) => (
             <Link href={`/blog/${post.slug}`} key={post.slug} className="blog-slide">
               <div className="blog-slide-image-col">
-                <img
+                <Image
                   src={post.image || "/assets/logos/bromak_kirmizi_logo.svg"}
                   alt={post.title}
                   draggable={false}
                   loading={index === 0 ? "eager" : "lazy"}
                   decoding="async"
                   fetchPriority={index === 0 ? "high" : "auto"}
-                  style={{ pointerEvents: "none" }}
+                  fill
+                  style={{ pointerEvents: "none", objectFit: "cover" }}
                   onError={(e) => { (e.target as HTMLImageElement).src = '/assets/logos/bromak_kirmizi_logo.svg' }}
                 />
               </div>
@@ -242,11 +243,13 @@ export default function BlogPageClient({ posts }: { posts: Post[] }) {
               {displayedPosts.map((post) => (
                 <Link href={`/blog/${post.slug}`} className="blog-card" key={post.slug}>
                   <div className="blog-card-img-wrap">
-                    <img
+                    <Image
                       src={post.image || "/assets/logos/bromak_kirmizi_logo.svg"}
                       alt={post.title}
                       loading="lazy"
                       decoding="async"
+                      fill
+                      style={{ objectFit: "cover" }}
                       onError={(e) => { (e.target as HTMLImageElement).src = '/assets/logos/bromak_kirmizi_logo.svg' }}
                     />
                   </div>
@@ -285,12 +288,13 @@ export default function BlogPageClient({ posts }: { posts: Post[] }) {
           <div className="bn-card">
             <div className="bn-content">
               <div className="bn-eyebrow">
-                <img
+                <Image
                   src="/assets/m.svg"
                   alt="Bromak"
                   className="bn-logo"
-                  loading="lazy"
-                  decoding="async"
+                  width={30}
+                  height={30}
+                  style={{ width: "auto", height: "auto" }}
                 />
                 <div className="bn-divider" />
                 <span>Bromak Agency&apos;den içerik dozunuzu alın.</span>
@@ -332,12 +336,13 @@ export default function BlogPageClient({ posts }: { posts: Post[] }) {
               </div>
 
               <div className="bn-plane">
-                <img
+                <Image
                   src="/assets/paper-planed.svg"
                   alt=""
                   aria-hidden="true"
-                  loading="lazy"
-                  decoding="async"
+                  width={150}
+                  height={150}
+                  style={{ width: "auto", height: "auto" }}
                 />
               </div>
             </div>

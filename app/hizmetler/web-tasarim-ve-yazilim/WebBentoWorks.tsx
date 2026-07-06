@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import "./web-bento-works.css";
 
 export default function WebBentoWorks({ works = [] }: { works?: any[] }) {
@@ -16,12 +17,14 @@ export default function WebBentoWorks({ works = [] }: { works?: any[] }) {
       <div className="bento-works-grid">
         {works.map((item, index) => (
           <Link href={`/isler/${item.slug}`} className={`bento-work-card work-${index + 1}`} key={index}>
-            <img
+            <Image
               src={item.coverImage?.startsWith('http') || item.coverImage?.startsWith('/') ? item.coverImage : `/images/${item.coverImage}`}
               alt={item.title}
               className="work-bg"
               loading="lazy"
               decoding="async"
+              fill
+              style={{ objectFit: 'cover' }}
             />
             <div className="work-overlay">
               <h3 className="work-brand">{item.title}</h3>

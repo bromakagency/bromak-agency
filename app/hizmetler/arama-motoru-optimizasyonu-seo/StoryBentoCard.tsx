@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 const STORY_DURATION = 4000;
 
@@ -46,11 +47,15 @@ export default function StoryBentoCard() {
 
       <div className="story-image-stack" aria-hidden="true">
         {storyImages.map((src, index) => (
-          <img loading="lazy" decoding="async"
+          <Image
             key={src}
             src={src}
             alt=""
             className={index === activeIndex ? "is-active" : ""}
+            loading="lazy"
+            decoding="async"
+            fill
+            style={{ objectFit: 'cover' }}
           />
         ))}
       </div>

@@ -23,10 +23,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = await prisma.post.findUnique({ where: { slug } });
 
-  if (!post) return { title: "Blog yazısı bulunamadı | Bromak Agency" };
+  if (!post) return { title: "Blog yazısı bulunamadı" };
 
   return {
-    title: `${post.title} | Bromak Agency`,
+    title: post.title,
     description: post.summary,
     alternates: { canonical: `/blog/${post.slug}` },
     openGraph: {

@@ -9,24 +9,20 @@ export default function ReviewsSection() {
           <div className="reviews_layout">
             {/* Desktop image */}
             <div className="reviews_img-wrap">
-              <Image src={A("68bc1a447e73b0da2a03295c_reviews-img.avif")}
+              <img src={A("68bc1a447e73b0da2a03295c_reviews-img.avif")}
                 alt=""
                 className="reviews_img"
                 loading="lazy"
                 decoding="async"
-                fill
-                style={{ objectFit: 'cover' }}
               />
             </div>
             {/* Mobile top image */}
             <div className="reviews_m-img-wrap">
-              <Image src={A("68bc1a447e73b0da2a03296b_Reviews-M-Top.avif")}
+              <img src={A("68bc1a447e73b0da2a03296b_Reviews-M-Top.avif")}
                 alt=""
                 className="reviews_m-img"
                 loading="lazy"
                 decoding="async"
-                fill
-                style={{ objectFit: 'cover' }}
               />
             </div>
             {/* Head */}
@@ -44,13 +40,11 @@ export default function ReviewsSection() {
             </div>
             {/* Mobile bottom image */}
             <div className="reviews_m-img-wrap is-bottom">
-              <Image src={A("68bc1a447e73b0da2a032965_Reviews-M-Bottom.avif")}
+              <img src={A("68bc1a447e73b0da2a032965_Reviews-M-Bottom.avif")}
                 alt=""
                 className="reviews_m-img"
                 loading="lazy"
                 decoding="async"
-                fill
-                style={{ objectFit: 'cover' }}
               />
               <div className="reviews_m-img-overlay" />
             </div>

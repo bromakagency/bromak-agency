@@ -206,6 +206,15 @@
   margin-bottom: 24px;
 }
 
+.story-rich-content ul, .story-rich-content ol {
+  padding-left: 24px;
+  margin-bottom: 24px;
+}
+
+.story-rich-content li {
+  margin-bottom: 8px;
+}
+
 .story-rich-content blockquote {
   font-size: 1.5rem;
   line-height: 1.4;
@@ -220,6 +229,29 @@
   width: 100%;
   border-radius: 12px;
   margin: 40px 0;
+}
+
+/* Tables */
+.story-rich-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2em 0;
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.story-rich-content table th,
+.story-rich-content table td {
+  border: 1px solid #e5e7eb;
+  padding: 12px 16px;
+  text-align: left;
+}
+
+.story-rich-content table th {
+  background: #f9fafb;
+  font-weight: 600;
 }
 
 /* More Stories */

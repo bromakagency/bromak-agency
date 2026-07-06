@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import "./not-found.css";
@@ -17,7 +18,7 @@ export default function NotFound() {
         
         <div className="not-found-content">
           <div className="logo-container">
-            <img src="/assets/logos/bromak_app_icon.png" alt="Bromak Icon" className="floating-logo" />
+            <Image src="/assets/logos/bromak_app_icon.png" alt="Bromak Icon" className="floating-logo" width={100} height={100} />
           </div>
           
           <h1 className="elegant-title">404</h1>

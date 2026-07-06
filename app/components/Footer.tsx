@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 import "./footer.css";
 
 import { FiInstagram, FiLinkedin, FiArrowRight } from "react-icons/fi";
@@ -113,14 +114,14 @@ export default function Footer() {
               <div className="footer-image-track-top">
                 <div className="footer-track-inner">
                   {[...sliderImages, ...sliderImages].map((src, index) => (
-                    <img key={`top-${index}`} src={src} alt="Marka çalışması" loading="lazy" decoding="async" />
+                    <Image key={`top-${index}`} src={src} alt="Marka çalışması" width={150} height={150} />
                   ))}
                 </div>
               </div>
               <div className="footer-image-track-bottom">
                 <div className="footer-track-inner">
                   {[...reversedSliderImages, ...reversedSliderImages].map((src, index) => (
-                    <img key={`bottom-${index}`} src={src} alt="Marka çalışması" loading="lazy" decoding="async" />
+                    <Image key={`bottom-${index}`} src={src} alt="Marka çalışması" width={150} height={150} />
                   ))}
                 </div>
               </div>
@@ -131,12 +132,13 @@ export default function Footer() {
 
       <section className="footer-main">
         <div className="footer-brand">
-          <img
+          <Image
             src="/assets/logos/bromak_kirmizi-logo.gif"
             alt="Bromak Agency"
             className="footer-brand-logo"
-            loading="lazy"
-            decoding="async"
+            width={160}
+            height={50}
+            unoptimized={true} // Unoptimized for GIFs to preserve animation
           />
           <p className="footer-brand-desc">Strateji, tasarım ve teknolojiyi bir araya getirerek markaların büyümesine katkı sağlıyoruz.</p>
           <div className="footer-social">

@@ -3,6 +3,7 @@ import { FiMapPin, FiPhoneCall, FiMail, FiClock, FiZap, FiArrowRight } from "rea
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 import ContactForm from "@/app/components/ContactForm";
+import Image from "next/image";
 import "./iletisim.css";
 
 import { getSeoMetadata } from "@/app/lib/seo";
@@ -71,10 +72,12 @@ export default function ContactPage() {
 
           <div className="hero-visual">
             <div className="hero-m-wrap">
-              <img
+              <Image
                 src="/assets/logos/bromak_app_icon.png"
                 alt="Bromak"
                 className="hero-m-svg"
+                width={280}
+                height={280}
               />
             </div>
           </div>
@@ -118,7 +121,7 @@ export default function ContactPage() {
 
             <div className="quick-box">
               <div className="quick-box-icon">
-                <img src="/assets/logos/bromak_app_icon.png" alt="Bromak" style={{ width: "100%", height: "100%", objectFit: "contain" }} />
+                <Image src="/assets/logos/bromak_app_icon.png" alt="Bromak" width={54} height={54} style={{ objectFit: "contain" }} />
               </div>
               <div>
                 <strong>Hızlı dönüş alın!</strong>
@@ -147,10 +150,12 @@ export default function ContactPage() {
           <div className="map-pin-wrapper">
             <div className="pulse-ring"></div>
             <div className="pulse-ring delay"></div>
-            <img
+            <Image
               src="/assets/logos/bromak-favicon.svg"
               alt="Bromak"
               className="map-pin-img"
+              width={44}
+              height={44}
             />
           </div>
         </div>

@@ -83,7 +83,7 @@ export default function AwardsShowcase() {
               className="award-logo-img"
               width={120}
               height={40}
-              style={{ width: 'auto', height: 'auto' }}
+              style={{ width: 'auto' }}
             />
           ))}
         </div>

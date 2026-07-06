@@ -15,7 +15,7 @@ export default function SliderSection() {
                 {sliderData.map((s, i) => (
                   <div key={i} className="slider_slide swiper-slide">
                     <div className="slider_img-wrap">
-                      <Image src={A(s.img)} alt="" className="slider_img" fill style={{ objectFit: 'cover' }} />
+                      <Image src={A(s.img)} alt="" className="slider_img" fill sizes="(max-width: 768px) 100vw, 50vw" style={{ objectFit: 'cover' }} />
                     </div>
                     <div className="slider_slide-content">
                       <h3 className="slider_title">{s.title}</h3>
@@ -33,7 +33,7 @@ export default function SliderSection() {
                   key={i}
                   className={`slider_mobile_slide${s.isWide ? " is-1" : ""}`}
                 >
-                  <Image src={A(s.img)} alt="" className="slider_mobile_img" fill style={{ objectFit: 'cover' }} />
+                  <Image src={A(s.img)} alt="" className="slider_mobile_img" fill sizes="100vw" style={{ objectFit: 'cover' }} />
                   <div className="slider_mobile_content">
                     <h3 className="slider_mobile_title">{s.title}</h3>
                     <p className="slider_mobile_p">{s.desc}</p>

@@ -102,14 +102,11 @@ export default function FeaturedWorksSlider({ works = [] }: { works: any[] }) {
               style={{ objectFit: 'cover' }}
             />
             {work.heroImage && (
-              <Image
+              <img
                 src={work.heroImage}
                 alt={`${work.title} Logo`}
                 className="featured-logo"
                 draggable={false}
-                fill
-                sizes="(max-width: 768px) 50vw, 33vw"
-                style={{ objectFit: 'contain' }}
               />
             )}
           </div>

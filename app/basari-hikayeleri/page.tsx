@@ -22,6 +22,7 @@ export default async function BasariHikayeleriPage() {
 
   return (
     <div className="page-wrapper">
+      <Navbar />
       <Animations />
       
       <main className="main-wrapper">
@@ -86,6 +87,7 @@ export default async function BasariHikayeleriPage() {
         </section>
       </main>
 
+      <Footer />
     </div>
   );
 }

@@ -13,6 +13,7 @@ import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 import { subscribeToNewsletter } from "@/app/actions/newsletter";
 import toast, { Toaster } from "react-hot-toast";
+import Image from "next/image";
 import "./blog.css";
 
 type Post = {

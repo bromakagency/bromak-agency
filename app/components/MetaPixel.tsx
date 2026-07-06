@@ -1,32 +1,29 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, Suspense } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 import Script from "next/script";
 import { fbq } from "@/app/lib/meta-client";
 
 const PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || "27322011684148956";
 
-export default function MetaPixel() {
+function PixelTracker() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
   useEffect(() => {
-    // Only track PageView on route change (soft nav).
-    // Initial page load is handled by the script itself running fbq('track', 'PageView') inside its body.
-    // Wait, since we are initializing fbq in the script, we might want to manually trigger PageView here if it's a client-side transition.
-    
-    // We can just rely on fbq('track', 'PageView') here for all pathname changes if we don't put track PageView in the script tag.
-    // But it's safer to just put it in the script tag for first load, and trigger again on subsequent path changes.
-    // However, in Next.js App Router, the first render also runs useEffect. To prevent double PageView on hard load,
-    // we can either track if it's the first load, or just trigger it here exclusively and remove it from the script tag.
-    
-    // Let's trigger it here exclusively.
     fbq("track", "PageView");
   }, [pathname, searchParams]);
 
+  return null;
+}
+
+export default function MetaPixel() {
   return (
     <>
+      <Suspense fallback={null}>
+        <PixelTracker />
+      </Suspense>
       <Script
         id="meta-pixel"
         strategy="afterInteractive"

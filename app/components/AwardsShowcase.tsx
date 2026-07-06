@@ -55,6 +55,7 @@ export default function AwardsShowcase() {
                 loading={i < 8 ? undefined : "lazy"}
                 fetchPriority={i < 8 ? "high" : "auto"}
                 fill
+                sizes="(max-width: 768px) 100vw, 33vw"
                 style={{ objectFit: "cover" }}
               />
             </div>
@@ -82,6 +83,7 @@ export default function AwardsShowcase() {
               className="award-logo-img"
               width={120}
               height={40}
+              style={{ width: 'auto', height: 'auto' }}
             />
           ))}
         </div>

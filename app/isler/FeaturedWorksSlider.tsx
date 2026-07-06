@@ -98,6 +98,7 @@ export default function FeaturedWorksSlider({ works = [] }: { works: any[] }) {
               className="featured-cover"
               draggable={false}
               fill
+              sizes="(max-width: 768px) 100vw, 100vw"
               style={{ objectFit: 'cover' }}
             />
             {work.heroImage && (
@@ -107,6 +108,7 @@ export default function FeaturedWorksSlider({ works = [] }: { works: any[] }) {
                 className="featured-logo"
                 draggable={false}
                 fill
+                sizes="(max-width: 768px) 50vw, 33vw"
                 style={{ objectFit: 'contain' }}
               />
             )}

@@ -24,6 +24,8 @@ export async function createStory(data: any) {
   })
 
   revalidatePath("/bromakhome/hikayeler")
+  revalidatePath("/basari-hikayeleri")
+  revalidatePath("/", "layout")
   return story
 }
 
@@ -48,6 +50,8 @@ export async function updateStory(id: string, data: any) {
   })
 
   revalidatePath("/bromakhome/hikayeler")
+  revalidatePath("/basari-hikayeleri")
+  revalidatePath("/", "layout")
   return story
 }
 
@@ -60,4 +64,6 @@ export async function deleteStory(id: string) {
   })
 
   revalidatePath("/bromakhome/hikayeler")
+  revalidatePath("/basari-hikayeleri")
+  revalidatePath("/", "layout")
 }

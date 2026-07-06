@@ -16,6 +16,13 @@ interface RichTextEditorProps {
   onChange: (html: string) => void
 }
 
+import {
+  LuBold, LuItalic, LuList, LuListOrdered, LuHeading1, LuHeading2,
+  LuHeading3, LuHeading4, LuHeading5, LuHeading6,
+  LuQuote, LuImage, LuLink2, LuCode, LuUndo2, LuRedo2, LuClock
+} from "react-icons/lu"
+import { FiX } from "react-icons/fi"
+
 export default function RichTextEditor({ content, onChange }: RichTextEditorProps) {
   const fileInputRef = useRef<HTMLInputElement>(null)
   const [isUploading, setIsUploading] = useState(false)
@@ -60,15 +67,12 @@ export default function RichTextEditor({ content, onChange }: RichTextEditorProp
       if (!response.ok) throw new Error('Yükleme başarısız')
 
       const data = await response.json()
-      
-      // Resim URL'sini editöre ekle
       editor.chain().focus().setImage({ src: data.url }).run()
     } catch (error) {
       alert('Görsel yüklenirken bir hata oluştu.')
       console.error(error)
     } finally {
       setIsUploading(false)
-      // Input'u sıfırla ki aynı dosyayı tekrar seçebilsin
       if (fileInputRef.current) fileInputRef.current.value = ''
     }
   }
@@ -81,10 +85,7 @@ export default function RichTextEditor({ content, onChange }: RichTextEditorProp
     const previousUrl = editor?.getAttributes('link').href
     const url = window.prompt('URL adresi:', previousUrl)
 
-    if (url === null) {
-      return
-    }
-
+    if (url === null) return
     if (url === '') {
       editor?.chain().focus().extendMarkRange('link').unsetLink().run()
       return
@@ -98,75 +99,49 @@ export default function RichTextEditor({ content, onChange }: RichTextEditorProp
   }
 
   return (
-    <div className="rich-text-editor">
-      <div className="editor-toolbar">
-        <button
-          type="button"
-          onClick={() => editor.chain().focus().toggleBold().run()}
-          className={editor.isActive('bold') ? 'is-active' : ''}
-        >
-          K
+    <div className="tiptap-container">
+      <div className="tiptap-toolbar">
+        <button type="button" onClick={() => editor.chain().focus().toggleBold().run()} className={`toolbar-btn ${editor.isActive('bold') ? 'active' : ''}`} title="Kalın"><LuBold /></button>
+        <button type="button" onClick={() => editor.chain().focus().toggleItalic().run()} className={`toolbar-btn ${editor.isActive('italic') ? 'active' : ''}`} title="İtalik"><LuItalic /></button>
+        
+        <div className="toolbar-divider" />
+        <button type="button" onClick={() => editor.chain().focus().toggleHeading({ level: 2 }).run()} className={`toolbar-btn ${editor.isActive('heading', { level: 2 }) ? 'active' : ''}`} title="Başlık 2"><LuHeading2 /></button>
+        <button type="button" onClick={() => editor.chain().focus().toggleHeading({ level: 3 }).run()} className={`toolbar-btn ${editor.isActive('heading', { level: 3 }) ? 'active' : ''}`} title="Başlık 3"><LuHeading3 /></button>
+        <button type="button" onClick={() => editor.chain().focus().toggleHeading({ level: 4 }).run()} className={`toolbar-btn ${editor.isActive('heading', { level: 4 }) ? 'active' : ''}`} title="Başlık 4"><LuHeading4 /></button>
+        
+        <div className="toolbar-divider" />
+        <button type="button" onClick={() => editor.chain().focus().toggleBulletList().run()} className={`toolbar-btn ${editor.isActive('bulletList') ? 'active' : ''}`} title="Madde Listesi"><LuList /></button>
+        <button type="button" onClick={() => editor.chain().focus().toggleOrderedList().run()} className={`toolbar-btn ${editor.isActive('orderedList') ? 'active' : ''}`} title="Numaralı Liste"><LuListOrdered /></button>
+        <button type="button" onClick={() => editor.chain().focus().toggleBlockquote().run()} className={`toolbar-btn ${editor.isActive('blockquote') ? 'active' : ''}`} title="Alıntı"><LuQuote /></button>
+        <button type="button" onClick={() => editor.chain().focus().toggleCode().run()} className={`toolbar-btn ${editor.isActive('code') ? 'active' : ''}`} title="Kod"><LuCode /></button>
+        
+        <div className="toolbar-divider" />
+        <button type="button" onClick={setLink} className={`toolbar-btn ${editor.isActive('link') ? 'active' : ''}`} title="Bağlantı"><LuLink2 /></button>
+        
+        <button type="button" onClick={triggerFileInput} className="toolbar-btn" disabled={isUploading} title="Görsel Ekle">
+          {isUploading ? <div className="spin"><LuClock /></div> : <LuImage />}
         </button>
-        <button
-          type="button"
-          onClick={() => editor.chain().focus().toggleItalic().run()}
-          className={editor.isActive('italic') ? 'is-active' : ''}
-        >
-          E
-        </button>
-        <button
-          type="button"
-          onClick={() => editor.chain().focus().toggleHeading({ level: 2 }).run()}
-          className={editor.isActive('heading', { level: 2 }) ? 'is-active' : ''}
-        >
-          H2
-        </button>
-        <button
-          type="button"
-          onClick={() => editor.chain().focus().toggleHeading({ level: 3 }).run()}
-          className={editor.isActive('heading', { level: 3 }) ? 'is-active' : ''}
-        >
-          H3
-        </button>
-        <button
-          type="button"
-          onClick={() => editor.chain().focus().toggleBulletList().run()}
-          className={editor.isActive('bulletList') ? 'is-active' : ''}
-        >
-          Liste
-        </button>
-        <button
-          type="button"
-          onClick={() => editor.chain().focus().toggleBlockquote().run()}
-          className={editor.isActive('blockquote') ? 'is-active' : ''}
-        >
-          Alıntı
-        </button>
-        <button type="button" onClick={setLink} className={editor.isActive('link') ? 'is-active' : ''}>
-          Link
-        </button>
-        <button type="button" onClick={triggerFileInput} disabled={isUploading}>
-          {isUploading ? 'Yükleniyor...' : 'Görsel'}
-        </button>
-        <div className="table-controls" style={{ display: 'flex', gap: '4px', borderLeft: '1px solid #ddd', paddingLeft: '8px', marginLeft: '4px' }}>
-          <button type="button" onClick={() => editor.chain().focus().insertTable({ rows: 3, cols: 3, withHeaderRow: true }).run()}>Tablo Ekle</button>
-          <button type="button" onClick={() => editor.chain().focus().addColumnAfter().run()} disabled={!editor.can().addColumnAfter()}>Sütun +</button>
-          <button type="button" onClick={() => editor.chain().focus().deleteColumn().run()} disabled={!editor.can().deleteColumn()}>Sütun Sil</button>
-          <button type="button" onClick={() => editor.chain().focus().addRowAfter().run()} disabled={!editor.can().addRowAfter()}>Satır +</button>
-          <button type="button" onClick={() => editor.chain().focus().deleteRow().run()} disabled={!editor.can().deleteRow()}>Satır Sil</button>
-          <button type="button" onClick={() => editor.chain().focus().deleteTable().run()} disabled={!editor.can().deleteTable()}>Tablo Sil</button>
-        </div>
-        <input 
-          type="file" 
-          ref={fileInputRef} 
-          onChange={handleFileUpload} 
-          accept="image/*" 
-          style={{ display: 'none' }} 
-        />
+        <input type="file" ref={fileInputRef} onChange={handleFileUpload} accept="image/*" style={{ display: 'none' }} />
+        
+        <div className="toolbar-divider" />
+        <button type="button" onClick={() => editor.chain().focus().insertTable({ rows: 3, cols: 3, withHeaderRow: true }).run()} className="toolbar-btn" style={{fontSize:'12px', width:'auto', padding:'0 8px'}} title="Tablo Ekle">Tablo</button>
+        {editor.isActive('table') && (
+          <>
+            <button type="button" onClick={() => editor.chain().focus().addColumnAfter().run()} disabled={!editor.can().addColumnAfter()} className="toolbar-btn" style={{fontSize:'12px', width:'auto', padding:'0 8px'}}>Sütun +</button>
+            <button type="button" onClick={() => editor.chain().focus().deleteColumn().run()} disabled={!editor.can().deleteColumn()} className="toolbar-btn" style={{fontSize:'12px', width:'auto', padding:'0 8px'}}>Sütun -</button>
+            <button type="button" onClick={() => editor.chain().focus().addRowAfter().run()} disabled={!editor.can().addRowAfter()} className="toolbar-btn" style={{fontSize:'12px', width:'auto', padding:'0 8px'}}>Satır +</button>
+            <button type="button" onClick={() => editor.chain().focus().deleteRow().run()} disabled={!editor.can().deleteRow()} className="toolbar-btn" style={{fontSize:'12px', width:'auto', padding:'0 8px'}}>Satır -</button>
+            <button type="button" onClick={() => editor.chain().focus().deleteTable().run()} disabled={!editor.can().deleteTable()} className="toolbar-btn" style={{fontSize:'12px', width:'auto', padding:'0 8px'}}>Tabloyu Sil</button>
+          </>
+        )}
+        
+        <div className="toolbar-divider" />
+        <button type="button" onClick={() => editor.chain().focus().undo().run()} disabled={!editor.can().undo()} className="toolbar-btn" title="Geri Al"><LuUndo2 /></button>
+        <button type="button" onClick={() => editor.chain().focus().redo().run()} disabled={!editor.can().redo()} className="toolbar-btn" title="Yinele"><LuRedo2 /></button>
       </div>
       
-      <div className="editor-content-area">
-        <EditorContent editor={editor} />
+      <div className="tiptap-wrapper">
+        <EditorContent editor={editor} className="tiptap-editor" />
       </div>
     </div>
   )

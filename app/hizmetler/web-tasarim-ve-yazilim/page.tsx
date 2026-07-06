@@ -4,6 +4,7 @@ import Footer from "@/app/components/Footer";
 import Animations from "@/app/components/Animations";
 import WebBentoWorks from "./WebBentoWorks";
 import WebFeatures from "./WebFeatures";
+import MetaViewContentTracker from "@/app/components/MetaViewContentTracker";
 import "../arama-motoru-optimizasyonu-seo/detay.css";
 import "./web-tasarim.css";
 
@@ -68,6 +69,7 @@ export default async function WebTasarim() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
+      <MetaViewContentTracker content_name="Web Tasarım & Yazılım" content_category="Hizmet" />
       <Animations />
       <div className="main-wrapper">
         <Navbar />

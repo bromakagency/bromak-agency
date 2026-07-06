@@ -6,6 +6,7 @@ import Navbar from "@/app/components/Navbar";
 import "./blog-detail.css";
 import BlogDetailDB from "./BlogDetailDB";
 import ReadingProgress from "@/app/components/ReadingProgress";
+import MetaViewContentTracker from "@/app/components/MetaViewContentTracker";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -91,11 +92,12 @@ export default async function BlogDetailPage({ params }: Props) {
   };
 
   return (
-    <>
-      <ReadingProgress />
+    <div className="main-wrapper">
+      <MetaViewContentTracker content_name={post.title} content_category="Blog" />
       <Navbar />
+      <ReadingProgress />
       <BlogDetailDB post={mappedPost} relatedPosts={mappedRelated} />
       <Footer />
-    </>
+    </div>
   );
 }

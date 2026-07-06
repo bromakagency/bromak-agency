@@ -4,6 +4,7 @@ import Footer from "@/app/components/Footer";
 import Animations from "@/app/components/Animations";
 import StoryBentoCard from "./StoryBentoCard";
 import VideoShowcase from "./VideoShowcase";
+import MetaViewContentTracker from "@/app/components/MetaViewContentTracker";
 import "./detay.css";
 
 import { getSeoMetadata } from "@/app/lib/seo";
@@ -31,6 +32,7 @@ export default function SosyalMedyaDetay() {
 
   return (
     <div className="page-wrapper">
+      <MetaViewContentTracker content_name="Sosyal Medya Yönetimi" content_category="Hizmet" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}

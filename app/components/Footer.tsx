@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
+import { trackContact } from "@/app/lib/meta-client";
 import "./footer.css";
 
 import { FiInstagram, FiLinkedin, FiArrowRight } from "react-icons/fi";
@@ -74,9 +75,9 @@ const resourceLinks = (
 
 const contactContent = (
   <>
-    <a href="mailto:merhaba@bromakagency.com" className="footer-contact-item footer-contact-link"><span className="footer-contact-icon"><MailIcon /></span><span>merhaba@bromakagency.com</span></a>
-    <a href="tel:+905413660496" className="footer-contact-item footer-contact-link"><span className="footer-contact-icon"><PhoneIcon /></span><span>+90 541 366 04 96</span></a>
-    <a href="tel:+905050638543" className="footer-contact-item footer-contact-link"><span className="footer-contact-icon"><PhoneIcon /></span><span>+90 505 063 85 43</span></a>
+    <a href="mailto:merhaba@bromakagency.com" onClick={() => trackContact("Email Click")} className="footer-contact-item footer-contact-link"><span className="footer-contact-icon"><MailIcon /></span><span>merhaba@bromakagency.com</span></a>
+    <a href="tel:+905413660496" onClick={() => trackContact("Phone Click")} className="footer-contact-item footer-contact-link"><span className="footer-contact-icon"><PhoneIcon /></span><span>+90 541 366 04 96</span></a>
+    <a href="tel:+905050638543" onClick={() => trackContact("Phone Click")} className="footer-contact-item footer-contact-link"><span className="footer-contact-icon"><PhoneIcon /></span><span>+90 505 063 85 43</span></a>
     <div className="footer-contact-item"><span className="footer-contact-icon"><LocationIcon /></span><span>Esenler Mh. Horasan Sk. Görgülü Center.<br />No:4/4 Selçuklu / Konya</span></div>
   </>
 );

@@ -5,6 +5,7 @@ import Animations from "@/app/components/Animations";
 import StoryBentoCard from "./StoryBentoCard";
 import InteractiveRoasCalc from "./InteractiveRoasCalc";
 import PlatformEcosystem from "./PlatformEcosystem";
+import MetaViewContentTracker from "@/app/components/MetaViewContentTracker";
 import "./detay.css";
 
 import { getSeoMetadata } from "@/app/lib/seo";
@@ -32,6 +33,7 @@ export default function DijitalReklamDetay() {
 
   return (
     <div className="page-wrapper">
+      <MetaViewContentTracker content_name="Dijital Reklam Yönetimi" content_category="Hizmet" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}

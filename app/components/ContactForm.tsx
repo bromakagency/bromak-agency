@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { LuSend } from "react-icons/lu";
+import { trackLead } from "@/app/lib/meta-client";
 
 export default function ContactForm() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -42,6 +43,13 @@ export default function ContactForm() {
 
       setStatus("success");
       setMessage("Mesajınız başarıyla gönderildi. En kısa sürede size dönüş yapacağız.");
+      
+      // Track Meta Lead event
+      trackLead({
+        email: data.email as string,
+        phone: data.phone as string
+      });
+
       (e.target as HTMLFormElement).reset();
     } catch (error) {
       console.error(error);

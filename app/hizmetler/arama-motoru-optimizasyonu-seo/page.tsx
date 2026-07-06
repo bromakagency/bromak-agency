@@ -6,6 +6,7 @@ import InteractiveSeoRoi from "./InteractiveSeoRoi";
 import SeoToolEcosystem from "./SeoToolEcosystem";
 import SeoRoadmap from "./SeoRoadmap";
 import SeoHeroCaseStudies from "./SeoHeroCaseStudies";
+import MetaViewContentTracker from "@/app/components/MetaViewContentTracker";
 import "./detay.css";
 
 import { getSeoMetadata } from "@/app/lib/seo";
@@ -40,6 +41,7 @@ export default async function SeoDetay() {
 
   return (
     <div className="page-wrapper">
+      <MetaViewContentTracker content_name="Arama Motoru Optimizasyonu (SEO)" content_category="Hizmet" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}

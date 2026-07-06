@@ -5,6 +5,7 @@ import { prisma } from "@/app/lib/prisma";
 import "./work-detail.css";
 import WorkGalleryClient from "./WorkGalleryClient";
 import ReadingProgress from "@/app/components/ReadingProgress";
+import MetaViewContentTracker from "@/app/components/MetaViewContentTracker";
 
 type WorkDetailPageProps = {
   params: Promise<{
@@ -87,6 +88,7 @@ export default async function WorkDetailPage({ params }: WorkDetailPageProps) {
 
   return (
     <main className="work-detail-page">
+      <MetaViewContentTracker content_name={work.title} content_category="Proje" />
       <ReadingProgress />
       <script
         type="application/ld+json"

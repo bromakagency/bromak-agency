@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import CookieBanner from "./components/CookieBanner";
 import { Analytics } from "@vercel/analytics/react";
+import MetaPixel from "./components/MetaPixel";
 
 const ttFirsNeue = localFont({
   src: [
@@ -102,6 +103,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body data-scrolling-started="false" data-scrolling-direction="up" suppressHydrationWarning>
+        <MetaPixel />
         {children}
         <CookieBanner />
         <Analytics />

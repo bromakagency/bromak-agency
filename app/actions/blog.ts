@@ -105,7 +105,7 @@ export async function createPost(data: any) {
     notifySubscribers(post)
   }
 
-  revalidatePath("/bromakhome/blog")
+  revalidatePath("/", "layout")
   return post
 }
 
@@ -136,8 +136,7 @@ export async function updatePost(id: string, data: any) {
     notifySubscribers(post)
   }
 
-  revalidatePath("/blog")
-  revalidatePath(`/blog/${id}/edit`)
+  revalidatePath("/", "layout")
   return post
 }
 
@@ -149,7 +148,7 @@ export async function deletePost(id: string) {
     where: { id }
   })
 
-  revalidatePath("/bromakhome/blog")
+  revalidatePath("/", "layout")
   return true
 }
 
@@ -167,7 +166,7 @@ export async function togglePublishStatus(id: string, currentStatus: boolean) {
     notifySubscribers(post)
   }
 
-  revalidatePath("/bromakhome/blog")
+  revalidatePath("/", "layout")
 }
 
 export async function deleteBulkPosts(ids: string[]) {
@@ -180,6 +179,6 @@ export async function deleteBulkPosts(ids: string[]) {
     }
   })
 
-  revalidatePath("/bromakhome/blog")
+  revalidatePath("/", "layout")
   return true
 }

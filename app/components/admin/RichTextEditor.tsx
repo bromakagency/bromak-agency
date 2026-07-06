@@ -99,8 +99,8 @@ export default function RichTextEditor({ content, onChange }: RichTextEditorProp
   }
 
   return (
-    <div className="tiptap-container">
-      <div className="tiptap-toolbar">
+    <div className="editor-card" style={{ padding: 0, border: '1px solid #ddd', borderRadius: '12px', overflow: 'hidden' }}>
+      <div className="editor-toolbar">
         <button type="button" onClick={() => editor.chain().focus().toggleBold().run()} className={`toolbar-btn ${editor.isActive('bold') ? 'active' : ''}`} title="Kalın"><LuBold /></button>
         <button type="button" onClick={() => editor.chain().focus().toggleItalic().run()} className={`toolbar-btn ${editor.isActive('italic') ? 'active' : ''}`} title="İtalik"><LuItalic /></button>
         

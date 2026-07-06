@@ -4,6 +4,10 @@ import { useEditor, EditorContent } from '@tiptap/react'
 import StarterKit from '@tiptap/starter-kit'
 import Image from '@tiptap/extension-image'
 import Link from '@tiptap/extension-link'
+import Table from '@tiptap/extension-table'
+import TableRow from '@tiptap/extension-table-row'
+import TableCell from '@tiptap/extension-table-cell'
+import TableHeader from '@tiptap/extension-table-header'
 import { useCallback, useRef, useState } from 'react'
 import './editor.css'
 
@@ -25,7 +29,13 @@ export default function RichTextEditor({ content, onChange }: RichTextEditorProp
       }),
       Link.configure({
         openOnClick: false,
-      })
+      }),
+      Table.configure({
+        resizable: true,
+      }),
+      TableRow,
+      TableHeader,
+      TableCell,
     ],
     content,
     onUpdate: ({ editor }) => {
@@ -138,6 +148,14 @@ export default function RichTextEditor({ content, onChange }: RichTextEditorProp
         <button type="button" onClick={triggerFileInput} disabled={isUploading}>
           {isUploading ? 'Yükleniyor...' : 'Görsel'}
         </button>
+        <div className="table-controls" style={{ display: 'flex', gap: '4px', borderLeft: '1px solid #ddd', paddingLeft: '8px', marginLeft: '4px' }}>
+          <button type="button" onClick={() => editor.chain().focus().insertTable({ rows: 3, cols: 3, withHeaderRow: true }).run()}>Tablo Ekle</button>
+          <button type="button" onClick={() => editor.chain().focus().addColumnAfter().run()} disabled={!editor.can().addColumnAfter()}>Sütun +</button>
+          <button type="button" onClick={() => editor.chain().focus().deleteColumn().run()} disabled={!editor.can().deleteColumn()}>Sütun Sil</button>
+          <button type="button" onClick={() => editor.chain().focus().addRowAfter().run()} disabled={!editor.can().addRowAfter()}>Satır +</button>
+          <button type="button" onClick={() => editor.chain().focus().deleteRow().run()} disabled={!editor.can().deleteRow()}>Satır Sil</button>
+          <button type="button" onClick={() => editor.chain().focus().deleteTable().run()} disabled={!editor.can().deleteTable()}>Tablo Sil</button>
+        </div>
         <input 
           type="file" 
           ref={fileInputRef} 

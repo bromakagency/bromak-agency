@@ -97,3 +97,10 @@
   text-decoration: underline;
   cursor: pointer;
 }
+
+/* Table Styles for Tiptap */
+.tiptap table { border-collapse: collapse; table-layout: fixed; width: 100%; margin: 0; overflow: hidden; }
+.tiptap table td, .tiptap table th { min-width: 1em; border: 2px solid #ced4da; padding: 3px 5px; vertical-align: top; box-sizing: border-box; position: relative; }
+.tiptap table th { font-weight: bold; text-align: left; background-color: #f1f3f5; }
+.tiptap table .column-resize-handle { position: absolute; right: -2px; top: 0; bottom: -2px; width: 4px; background-color: #adf; pointer-events: none; }
+.tiptap table p { margin: 0; }

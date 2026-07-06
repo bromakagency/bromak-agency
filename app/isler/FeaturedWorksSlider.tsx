@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState, useCallback, type PointerEvent } from "react";
+import Image from "next/image";
 
 const SLIDE_DURATION = 4000;
 
@@ -91,18 +92,22 @@ export default function FeaturedWorksSlider({ works = [] }: { works: any[] }) {
 
         {featuredWorks.map((work, index) => (
           <div key={work.id || work.title} className={`featured-slide ${index === activeIndex ? "is-active" : ""}`}>
-            <img
+            <Image
               src={work.coverImage}
               alt={work.title}
               className="featured-cover"
               draggable={false}
+              fill
+              style={{ objectFit: 'cover' }}
             />
             {work.heroImage && (
-              <img
+              <Image
                 src={work.heroImage}
                 alt={`${work.title} Logo`}
                 className="featured-logo"
                 draggable={false}
+                fill
+                style={{ objectFit: 'contain' }}
               />
             )}
           </div>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import "./awards-showcase.css";
 
 const baseImages = [
@@ -48,12 +49,13 @@ export default function AwardsShowcase() {
               className="awards-wheel-item"
               style={{ '--rotate-deg': `${i * 15}deg` } as React.CSSProperties}
             >
-              <img 
+              <Image 
                 src={img.src} 
                 alt={img.alt} 
                 loading={i < 8 ? undefined : "lazy"}
                 fetchPriority={i < 8 ? "high" : "auto"}
-                decoding="async" 
+                fill
+                style={{ objectFit: "cover" }}
               />
             </div>
           ))}
@@ -73,13 +75,13 @@ export default function AwardsShowcase() {
 
         <div className="awards-logos-row">
           {awards.map((award, i) => (
-            <img
+            <Image
               key={i}
               src={award.src}
               alt={award.alt}
               className="award-logo-img"
-              loading="lazy"
-              decoding="async"
+              width={120}
+              height={40}
             />
           ))}
         </div>

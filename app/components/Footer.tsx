@@ -136,8 +136,9 @@ export default function Footer() {
             src="/assets/logos/bromak_kirmizi-logo.gif"
             alt="Bromak Agency"
             className="footer-brand-logo"
-            width={160}
-            height={50}
+            width={300}
+            height={100}
+            style={{ width: '150px', height: 'auto' }}
             unoptimized={true} // Unoptimized for GIFs to preserve animation
           />
           <p className="footer-brand-desc">Strateji, tasarım ve teknolojiyi bir araya getirerek markaların büyümesine katkı sağlıyoruz.</p>

@@ -26,7 +26,7 @@ export async function POST(req: NextRequest) {
       success: true, 
       debug: { 
         token_exists: !!process.env.META_ACCESS_TOKEN,
-        test_code_exists: !!process.env.META_TEST_EVENT_CODE 
+        test_code_exists: !!(process.env.META_TEST_EVENT_CODE || process.env.NEXT_PUBLIC_META_TEST_EVENT_CODE) 
       } 
     });
   } catch (error) {

@@ -59,7 +59,7 @@ export const trackViewContent = async (params: { content_name: string; content_c
   // Server CAPI
   try {
     const { fbp, fbc } = await getMetaCookies();
-    await fetch("/api/capi", {
+    await fetch(window.location.origin + "/api/capi", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -99,7 +99,7 @@ export const trackLead = async (params: { email?: string; phone?: string; first_
   // Server CAPI
   try {
     const { fbp, fbc } = await getMetaCookies();
-    await fetch("/api/capi", {
+    await fetch(window.location.origin + "/api/capi", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -141,7 +141,7 @@ export const trackContact = async (content_name: string) => {
 
   try {
     const { fbp, fbc } = await getMetaCookies();
-    await fetch("/api/capi", {
+    await fetch(window.location.origin + "/api/capi", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

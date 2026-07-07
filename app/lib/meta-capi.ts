@@ -23,9 +23,9 @@ export const normalizePhone = (phone?: string): string | undefined => {
 };
 
 export const sendToMetaCapi = async (payload: any, reqInfo: { ip: string; userAgent: string }) => {
-  const PIXEL_ID = process.env.META_PIXEL_ID || "27322011684148956";
+  const PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || process.env.META_PIXEL_ID || "27322011684148956";
   const ACCESS_TOKEN = process.env.META_ACCESS_TOKEN;
-  const TEST_CODE = process.env.META_TEST_EVENT_CODE;
+  const TEST_CODE = process.env.META_TEST_EVENT_CODE || process.env.NEXT_PUBLIC_META_TEST_EVENT_CODE;
 
   if (!ACCESS_TOKEN) {
     console.warn("META_ACCESS_TOKEN is not defined in environment variables. CAPI request aborted.");

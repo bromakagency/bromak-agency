@@ -48,9 +48,11 @@ export const getMetaCookies = async () => {
  */
 export const trackViewContent = async (params: { content_name: string; content_category: string; event_source_url?: string }) => {
   const eventId = generateEventId();
+  const currentUrl = params.event_source_url || window.location.href;
   const eventData = {
     content_name: params.content_name,
     content_category: params.content_category,
+    event_source_url: currentUrl
   };
 
   // Browser Pixel
@@ -67,7 +69,7 @@ export const trackViewContent = async (params: { content_name: string; content_c
         event_name: "ViewContent",
         event_time: Math.floor(Date.now() / 1000),
         event_id: eventId,
-        event_source_url: params.event_source_url || window.location.href,
+        event_source_url: currentUrl,
         action_source: "website",
         custom_data: eventData,
         user_data: { fbp, fbc }
@@ -81,8 +83,9 @@ export const trackViewContent = async (params: { content_name: string; content_c
 /**
  * Fires Lead event on Browser and Server (After contact form submission).
  */
-export const trackLead = async (params: { email?: string; phone?: string; first_name?: string; last_name?: string; [key: string]: any }) => {
+export const trackLead = async (params: { email?: string; phone?: string; first_name?: string; last_name?: string; event_source_url?: string; [key: string]: any }) => {
   const eventId = generateEventId();
+  const currentUrl = params.event_source_url || window.location.href;
 
   // Advanced Matching params for Browser Pixel
   const advancedMatching: any = {};
@@ -95,7 +98,7 @@ export const trackLead = async (params: { email?: string; phone?: string; first_
     fbq('init', pixelId, advancedMatching);
   }
 
-  fbq('track', 'Lead', {}, { eventID: eventId });
+  fbq('track', 'Lead', { event_source_url: currentUrl }, { eventID: eventId });
 
   // Server CAPI
   try {
@@ -108,7 +111,7 @@ export const trackLead = async (params: { email?: string; phone?: string; first_
         event_name: "Lead",
         event_time: Math.floor(Date.now() / 1000),
         event_id: eventId,
-        event_source_url: window.location.href,
+        event_source_url: currentUrl,
         action_source: "website",
         custom_data: {},
         user_data: { 
@@ -130,14 +133,15 @@ let lastContactEventTime = 0;
 /**
  * Fires Contact event on Browser and Server (Debounced).
  */
-export const trackContact = async (content_name: string) => {
+export const trackContact = async (content_name: string, event_source_url?: string) => {
   const now = Date.now();
   // 15 seconds debounce
   if (now - lastContactEventTime < 15000) return;
   lastContactEventTime = now;
 
   const eventId = generateEventId();
-  const eventData = { content_name };
+  const currentUrl = event_source_url || window.location.href;
+  const eventData = { content_name, event_source_url: currentUrl };
 
   fbq('track', 'Contact', eventData, { eventID: eventId });
 
@@ -151,7 +155,7 @@ export const trackContact = async (content_name: string) => {
         event_name: "Contact",
         event_time: Math.floor(Date.now() / 1000),
         event_id: eventId,
-        event_source_url: window.location.href,
+        event_source_url: currentUrl,
         action_source: "website",
         custom_data: eventData,
         user_data: { fbp, fbc }

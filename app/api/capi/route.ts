@@ -19,10 +19,16 @@ export async function POST(req: NextRequest) {
     }
     const userAgent = req.headers.get("user-agent") || "";
 
-    // Send async (we don't strictly need to await it to return 200 fast, but Vercel serverless might kill it if we don't await)
+    // Send async
     await sendToMetaCapi(body, { ip, userAgent });
 
-    return NextResponse.json({ success: true });
+    return NextResponse.json({ 
+      success: true, 
+      debug: { 
+        token_exists: !!process.env.META_ACCESS_TOKEN,
+        test_code_exists: !!process.env.META_TEST_EVENT_CODE 
+      } 
+    });
   } catch (error) {
     console.error("CAPI API Error:", error);
     return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });

@@ -50,9 +50,11 @@ export const sendToMetaCapi = async (payload: any, reqInfo: { ip: string; userAg
   if (userData.fbp) finalUserData.fbp = userData.fbp;
   if (userData.fbc) finalUserData.fbc = userData.fbc;
 
-  // Hash email and phone if available
+  // Hash email, phone, name if available
   if (userData.email) finalUserData.em = hashData(userData.email);
   if (userData.phone) finalUserData.ph = hashData(normalizePhone(userData.phone));
+  if (userData.first_name) finalUserData.fn = hashData(userData.first_name);
+  if (userData.last_name) finalUserData.ln = hashData(userData.last_name);
 
   const apiPayload: any = {
     data: [

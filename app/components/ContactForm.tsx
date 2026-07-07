@@ -45,9 +45,15 @@ export default function ContactForm() {
       setMessage("Mesajınız başarıyla gönderildi. En kısa sürede size dönüş yapacağız.");
       
       // Track Meta Lead event
+      const nameParts = (data.name as string || "").trim().split(" ");
+      const firstName = nameParts[0] || "";
+      const lastName = nameParts.length > 1 ? nameParts.slice(1).join(" ") : "";
+      
       trackLead({
         email: data.email as string,
-        phone: data.phone as string
+        phone: data.phone as string,
+        first_name: firstName,
+        last_name: lastName
       });
 
       (e.target as HTMLFormElement).reset();

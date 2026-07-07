@@ -16,19 +16,31 @@ export const fbq = (...args: any[]) => {
 /**
  * Parses _fbp and _fbc cookies if available.
  */
-export const getMetaCookies = () => {
+export const getMetaCookies = async () => {
   if (typeof document === "undefined") return { fbp: undefined, fbc: undefined };
   
-  const cookies = document.cookie.split(';');
-  let fbp, fbc;
-  
-  for (const cookie of cookies) {
-    const [name, value] = cookie.trim().split('=');
-    if (name === '_fbp') fbp = value;
-    if (name === '_fbc') fbc = value;
+  let attempts = 0;
+  while (attempts < 10) {
+    const cookies = document.cookie.split(';');
+    let fbp, fbc;
+    
+    for (const cookie of cookies) {
+      const [name, value] = cookie.trim().split('=');
+      if (name === '_fbp') fbp = value;
+      if (name === '_fbc') fbc = value;
+    }
+    
+    // Return immediately if both exist, or if we have at least _fbp and it's not the first try, or if max attempts reached.
+    // Usually _fbc is either there or not, _fbp takes a moment.
+    if (fbp || attempts === 9) {
+      return { fbp, fbc };
+    }
+    
+    await new Promise(r => setTimeout(r, 100));
+    attempts++;
   }
   
-  return { fbp, fbc };
+  return { fbp: undefined, fbc: undefined };
 };
 
 /**
@@ -46,7 +58,7 @@ export const trackViewContent = async (params: { content_name: string; content_c
 
   // Server CAPI
   try {
-    const { fbp, fbc } = getMetaCookies();
+    const { fbp, fbc } = await getMetaCookies();
     await fetch("/api/capi", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -68,7 +80,7 @@ export const trackViewContent = async (params: { content_name: string; content_c
 /**
  * Fires Lead event on Browser and Server (After contact form submission).
  */
-export const trackLead = async (params: { email?: string; phone?: string; [key: string]: any }) => {
+export const trackLead = async (params: { email?: string; phone?: string; first_name?: string; last_name?: string; [key: string]: any }) => {
   const eventId = generateEventId();
 
   // Advanced Matching params for Browser Pixel
@@ -86,7 +98,7 @@ export const trackLead = async (params: { email?: string; phone?: string; [key: 
 
   // Server CAPI
   try {
-    const { fbp, fbc } = getMetaCookies();
+    const { fbp, fbc } = await getMetaCookies();
     await fetch("/api/capi", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -101,7 +113,9 @@ export const trackLead = async (params: { email?: string; phone?: string; [key: 
           fbp, 
           fbc,
           email: params.email,
-          phone: params.phone 
+          phone: params.phone,
+          first_name: params.first_name,
+          last_name: params.last_name
         }
       }),
     });
@@ -126,7 +140,7 @@ export const trackContact = async (content_name: string) => {
   fbq('track', 'Contact', eventData, { eventID: eventId });
 
   try {
-    const { fbp, fbc } = getMetaCookies();
+    const { fbp, fbc } = await getMetaCookies();
     await fetch("/api/capi", {
       method: "POST",
       headers: { "Content-Type": "application/json" },

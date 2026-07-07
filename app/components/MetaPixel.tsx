@@ -12,6 +12,28 @@ function PixelTracker() {
   const searchParams = useSearchParams();
 
   useEffect(() => {
+    // Process fbclid and create _fbc cookie if consent is granted
+    if (searchParams) {
+      const fbclid = searchParams.get("fbclid");
+      if (fbclid) {
+        const prefsStr = localStorage.getItem("bromak_cookie_consent");
+        if (prefsStr) {
+          try {
+            const prefs = JSON.parse(prefsStr);
+            if (prefs.marketing) {
+              const hasFbc = document.cookie.includes('_fbc=');
+              if (!hasFbc) {
+                const fbcValue = `fb.1.${Date.now()}.${fbclid}`;
+                document.cookie = `_fbc=${fbcValue}; path=/; max-age=7776000; SameSite=Lax`;
+              }
+            }
+          } catch (e) {
+            console.error("Cookie consent parse error", e);
+          }
+        }
+      }
+    }
+
     fbq("track", "PageView");
   }, [pathname, searchParams]);
 

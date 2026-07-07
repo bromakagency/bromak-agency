@@ -4,6 +4,7 @@ import "./globals.css";
 import CookieBanner from "./components/CookieBanner";
 import { Analytics } from "@vercel/analytics/react";
 import MetaPixel from "./components/MetaPixel";
+import Script from "next/script";
 
 const ttFirsNeue = localFont({
   src: [
@@ -103,6 +104,22 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body data-scrolling-started="false" data-scrolling-direction="up" suppressHydrationWarning>
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-5Y4NVDVB0T"
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-5Y4NVDVB0T');
+            `,
+          }}
+        />
         <MetaPixel />
         {children}
         <CookieBanner />

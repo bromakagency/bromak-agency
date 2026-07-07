@@ -59,7 +59,15 @@ export default function MetaPixel() {
             t.src=v;s=b.getElementsByTagName(e)[0];
             s.parentNode.insertBefore(t,s)}(window, document,'script',
             'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '${PIXEL_ID}');
+            var extId = null;
+            try {
+              extId = sessionStorage.getItem("bromak_meta_ext_id");
+              if (!extId) {
+                extId = "evt_" + new Date().getTime() + "_" + Math.floor(Math.random() * 1000000000).toString(16);
+                sessionStorage.setItem("bromak_meta_ext_id", extId);
+              }
+            } catch(e) {}
+            fbq('init', '${PIXEL_ID}', extId ? { external_id: extId } : {});
           `,
         }}
       />

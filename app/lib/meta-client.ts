@@ -5,6 +5,20 @@ export const generateEventId = () => {
   return "evt_" + new Date().getTime() + "_" + Math.floor(Math.random() * 1000000000).toString(16);
 };
 
+export const getSessionExternalId = () => {
+  if (typeof window === "undefined") return undefined;
+  try {
+    let extId = sessionStorage.getItem("bromak_meta_ext_id");
+    if (!extId) {
+      extId = generateEventId();
+      sessionStorage.setItem("bromak_meta_ext_id", extId);
+    }
+    return extId;
+  } catch (e) {
+    return undefined;
+  }
+};
+
 export const fbq = (...args: any[]) => {
   if (typeof window !== "undefined" && (window as any).fbq) {
     (window as any).fbq(...args);
@@ -72,7 +86,7 @@ export const trackViewContent = async (params: { content_name: string; content_c
         event_source_url: currentUrl,
         action_source: "website",
         custom_data: eventData,
-        user_data: { fbp, fbc }
+        user_data: { fbp, fbc, external_id: getSessionExternalId() }
       }),
     });
   } catch (err) {
@@ -117,6 +131,7 @@ export const trackLead = async (params: { email?: string; phone?: string; first_
         user_data: { 
           fbp, 
           fbc,
+          external_id: getSessionExternalId(),
           email: params.email,
           phone: params.phone,
           first_name: params.first_name,
@@ -158,7 +173,7 @@ export const trackContact = async (content_name: string, event_source_url?: stri
         event_source_url: currentUrl,
         action_source: "website",
         custom_data: eventData,
-        user_data: { fbp, fbc }
+        user_data: { fbp, fbc, external_id: getSessionExternalId() }
       }),
     });
   } catch (err) {

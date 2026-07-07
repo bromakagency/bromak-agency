@@ -11,7 +11,16 @@ export default function MetaViewContentTracker({
   content_category: string; 
 }) {
   useEffect(() => {
-    trackViewContent({ content_name, content_category });
+    // Wait a brief moment to ensure Next.js has fully updated the browser history state for the soft navigation
+    const timeout = setTimeout(() => {
+      trackViewContent({ 
+        content_name, 
+        content_category,
+        event_source_url: window.location.href
+      });
+    }, 100);
+    
+    return () => clearTimeout(timeout);
   }, [content_name, content_category]);
 
   return null;

@@ -46,7 +46,7 @@ export const getMetaCookies = async () => {
 /**
  * Fires ViewContent event on Browser and Server.
  */
-export const trackViewContent = async (params: { content_name: string; content_category: string }) => {
+export const trackViewContent = async (params: { content_name: string; content_category: string; event_source_url?: string }) => {
   const eventId = generateEventId();
   const eventData = {
     content_name: params.content_name,
@@ -67,7 +67,7 @@ export const trackViewContent = async (params: { content_name: string; content_c
         event_name: "ViewContent",
         event_time: Math.floor(Date.now() / 1000),
         event_id: eventId,
-        event_source_url: window.location.href,
+        event_source_url: params.event_source_url || window.location.href,
         action_source: "website",
         custom_data: eventData,
         user_data: { fbp, fbc }

@@ -4,6 +4,7 @@ import Footer from "@/app/components/Footer";
 import Animations from "@/app/components/Animations";
 import WebBentoWorks from "./WebBentoWorks";
 import WebFeatures from "./WebFeatures";
+import WebRoadmap from "./WebRoadmap";
 import MetaViewContentTracker from "@/app/components/MetaViewContentTracker";
 import "../arama-motoru-optimizasyonu-seo/detay.css";
 import "./web-tasarim.css";
@@ -12,8 +13,8 @@ import { getSeoMetadata } from "@/app/lib/seo";
 
 export async function generateMetadata() {
   return getSeoMetadata("hizmetler-web", {
-    title: "Konya Web Tasarım Hizmeti | Bromak Agency",
-    description: "Ziyaretçiyi müşteriye dönüştüren hızlı, modern ve kullanıcı dostu web siteleri geliştiriyoruz. Profesyonel Konya web site tasarımı hizmeti ile işinizi büyütün.",
+    title: "Konya Web Tasarım ve Yazılım Ajansı | Bromak",
+    description: "Konya web tasarım firmaları arasında dönüşüm odaklı, SEO uyumlu ve ultra hızlı kurumsal web sitesi yapan ödüllü reklam ajansı. Projeniz için tanışalım.",
     keywords: "web tasarım, konya web tasarım, konya web site tasarımı, kurumsal web sitesi"
   });
 }
@@ -77,12 +78,15 @@ export default async function WebTasarim() {
         <main className="detail-page">
           <section className="detail-hero">
             <div className="hero-left">
+              <span className="eyebrow-text" style={{color: "#fff", textTransform: "uppercase", fontSize: "0.85rem", letterSpacing: "2px", opacity: 0.7, display: "block", marginBottom: "1rem"}}>
+                KONYA WEB TASARIM VE YAZILIM AJANSI
+              </span>
               <h1>
                 Kusursuz Kod.<br />
                 <strong>Sıfır Sınır.</strong>
               </h1>
               <p>
-                Konya web tasarım ajansı olarak; hem masaüstünde hem mobilde piksel mükemmelliğinde, saniyeden kısa sürede açılan modern web deneyimleri tasarlıyor ve kodluyoruz.
+                Dijitaldeki vitrininiz sıradan olamaz. Konya web sitesi yapan firmalar arasında butik hizmet anlayışımızla; ziyaretçiyi müşteriye dönüştüren, mobil ve SEO uyumlu, ultra hızlı özel web projeleri tasarlıyor ve kodluyoruz.
               </p>
             </div>
 
@@ -114,6 +118,8 @@ export default async function WebTasarim() {
 
           <WebFeatures />
 
+          <WebRoadmap />
+
           <WebBentoWorks works={works.slice(0, 5)} />
 
           <section className="social-faq-section">
@@ -127,23 +133,23 @@ export default async function WebTasarim() {
 
               <div className="social-faq-list">
                 <details className="social-faq-item" open>
-                  <summary>Bir web sitesinin yapım süreci ne kadar sürer?</summary>
+                  <summary>Kurumsal bir web sitesinin yapım süreci ne kadar sürer?</summary>
                   <p>
-                    Projenin kapsamına ve ihtiyaçlarınıza göre değişiklik gösterir. Kurumsal web siteleri genellikle 4-6 hafta, e-ticaret ve özel yazılım projeleri ise 8-12 hafta arasında tamamlanmaktadır.
+                    Projenin kapsamına ve ihtiyaçlarınıza göre değişiklik gösterir. Kurumsal web siteleri genellikle 4-6 hafta, e-ticaret ve özel yazılım projeleri ise 8-12 hafta arasında tamamlanmaktadır. Konya web tasarım ajansı arayışınızda en hızlı ve şeffaf süreci sunuyoruz.
                   </p>
                 </details>
 
                 <details className="social-faq-item">
-                  <summary>Siteleriniz mobil uyumlu mu?</summary>
+                  <summary>Tasarladığınız web siteleri mobil uyumlu mu?</summary>
                   <p>
-                    Kesinlikle. Geliştirdiğimiz tüm projeler %100 mobil uyumlu (responsive) olarak tasarlanır ve kodlanır. Siteniz akıllı telefonlar, tabletler ve dev ekranlarda kusursuz görünür.
+                    Kesinlikle. Geliştirdiğimiz tüm kurumsal web sitesi projeleri %100 mobil uyumlu (responsive) olarak tasarlanır ve kodlanır. Siteniz akıllı telefonlar, tabletler ve dev ekranlarda kusursuz görünür.
                   </p>
                 </details>
 
                 <details className="social-faq-item">
                   <summary>Hazır şablon (tema) kullanıyor musunuz?</summary>
                   <p>
-                    Hayır. Sizi rakiplerinizden ayırmak için markanıza tamamen özel UI/UX tasarımlar yapıyor ve projeyi sıfırdan sizin ihtiyaçlarınıza göre kodluyoruz.
+                    Hayır. Sizi rakiplerinizden ayırmak için markanıza tamamen özel UI/UX tasarımlar yapıyor ve projeyi sıfırdan sizin ihtiyaçlarınıza göre kodluyoruz. Gerçek bir web tasarım firması farkını kod kalitesinde gösterir.
                   </p>
                 </details>
 

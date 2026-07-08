@@ -38,9 +38,9 @@ export default function WebFeatures() {
             </div>
           </div>
           <div className="feature-content">
-            <h2>Kusursuz Kullanıcı Deneyimi (UI/UX)</h2>
+            <h2>Neden Bromak Web Tasarım Ajansı?</h2>
             <p>
-              Müşterilerinizin sitenizde kaybolmasına izin vermeyin. Modern, sezgisel ve dönüşüm odaklı arayüzlerle, ziyaretçilerinizi sadık müşterilere dönüştüren akıcı dijital deneyimler tasarlıyoruz.
+              Aynı anda yüzlerce iş almıyoruz. Sınırlı sayıda proje alarak markanıza hak ettiği kaliteyi sağlıyoruz. Hazır şablonlar kullanmıyoruz; Konya merkezli butik ajansımızdan global standartlarda, tamamen markanıza özel (UI/UX) ve dönüşüm odaklı kurumsal web siteleri tasarlıyoruz.
             </p>
             <a href="#iletisim" className="feature-outline-btn">Tasarım sürecimizi incele</a>
           </div>
@@ -49,9 +49,9 @@ export default function WebFeatures() {
         {/* Feature 2: Text Left, Image Right */}
         <div className="feature-row reverse">
           <div className="feature-content">
-            <h2>Işık Hızında, SEO Dostu Altyapı</h2>
+            <h2>Performans, Hız ve SEO Uyumu</h2>
             <p>
-              Güzel görünen ama yavaş açılan bir site size sadece para kaybettirir. En güncel teknolojilerle (Next.js, React) saniyeden kısa sürede yüklenen ve arama motorlarında üst sıralara çıkan kusursuz kodlar yazıyoruz.
+              Güzel görünen ama yavaş açılan bir site size müşteri kaybettirir. En güncel teknolojilerle saniyeden kısa sürede yüklenen ve arama motorlarında üst sıralara çıkan SEO uyumlu web siteleri kodluyoruz. Hantal altyapılardan uzak, 2026 standartlarına uygun bir hız sunuyoruz.
             </p>
             <a href="#iletisim" className="feature-outline-btn">Teknoloji yığınımızı gör</a>
           </div>
@@ -98,11 +98,11 @@ export default function WebFeatures() {
             </div>
           </div>
           <div className="feature-content">
-            <h2>Size Özel, Özgür Yönetim Paneli</h2>
+            <h2>Teknik Bilgi Gerektirmeyen Yönetilebilir Altyapı</h2>
             <p>
-              Sitenizi güncellemek için ajanslara veya yazılımcılara bağımlı kalmayın. Tamamen size ve işletmenize özel geliştirdiğimiz, kullanımı son derece kolay yönetim paneli ile tüm ipler sizin elinizde.
+              Web sitenizi teslim aldıktan sonra, teknik bilgiye ihtiyaç duymadan yazı, fotoğraf ve ürünlerinizi kolayca güncelleyebileceğiniz size özel yönetim panelleri sunuyoruz. Sitenizi tamamen özgürce, kimseye bağlı kalmadan yönetin.
             </p>
-            <a href="#iletisim" className="feature-outline-btn">Panel demosunu talep et</a>
+            <a href="#iletisim" className="feature-outline-btn">Hemen iletişime geçin</a>
           </div>
         </div>
 

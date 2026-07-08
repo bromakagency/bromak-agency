@@ -6,23 +6,23 @@ import "../arama-motoru-optimizasyonu-seo/seo-components.css";
 const STEPS = [
   {
     month: "1. Keşif",
-    title: "Analiz & Strateji",
-    desc: "İhtiyaçlarınızı dinliyor, hedef kitlenizi ve rakiplerinizi analiz ederek projeye en uygun teknolojik altyapıyı belirliyoruz."
+    title: "Strateji ve Planlama",
+    desc: "Hedef kitlenizi ve rakiplerinizi analiz ederek, dijitalde nasıl bir duruş sergilemeniz gerektiğini planlıyoruz."
   },
   {
     month: "2. Tasarım",
-    title: "UI/UX & Prototip",
-    desc: "Kullanıcı deneyimini merkeze alan modern, şık ve markanızı yansıtan arayüz tasarımlarını onayınıza sunuyoruz."
+    title: "UI/UX Tasarım",
+    desc: "Hazır şablonlar kullanmıyoruz. Markanıza özel, kullanıcı deneyimi yüksek ve dönüşüm odaklı benzersiz arayüzler tasarlıyoruz."
   },
   {
     month: "3. Geliştirme",
-    title: "Kodlama & Entegrasyon",
-    desc: "Tasarımları, en güncel teknolojiler (React, Next.js vb.) ile performanstan ödün vermeden koda döküyoruz."
+    title: "Özel Yazılım ve Kodlama",
+    desc: "Modern web teknolojileriyle (Next.js, React) saniyeden kısa sürede açılan, Google Core Web Vitals metriklerinde kusursuz puanlar alan siteler geliştiriyoruz."
   },
   {
     month: "4. Lansman",
-    title: "Test & Yayına Alma",
-    desc: "Tüm cihaz ve tarayıcılarda kusursuz çalıştığından emin olduktan sonra projenizi yayına alıyoruz."
+    title: "SEO Uyumu",
+    desc: "Sitelerimiz sadece güzel görünmekle kalmaz; en başından itibaren arama motoru dostu bir mimariyle (Semantic HTML, Schema Markup) kodlanır."
   }
 ];
 
@@ -52,7 +52,7 @@ export default function WebRoadmap() {
       <div className="seo-roadmap-inner">
         <div className="seo-roadmap-heading">
           <span>PROJE SÜRECİ</span>
-          <h2>Adım Adım Başarı.</h2>
+          <h2>Kurumsal Web Tasarım Sürecimiz.</h2>
           <p>Fikirden yayına kadar şeffaf ve planlı bir şekilde ilerliyoruz.</p>
         </div>
 

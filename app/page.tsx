@@ -15,8 +15,8 @@ import { getSeoMetadata } from "@/app/lib/seo";
 
 export async function generateMetadata() {
   return getSeoMetadata("home", {
-    title: "Bromak Agency - Konya Web Tasarım ve Reklam Ajansı",
-    description: "Bromak Agency, Konya merkezli bir reklam ve dijital pazarlama ajansıdır. Strateji, tasarım, dijital pazarlama ve içerik üretimi hizmetleri sunuyoruz.",
+    title: "Konya Reklam Ajansı | Markanızı Dijitalde Büyüten Güç - Bromak",
+    description: "Konya reklam ajansları arasında yaratıcı fikirleri veriye dayalı stratejilerle birleştiren dijital performans ajansı. Sosyal medya, SEO ve web projeleriniz için tanışalım.",
     keywords: "konya reklam ajansı, bromak agency, dijital pazarlama konya"
   });
 }

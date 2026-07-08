@@ -1,5 +1,5 @@
 const fs = require('fs');
-const phrases = ['konya web tasarım', 'web tasarım konya', 'konya web tasarım firmaları', 'konya web tasarım ajansı', 'konya web sitesi yapan firmalar', 'konya web sitesi', 'konya kurumsal web tasarım', 'konya web tasarım fiyatları'];
+const phrases = ['konya reklam ajansı', 'konya reklam ajansları', 'reklam ajansı konya', 'konya dijital pazarlama', 'konya dijital reklam ajansı', 'konya dijital ajans', 'konya sosyal medya ajansı', 'konya yaratıcı ajans', 'konya reklam firmaları'];
 const key = '1650bb3712eb083d7527df017cc04d1a';
 
 async function run() {
@@ -41,7 +41,7 @@ async function run() {
   
   unique.sort((a,b) => b.SearchVolume - a.SearchVolume);
   
-  fs.writeFileSync('C:\\Users\\recep\\.gemini\\antigravity-ide\\brain\\95ccb4b9-e4fe-4fac-be2d-3f4737a30b03\\scratch\\semrush_results.json', JSON.stringify(unique, null, 2));
+  fs.writeFileSync('C:\\Users\\recep\\.gemini\\antigravity-ide\\brain\\95ccb4b9-e4fe-4fac-be2d-3f4737a30b03\\scratch\\semrush_reklam.json', JSON.stringify(unique, null, 2));
   console.log('Done, saved ' + unique.length + ' keywords');
 }
 run();

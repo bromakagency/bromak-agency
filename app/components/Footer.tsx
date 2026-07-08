@@ -142,7 +142,7 @@ export default function Footer() {
             style={{ width: '150px', height: 'auto' }}
             unoptimized={true} // Unoptimized for GIFs to preserve animation
           />
-          <p className="footer-brand-desc">Strateji, tasarım ve teknolojiyi bir araya getirerek markaların büyümesine katkı sağlıyoruz.</p>
+          <p className="footer-brand-desc">Bromak Agency, Konya merkezli tam hizmet reklam ajansıdır. Strateji, tasarım, teknoloji ve prodüksiyonu bir araya getirerek markalar için bütüncül iletişim çözümleri geliştirir.</p>
           <div className="footer-social">
             <a href="https://www.instagram.com/bromakagency/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FiInstagram size={18} /></a>
             <a href="https://x.com/bromakagency" target="_blank" rel="noopener noreferrer" aria-label="X / Twitter"><FaXTwitter size={18} /></a>

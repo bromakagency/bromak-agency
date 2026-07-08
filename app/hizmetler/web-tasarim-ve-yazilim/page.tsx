@@ -79,11 +79,11 @@ export default async function WebTasarim() {
           <section className="detail-hero">
             <div className="hero-left">
               <span className="eyebrow-text" style={{color: "#fff", textTransform: "uppercase", fontSize: "0.85rem", letterSpacing: "2px", opacity: 0.7, display: "block", marginBottom: "1rem"}}>
-                KONYA WEB TASARIM VE YAZILIM AJANSI
+                KUSURSUZ KOD. SIFIR SINIR.
               </span>
               <h1>
-                Kusursuz Kod.<br />
-                <strong>Sıfır Sınır.</strong>
+                Konya Web Tasarım<br />
+                <strong>& Yazılım Ajansı.</strong>
               </h1>
               <p>
                 Dijitaldeki vitrininiz sıradan olamaz. Konya web sitesi yapan firmalar arasında butik hizmet anlayışımızla; ziyaretçiyi müşteriye dönüştüren, mobil ve SEO uyumlu, ultra hızlı özel web projeleri tasarlıyor ve kodluyoruz.

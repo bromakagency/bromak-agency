@@ -13,9 +13,9 @@ import { getSeoMetadata } from "@/app/lib/seo";
 
 export async function generateMetadata() {
   return getSeoMetadata("hizmetler-seo", {
-    title: "Konya SEO Ajansı | Arama Motoru Optimizasyonu",
-    description: "Google'da üst sıralarda yer alarak organik trafiğinizi artırın. Güvenilir Konya SEO ve dijital pazarlama ajansı ile çalışın.",
-    keywords: "seo, konya seo, konya seo ajansı, arama motoru optimizasyonu, google sıralama"
+    title: "Konya SEO Ajansı | Kurumsal SEO Hizmeti | Bromak Agency",
+    description: "Konya SEO ajansı Bromak ile arama motorlarında ilk sayfaya çıkın. Yüksek hacimli (Konya SEO) aramalarda Google'da zirveye yerleşmek için profesyonel SEO uzmanı desteği alın.",
+    keywords: "konya seo, konya seo ajansı, konya seo uzmanı, arama motoru optimizasyonu konya, google sıralama yükseltme, konya dijital pazarlama"
   });
 }
 
@@ -31,11 +31,11 @@ export default async function SeoDetay() {
     "@context": "https://schema.org",
     "@type": "Service",
     "@id": "https://bromakagency.com/hizmetler/arama-motoru-optimizasyonu-seo/#service",
-    "name": "Arama Motoru Optimizasyonu (SEO)",
+    "name": "Konya SEO Ajansı (Arama Motoru Optimizasyonu)",
     "provider": {
       "@id": "https://bromakagency.com/#organization"
     },
-    "description": "Web sitenizin arama motorlarındaki sıralamasını yükseltiyor, organik trafiğinizi kalıcı olarak artırıyoruz.",
+    "description": "Konya SEO uzmanı ekibimizle web sitenizin arama motorlarındaki sıralamasını yükseltiyor, organik trafiğinizi ve satışlarınızı kalıcı olarak artırıyoruz.",
     "url": "https://bromakagency.com/hizmetler/arama-motoru-optimizasyonu-seo"
   };
 
@@ -55,12 +55,11 @@ export default async function SeoDetay() {
             <div className="hero-left">
 
               <h1>
-                Organik Trafikle<br />
-                <strong>Zirveye Yerleşin.</strong>
+                Konya SEO Ajansı ile<br />
+                <strong>Google'da Zirveye Yerleşin.</strong>
               </h1>
               <p>
-                Konya SEO ajansı olarak, sürdürülebilir SEO stratejileriyle arama motorlarında bulunabilirliğinizi
-                artırıyor, rakiplerinizi geride bırakmanızı sağlıyoruz.
+                Yüksek arama hacmine sahip kelimelerde rakiplerinizi geride bırakın. Profesyonel <strong>Konya SEO uzmanı</strong> ekibimizle, sürdürülebilir stratejiler kurguluyor; <strong>Konya SEO ajansı</strong> olarak markanızı doğrudan hedef kitlenize ulaştırıyoruz.
               </p>
             </div>
 
@@ -150,14 +149,12 @@ export default async function SeoDetay() {
 
           <section className="social-detail-bento">
             <div className="bento-heading">
-              <span>ARAMA MOTORU OPTİMİZASYONU</span>
+              <span>KONYA SEO & ARAMA MOTORU OPTİMİZASYONU</span>
               <h2>
                 Organik trafiğinizi tesadüfe bırakmıyoruz<span>.</span>
               </h2>
               <p>
-                Detaylı site analizi, anahtar kelime stratejisi ve teknik geliştirmelerle
-                sitenizin otoritesini artırıyor, hedef kitleniz arama yaptığında ilk sırada
-                çıkmanızı sağlıyoruz.
+                Konya SEO kelimesinde olduğu gibi markanızı da en yüksek hacimli aramalarda ilk sayfaya taşıyoruz. Detaylı site analizi, profesyonel anahtar kelime stratejisi ve lokal SEO teknikleriyle sitenizin otoritesini artırıyor; en başarılı <strong>Konya SEO ajansı</strong> olarak sizi müşterilerinizle buluşturuyoruz.
               </p>
             </div>
 

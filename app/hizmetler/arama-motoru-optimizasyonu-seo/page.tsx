@@ -215,6 +215,31 @@ export default async function SeoDetay() {
 
           <InteractiveSeoRoi />
 
+          <section className="seo-success-banner" style={{
+            background: 'linear-gradient(135deg, #111111, #1a1a1a)',
+            border: '1px solid rgba(255,255,255,0.1)',
+            borderRadius: '24px',
+            padding: '4rem',
+            margin: '4rem 2rem',
+            textAlign: 'center',
+            position: 'relative',
+            overflow: 'hidden'
+          }}>
+            <span style={{ color: '#00ff88', fontWeight: 600, fontSize: '0.875rem', letterSpacing: '2px', textTransform: 'uppercase' }}>
+              GERÇEK SONUÇLAR, GERÇEK TRAFİK
+            </span>
+            <h2 style={{ fontSize: '2.5rem', marginTop: '1rem', marginBottom: '1.5rem', color: '#ffffff' }}>
+              Konya'da Yerel SEO ile %300 Büyüme
+            </h2>
+            <p style={{ color: 'rgba(255,255,255,0.7)', maxWidth: '600px', margin: '0 auto 2rem', fontSize: '1.125rem', lineHeight: 1.6 }}>
+              Rastgel firması için uyguladığımız özel <strong>Konya SEO</strong> stratejisi sayesinde organik trafiklerini nasıl 3 katına çıkardığımızı ve sektörde nasıl 1. sıraya yerleştiğimizi inceleyin. SEO'da söz değil, rakam konuşuruz.
+            </p>
+            <a href="/basari-hikayeleri/rastgel-seo-basari-hikayesi" className="primary-button" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '1rem 2rem', background: 'white', color: 'black', borderRadius: '100px', textDecoration: 'none', fontWeight: 600 }}>
+              Başarı Hikayesini Oku
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="18" height="18"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </section>
+
           <SeoRoadmap />
 
           <SeoToolEcosystem />

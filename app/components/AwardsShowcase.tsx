@@ -65,9 +65,9 @@ export default function AwardsShowcase() {
 
       {/* Center content */}
       <div className="awards-center-content">
-        <h2 className="awards-heading">
+        <h1 className="awards-heading">
           Nitelikli işler,<br />tescilli başarılar.
-        </h2>
+        </h1>
         <p className="awards-sub">
           Yıllar içinde ürettiğimiz işler, ulusal yarışmalarda defalarca ödüle layık görüldü.
         </p>

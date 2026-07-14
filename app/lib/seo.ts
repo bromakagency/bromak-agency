@@ -3,7 +3,8 @@ import { Metadata } from "next"
 
 export async function getSeoMetadata(
   page: string,
-  defaults: { title: string; description: string; keywords?: string }
+  defaults: { title: string; description: string; keywords?: string },
+  canonicalPath?: string
 ): Promise<Metadata> {
   try {
     const seo = await prisma.seoSettings.findUnique({
@@ -19,6 +20,7 @@ export async function getSeoMetadata(
       title,
       description,
       keywords: keywords ? keywords.split(",").map(k => k.trim()) : undefined,
+      ...(canonicalPath && { alternates: { canonical: canonicalPath } }),
       openGraph: {
         title,
         description,
@@ -38,6 +40,7 @@ export async function getSeoMetadata(
       title: defaults.title,
       description: defaults.description,
       keywords: defaults.keywords ? defaults.keywords.split(",").map(k => k.trim()) : undefined,
+      ...(canonicalPath && { alternates: { canonical: canonicalPath } }),
     }
   }
 }

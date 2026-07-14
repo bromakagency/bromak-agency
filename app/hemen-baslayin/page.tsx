@@ -8,6 +8,7 @@ import ShortContactForm from '../components/ShortContactForm';
 import './lp.css';
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/hemen-baslayin" },
   title: "İşlerimize Göz Atın, Sıradaki Siz Olun | Bromak Agency",
   description: "Konya'da 6 yıldır üretim firmalarına web sitesi ve sosyal medya hizmeti veriyoruz. Ödüllü ajansımızla dijitalde güçlü bir iz bırakın.",
   robots: {

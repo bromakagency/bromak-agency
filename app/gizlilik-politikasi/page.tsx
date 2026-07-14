@@ -3,6 +3,7 @@ import LegalPage from "@/app/components/LegalPage";
 import { privacyPolicy } from "@/app/legal-content";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/gizlilik-politikasi" },
   title: "Gizlilik Politikası | Bromak Agency",
   description:
     "Bromak Agency web sitesi gizlilik politikası ve kişisel verilerin işlenmesine ilişkin bilgilendirme.",

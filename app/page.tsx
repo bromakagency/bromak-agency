@@ -18,7 +18,7 @@ export async function generateMetadata() {
     title: "Konya Reklam Ajansı | Markanızı Dijitalde Büyüten Güç - Bromak",
     description: "Konya reklam ajansları arasında yaratıcı fikirleri veriye dayalı stratejilerle birleştiren dijital performans ajansı. Sosyal medya, SEO ve web projeleriniz için tanışalım.",
     keywords: "konya reklam ajansı, bromak agency, dijital pazarlama konya"
-  });
+  }, "/");
 }
 
 export default function Home() {

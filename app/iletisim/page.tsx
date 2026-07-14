@@ -13,7 +13,7 @@ export async function generateMetadata(): Promise<Metadata> {
     title: "İletişim | Bromak Agency - Konya Reklam Ajansı",
     description: "Bromak Agency ile iletişime geçin. Konya merkezli reklam ajansımızla projenizi konuşalım. +90 541 366 04 96 | merhaba@bromakagency.com",
     keywords: "iletişim, bromak agency, konya reklam ajansı, iletişim bilgileri"
-  });
+  }, "/iletisim");
 }
 
 export default function ContactPage() {

@@ -15,7 +15,7 @@ export async function generateMetadata() {
     title: "Dijital Reklam Yönetimi | Bromak Agency",
     description: "Google Ads, Meta ve diğer platformlarda hedef kitlenize ulaşacak, bütçenizi verimli kullanan kampanyalar tasarlıyoruz.",
     keywords: "dijital reklam, google ads, meta reklamları, sosyal medya reklam"
-  });
+  }, "/hizmetler/dijital-reklam-yonetimi");
 }
 
 export default function DijitalReklamDetay() {

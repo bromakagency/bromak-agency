@@ -14,7 +14,7 @@ export async function generateMetadata() {
     title: "Sosyal Medya Yönetimi | Bromak Agency",
     description: "Markanızın sosyal medyadaki tüm süreçlerini yönetiyor; içerik üretiminden iletişim stratejisine kadar dijital varlığınızı güçlendiriyoruz.",
     keywords: "sosyal medya yönetimi, içerik üretimi, instagram yönetimi, marka yönetimi"
-  });
+  }, "/hizmetler/sosyal-medya-yonetimi");
 }
 
 export default function SosyalMedyaDetay() {

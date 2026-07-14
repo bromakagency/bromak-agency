@@ -12,7 +12,7 @@ export async function generateMetadata(): Promise<Metadata> {
     title: "Hizmetlerimiz | Bromak Agency",
     description: "Markanızı büyütmek için ihtiyacınız olan tüm çözümleri tek çatı altında sunuyoruz. Strateji, tasarım ve dijital pazarlama hizmetlerimizi keşfedin.",
     keywords: "hizmetler, dijital pazarlama, strateji, tasarım"
-  });
+  }, "/hizmetler");
 }
 
 export default function HizmetlerPage() {

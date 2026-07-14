@@ -16,7 +16,7 @@ export async function generateMetadata() {
     title: "Konya SEO Ajansı | Kurumsal SEO Hizmeti | Bromak Agency",
     description: "Konya SEO ajansı Bromak ile arama motorlarında ilk sayfaya çıkın. Yüksek hacimli (Konya SEO) aramalarda Google'da zirveye yerleşmek için profesyonel SEO uzmanı desteği alın.",
     keywords: "konya seo, konya seo ajansı, konya seo uzmanı, arama motoru optimizasyonu konya, google sıralama yükseltme, konya dijital pazarlama"
-  });
+  }, "/hizmetler/arama-motoru-optimizasyonu-seo");
 }
 
 import { prisma } from "@/app/lib/prisma";

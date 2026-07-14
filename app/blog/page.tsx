@@ -9,7 +9,7 @@ export async function generateMetadata(): Promise<Metadata> {
     title: "Blog | Bromak Agency",
     description: "Dijital pazarlama, web tasarım, SEO ve marka yönetimi üzerine güncel ipuçları, stratejiler ve sektör haberleri.",
     keywords: "blog, dijital pazarlama, seo, web tasarım, marka yönetimi"
-  });
+  }, "/blog");
 
   return {
     ...seo,

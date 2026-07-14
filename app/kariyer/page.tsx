@@ -11,7 +11,7 @@ export async function generateMetadata(): Promise<Metadata> {
     title: "Kariyer & İş Başvurusu | Bromak Agency",
     description: "Bromak Agency ekibine katılmak veya staj yapmak için başvurunuzu gönderin.",
     keywords: "kariyer, iş başvurusu, staj başvurusu, reklam ajansı iş ilanları"
-  });
+  }, "/kariyer");
 }
 
 export default function KariyerPage() {

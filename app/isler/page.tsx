@@ -14,7 +14,7 @@ export async function generateMetadata(): Promise<Metadata> {
     title: "İşlerimiz | Bromak Agency",
     description: "Bromak Agency tarafından markalar için üretilen sosyal medya, tasarım, strateji ve dijital pazarlama çalışmalarını keşfedin.",
     keywords: "işlerimiz, portfolyo, bromak agency çalışmaları, tasarım, sosyal medya"
-  });
+  }, "/isler");
 }
 
 export default async function IslerPage(props: { searchParams: Promise<{ [key: string]: string | string[] | undefined }> }) {

@@ -16,7 +16,7 @@ export async function generateMetadata() {
     title: "Konya Web Tasarım ve Yazılım Ajansı | Bromak",
     description: "Konya web tasarım firmaları arasında dönüşüm odaklı, SEO uyumlu ve ultra hızlı kurumsal web sitesi yapan ödüllü reklam ajansı. Projeniz için tanışalım.",
     keywords: "web tasarım, konya web tasarım, konya web site tasarımı, kurumsal web sitesi"
-  });
+  }, "/hizmetler/web-tasarim-ve-yazilim");
 }
 export default async function WebTasarim() {
   const { prisma } = await import("@/app/lib/prisma");

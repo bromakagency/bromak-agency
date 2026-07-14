@@ -12,7 +12,7 @@ export async function generateMetadata(): Promise<Metadata> {
     title: "Sıkça Sorulan Sorular | Bromak Agency",
     description: "Bromak Agency ile çalışma süreçleri, hizmetlerimiz ve dijital dünyayla ilgili en çok merak edilen soruların cevapları.",
     keywords: "sıkça sorulan sorular, sss, bromak agency süreçler, destek"
-  });
+  }, "/sikca-sorulan-sorular");
 }
 
 export default function SikcaSorulanSorular() {

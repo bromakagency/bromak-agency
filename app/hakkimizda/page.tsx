@@ -11,7 +11,7 @@ export async function generateMetadata(): Promise<Metadata> {
     title: "Hakkımızda | Bromak Agency",
     description: "Bromak Agency'nin kuruluşu, vizyonu ve hedefleri.",
     keywords: "hakkımızda, bromak agency, vizyon, misyon"
-  });
+  }, "/hakkimizda");
 }
 
 

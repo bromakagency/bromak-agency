@@ -3,8 +3,14 @@
 import { useState, useEffect } from "react";
 import { FiX, FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
+export type GalleryItem = {
+  url: string;
+  span?: string;
+  fit?: string;
+};
+
 type Props = {
-  gallery: string[];
+  gallery: GalleryItem[];
   title: string;
 };
 
@@ -72,7 +78,7 @@ export default function WorkGalleryClient({ gallery, title }: Props) {
     <>
       <section className="work-detail-grid" aria-label={`${title} proje görselleri`}>
         {gallery.map((item, index) => {
-          const [url, span = "small", fit = "cover"] = item.split("|");
+          const { url, span = "small", fit = "cover" } = item;
           let spanClass = "bento-small";
           if (span === "wide") spanClass = "bento-wide";
           if (span === "tall") spanClass = "bento-tall";
@@ -114,7 +120,7 @@ export default function WorkGalleryClient({ gallery, title }: Props) {
           </button>
           
           <img 
-            src={gallery[currentIndex].split("|")[0]} 
+            src={gallery[currentIndex].url} 
             alt={`Galeri ${currentIndex + 1}`} 
             className="lightbox-image"
             onClick={(e) => e.stopPropagation()} // Resme tıklayınca kapanmasın

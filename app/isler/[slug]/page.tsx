@@ -144,7 +144,13 @@ export default async function WorkDetailPage({ params }: WorkDetailPageProps) {
       </section>
 
       {/* Bento Gallery (Interactive) */}
-      <WorkGalleryClient gallery={work.gallery} title={work.title} />
+      <WorkGalleryClient 
+        gallery={work.gallery.map((item: string) => {
+          const [url, span = "small", fit = "cover"] = item.split("|");
+          return { url, span, fit };
+        })} 
+        title={work.title} 
+      />
 
       {nextWork && (
         <section className="next-work-section" aria-label="Sonraki iş">

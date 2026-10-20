@@ -98,6 +98,8 @@ export default function FeaturedWorksSlider({ works = [] }: { works: any[] }) {
               className="featured-cover"
               draggable={false}
               fill
+              priority={index === 0}
+              loading={index === 0 ? "eager" : "lazy"}
               sizes="(max-width: 768px) 100vw, 100vw"
               style={{ objectFit: 'cover' }}
             />

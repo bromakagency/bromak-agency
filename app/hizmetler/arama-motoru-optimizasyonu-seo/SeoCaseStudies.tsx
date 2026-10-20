@@ -7,19 +7,19 @@ const CASES = [
     tag: "E-Ticaret",
     title: "Aylık 2.5M Organik Trafik Sırrı",
     desc: "Sektör lideri bir e-ticaret markasının SEO stratejisi ile organik trafiğini %340 artırmasının hikayesi.",
-    img: "/images/essen-markasi.png"
+    img: "/images/essen-markasi.webp"
   },
   {
     tag: "Yerel İşletme",
     title: "Haritalarda Zirveye Yerleşmek",
     desc: "Bölgesel hizmet veren bir kliniğin, Google Haritalar optimizasyonu ile randevularını %200 artırması.",
-    img: "/images/dies-markasi.png"
+    img: "/images/dies-markasi.webp"
   },
   {
     tag: "B2B Yazılım",
     title: "Global Pazarda Otorite",
     desc: "Bir SaaS firmasının, semantik blog içerikleriyle global rakiplerini geride bırakıp 1. sıraya oturması.",
-    img: "/images/essen-markasi-4.png"
+    img: "/images/essen-markasi-4.webp"
   }
 ];
 

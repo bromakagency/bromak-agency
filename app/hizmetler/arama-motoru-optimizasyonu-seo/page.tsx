@@ -66,36 +66,36 @@ export default async function SeoDetay() {
             <div className="hero-visuals">
               <div className="hero-track-container top">
                 <div className="hero-track">
-                  <img loading="lazy" decoding="async" src="/images/dies-markasi.png" alt="Sosyal Medya" />
-                  <img loading="lazy" decoding="async" src="/images/dies-markasi-1.png" alt="Sosyal Medya" />
-                  <img loading="lazy" decoding="async" src="/images/dies-markasi-2.png" alt="Sosyal Medya" />
-                  <img loading="lazy" decoding="async" src="/images/essen-markasi.png" alt="Sosyal Medya" />
-                  <img loading="lazy" decoding="async" src="/images/essen-markasi-1.png" alt="Sosyal Medya" />
-                  <img loading="lazy" decoding="async" src="/images/essen-markasi-2.png" alt="Sosyal Medya" />
+                  <img loading="lazy" decoding="async" src="/images/dies-markasi.webp" alt="Sosyal Medya" />
+                  <img loading="lazy" decoding="async" src="/images/dies-markasi-1.webp" alt="Sosyal Medya" />
+                  <img loading="lazy" decoding="async" src="/images/dies-markasi-2.webp" alt="Sosyal Medya" />
+                  <img loading="lazy" decoding="async" src="/images/essen-markasi.webp" alt="Sosyal Medya" />
+                  <img loading="lazy" decoding="async" src="/images/essen-markasi-1.webp" alt="Sosyal Medya" />
+                  <img loading="lazy" decoding="async" src="/images/essen-markasi-2.webp" alt="Sosyal Medya" />
                   {/* Duplicates */}
-                  <img loading="lazy" decoding="async" src="/images/dies-markasi.png" alt="Sosyal Medya" />
-                  <img loading="lazy" decoding="async" src="/images/dies-markasi-1.png" alt="Sosyal Medya" />
-                  <img loading="lazy" decoding="async" src="/images/dies-markasi-2.png" alt="Sosyal Medya" />
-                  <img loading="lazy" decoding="async" src="/images/essen-markasi.png" alt="Sosyal Medya" />
-                  <img loading="lazy" decoding="async" src="/images/essen-markasi-1.png" alt="Sosyal Medya" />
-                  <img loading="lazy" decoding="async" src="/images/essen-markasi-2.png" alt="Sosyal Medya" />
+                  <img loading="lazy" decoding="async" src="/images/dies-markasi.webp" alt="Sosyal Medya" />
+                  <img loading="lazy" decoding="async" src="/images/dies-markasi-1.webp" alt="Sosyal Medya" />
+                  <img loading="lazy" decoding="async" src="/images/dies-markasi-2.webp" alt="Sosyal Medya" />
+                  <img loading="lazy" decoding="async" src="/images/essen-markasi.webp" alt="Sosyal Medya" />
+                  <img loading="lazy" decoding="async" src="/images/essen-markasi-1.webp" alt="Sosyal Medya" />
+                  <img loading="lazy" decoding="async" src="/images/essen-markasi-2.webp" alt="Sosyal Medya" />
                 </div>
               </div>
               <div className="hero-track-container bottom">
                 <div className="hero-track">
-                  <img loading="lazy" decoding="async" src="/images/essen-markasi-3.png" alt="Sosyal Medya" />
-                  <img loading="lazy" decoding="async" src="/images/essen-markasi-4.png" alt="Sosyal Medya" />
-                  <img loading="lazy" decoding="async" src="/images/essen-markasi-5.png" alt="Sosyal Medya" />
-                  <img loading="lazy" decoding="async" src="/images/dies-markasi.png" alt="Sosyal Medya" />
-                  <img loading="lazy" decoding="async" src="/images/dies-markasi-1.png" alt="Sosyal Medya" />
-                  <img loading="lazy" decoding="async" src="/images/dies-markasi-2.png" alt="Sosyal Medya" />
+                  <img loading="lazy" decoding="async" src="/images/essen-markasi-3.webp" alt="Sosyal Medya" />
+                  <img loading="lazy" decoding="async" src="/images/essen-markasi-4.webp" alt="Sosyal Medya" />
+                  <img loading="lazy" decoding="async" src="/images/essen-markasi-5.webp" alt="Sosyal Medya" />
+                  <img loading="lazy" decoding="async" src="/images/dies-markasi.webp" alt="Sosyal Medya" />
+                  <img loading="lazy" decoding="async" src="/images/dies-markasi-1.webp" alt="Sosyal Medya" />
+                  <img loading="lazy" decoding="async" src="/images/dies-markasi-2.webp" alt="Sosyal Medya" />
                   {/* Duplicates */}
-                  <img loading="lazy" decoding="async" src="/images/essen-markasi-3.png" alt="Sosyal Medya" />
-                  <img loading="lazy" decoding="async" src="/images/essen-markasi-4.png" alt="Sosyal Medya" />
-                  <img loading="lazy" decoding="async" src="/images/essen-markasi-5.png" alt="Sosyal Medya" />
-                  <img loading="lazy" decoding="async" src="/images/dies-markasi.png" alt="Sosyal Medya" />
-                  <img loading="lazy" decoding="async" src="/images/dies-markasi-1.png" alt="Sosyal Medya" />
-                  <img loading="lazy" decoding="async" src="/images/dies-markasi-2.png" alt="Sosyal Medya" />
+                  <img loading="lazy" decoding="async" src="/images/essen-markasi-3.webp" alt="Sosyal Medya" />
+                  <img loading="lazy" decoding="async" src="/images/essen-markasi-4.webp" alt="Sosyal Medya" />
+                  <img loading="lazy" decoding="async" src="/images/essen-markasi-5.webp" alt="Sosyal Medya" />
+                  <img loading="lazy" decoding="async" src="/images/dies-markasi.webp" alt="Sosyal Medya" />
+                  <img loading="lazy" decoding="async" src="/images/dies-markasi-1.webp" alt="Sosyal Medya" />
+                  <img loading="lazy" decoding="async" src="/images/dies-markasi-2.webp" alt="Sosyal Medya" />
                 </div>
               </div>
             </div>
@@ -105,7 +105,7 @@ export default async function SeoDetay() {
 
           <section className="service-showcase-mosaic" aria-label="SEO çalışma alanları">
             <article className="showcase-panel showcase-panel-main">
-              <img loading="lazy" decoding="async" src="/images/essen-markasi.png" alt="Teknik SEO" />
+              <img loading="lazy" decoding="async" src="/images/essen-markasi.webp" alt="Teknik SEO" />
               <div className="showcase-panel-copy">
                 <h2>Teknik SEO</h2>
                 <p>Hızlı, taranabilir ve arama motoru dostu kusursuz bir altyapı.</p>
@@ -114,7 +114,7 @@ export default async function SeoDetay() {
 
             <div className="showcase-side-grid">
               <article className="showcase-panel showcase-panel-wide">
-                <img loading="lazy" decoding="async" src="/images/dies-markasi.png" alt="İçerik Optimizasyonu" />
+                <img loading="lazy" decoding="async" src="/images/dies-markasi.webp" alt="İçerik Optimizasyonu" />
                 <div className="showcase-panel-copy">
                   <h3>İçerik</h3>
                   <p>Kullanıcının arama niyetine tam yanıt veren kaliteli içerikler.</p>
@@ -122,7 +122,7 @@ export default async function SeoDetay() {
               </article>
 
               <article className="showcase-panel showcase-panel-small showcase-panel-2d">
-                <img loading="lazy" decoding="async" src="/images/essen-markasi-2.png" alt="Lokal SEO" />
+                <img loading="lazy" decoding="async" src="/images/essen-markasi-2.webp" alt="Lokal SEO" />
                 <div className="showcase-panel-copy">
                   <h3>Lokal</h3>
                   <p>Bölgesel aramalarda doğrudan müşterinize ulaşın.</p>
@@ -130,7 +130,7 @@ export default async function SeoDetay() {
               </article>
 
               <article className="showcase-panel showcase-panel-tall">
-                <img loading="lazy" decoding="async" src="/images/dies-markasi-1.png" alt="Off-Page SEO" />
+                <img loading="lazy" decoding="async" src="/images/dies-markasi-1.webp" alt="Off-Page SEO" />
                 <div className="showcase-panel-copy">
                   <h3>Otorite</h3>
                   <p>Güçlü backlink profili ile Google'ın gözünde güven inşa edin.</p>
@@ -138,7 +138,7 @@ export default async function SeoDetay() {
               </article>
 
               <article className="showcase-panel showcase-panel-small showcase-panel-3d">
-                <img loading="lazy" decoding="async" src="/images/essen-markasi-4.png" alt="Analiz" />
+                <img loading="lazy" decoding="async" src="/images/essen-markasi-4.webp" alt="Analiz" />
                 <div className="showcase-panel-copy">
                   <h3>Analiz</h3>
                   <p>Sürekli veri takibi ve anlık rakip izleme.</p>
@@ -169,7 +169,7 @@ export default async function SeoDetay() {
               </article>
 
               <article className="bento-card bento-card-image" style={{ gridColumn: 'span 2' }}>
-                <img loading="lazy" decoding="async" src="/images/essen-markasi-4.png" alt="İçerik Stratejisi" />
+                <img loading="lazy" decoding="async" src="/images/essen-markasi-4.webp" alt="İçerik Stratejisi" />
                 <div className="bento-overlay">
                   <span>02 / İçerik</span>
                   <h3>Anahtar Kelime & Niyet Analizi</h3>
@@ -186,7 +186,7 @@ export default async function SeoDetay() {
               </article>
 
               <article className="bento-card bento-card-wide bento-card-dark bento-report-card" style={{ gridColumn: '1 / -1' }}>
-                <img loading="lazy" decoding="async" src="/images/essen-markasi-5.png" alt="SEO performans raporu" />
+                <img loading="lazy" decoding="async" src="/images/essen-markasi-5.webp" alt="SEO performans raporu" />
                 <div className="bento-content">
                   <span>04 / Raporlama</span>
                   <h3>Şeffaf SEO İlerleme Raporu</h3>

@@ -31,10 +31,10 @@ export default async function WebTasarim() {
 
   const allGalleryImages = works.flatMap(w => (w.gallery || []).map(g => g.split("|")[0]));
   const fallbacks = [
-    "/images/dies-markasi.png", "/images/dies-markasi-1.png", "/images/dies-markasi-2.png",
-    "/images/essen-markasi.png", "/images/essen-markasi-1.png", "/images/essen-markasi-2.png",
-    "/images/essen-markasi-3.png", "/images/essen-markasi-4.png", "/images/essen-markasi-5.png",
-    "/images/dies-markasi.png", "/images/dies-markasi-1.png", "/images/dies-markasi-2.png"
+    "/images/dies-markasi.webp", "/images/dies-markasi-1.webp", "/images/dies-markasi-2.webp",
+    "/images/essen-markasi.webp", "/images/essen-markasi-1.webp", "/images/essen-markasi-2.webp",
+    "/images/essen-markasi-3.webp", "/images/essen-markasi-4.webp", "/images/essen-markasi-5.webp",
+    "/images/dies-markasi.webp", "/images/dies-markasi-1.webp", "/images/dies-markasi-2.webp"
   ];
   // Benzersiz (unique) görselleri alıp fallback ile 12'ye tamamlayalım
   const uniqueGallery = Array.from(new Set(allGalleryImages)).map(img => 

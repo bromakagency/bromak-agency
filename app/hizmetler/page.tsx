@@ -99,7 +99,7 @@ export default function HizmetlerPage() {
 
             <div className="service-cards">
               <a href="/hizmetler/sosyal-medya-yonetimi" className="service-card">
-                <img loading="lazy" decoding="async" src="/images/dies-markasi.png" alt="İçerik üretimi" />
+                <img loading="lazy" decoding="async" src="/images/dies-markasi.webp" alt="İçerik üretimi" />
                 <div className="card-content">
                   <div className="chips">
                     <span>İçerik Üretimi</span>
@@ -111,7 +111,7 @@ export default function HizmetlerPage() {
               </a>
 
               <a href="/hizmetler/sosyal-medya-yonetimi" className="service-card service-card-large">
-                <img loading="lazy" decoding="async" src="/images/dies-markasi-1.png" alt="Sosyal medya stratejisi" />
+                <img loading="lazy" decoding="async" src="/images/dies-markasi-1.webp" alt="Sosyal medya stratejisi" />
                 <div className="card-content">
                   <div className="chips">
                     <span>Strateji</span>
@@ -128,7 +128,7 @@ export default function HizmetlerPage() {
               </a>
 
               <a href="/hizmetler/sosyal-medya-yonetimi" className="service-card">
-                <img loading="lazy" decoding="async" src="/images/dies-markasi-2.png" alt="Reklam ve kampanya yönetimi" />
+                <img loading="lazy" decoding="async" src="/images/dies-markasi-2.webp" alt="Reklam ve kampanya yönetimi" />
                 <div className="card-content">
                   <div className="chips">
                     <span>Reklam Yönetimi</span>
@@ -156,7 +156,7 @@ export default function HizmetlerPage() {
 
             <div className="service-cards">
               <a href="/hizmetler/dijital-reklam-yonetimi" className="service-card">
-                <img loading="lazy" decoding="async" src="/images/essen-markasi-3.png" alt="Marka Konumlandırma" />
+                <img loading="lazy" decoding="async" src="/images/essen-markasi-3.webp" alt="Marka Konumlandırma" />
                 <div className="card-content">
                   <div className="chips">
                     <span>Konumlandırma</span>
@@ -169,7 +169,7 @@ export default function HizmetlerPage() {
               </a>
 
               <a href="/hizmetler/dijital-reklam-yonetimi" className="service-card service-card-large">
-                <img loading="lazy" decoding="async" src="/images/essen-markasi-4.png" alt="Kreatif Strateji" />
+                <img loading="lazy" decoding="async" src="/images/essen-markasi-4.webp" alt="Kreatif Strateji" />
                 <div className="card-content">
                   <div className="chips">
                     <span>Kreatif</span>
@@ -182,7 +182,7 @@ export default function HizmetlerPage() {
               </a>
 
               <a href="/hizmetler/dijital-reklam-yonetimi" className="service-card">
-                <img loading="lazy" decoding="async" src="/images/essen-markasi-5.png" alt="Kampanya Fikirleri" />
+                <img loading="lazy" decoding="async" src="/images/essen-markasi-5.webp" alt="Kampanya Fikirleri" />
                 <div className="card-content">
                   <div className="chips">
                     <span>Kampanya</span>
@@ -208,7 +208,7 @@ export default function HizmetlerPage() {
 
             <div className="service-cards">
               <a href="/hizmetler/web-tasarim-ve-yazilim" className="service-card">
-                <img loading="lazy" decoding="async" src="/images/dies-markasi.png" alt="Kurumsal Web Sitesi" />
+                <img loading="lazy" decoding="async" src="/images/dies-markasi.webp" alt="Kurumsal Web Sitesi" />
                 <div className="card-content">
                   <div className="chips">
                     <span>Web Sitesi</span>
@@ -221,7 +221,7 @@ export default function HizmetlerPage() {
               </a>
 
               <a href="/hizmetler/web-tasarim-ve-yazilim" className="service-card service-card-large">
-                <img loading="lazy" decoding="async" src="/images/dies-markasi-1.png" alt="UI/UX Tasarım" />
+                <img loading="lazy" decoding="async" src="/images/dies-markasi-1.webp" alt="UI/UX Tasarım" />
                 <div className="card-content">
                   <div className="chips">
                     <span>UI/UX</span>
@@ -234,7 +234,7 @@ export default function HizmetlerPage() {
               </a>
 
               <a href="/hizmetler/web-tasarim-ve-yazilim" className="service-card">
-                <img loading="lazy" decoding="async" src="/images/dies-markasi-2.png" alt="Özel Yazılım" />
+                <img loading="lazy" decoding="async" src="/images/dies-markasi-2.webp" alt="Özel Yazılım" />
                 <div className="card-content">
                   <div className="chips">
                     <span>Özel Yazılım</span>
@@ -260,7 +260,7 @@ export default function HizmetlerPage() {
 
             <div className="service-cards">
               <a href="/hizmetler/arama-motoru-optimizasyonu-seo" className="service-card">
-                <img loading="lazy" decoding="async" src="/images/dies-markasi.png" alt="Teknik SEO" />
+                <img loading="lazy" decoding="async" src="/images/dies-markasi.webp" alt="Teknik SEO" />
                 <div className="card-content">
                   <div className="chips">
                     <span>Teknik SEO</span>
@@ -273,7 +273,7 @@ export default function HizmetlerPage() {
               </a>
 
               <a href="/hizmetler/arama-motoru-optimizasyonu-seo" className="service-card service-card-large">
-                <img loading="lazy" decoding="async" src="/images/dies-markasi-1.png" alt="İçerik SEO" />
+                <img loading="lazy" decoding="async" src="/images/dies-markasi-1.webp" alt="İçerik SEO" />
                 <div className="card-content">
                   <div className="chips">
                     <span>İçerik</span>
@@ -286,7 +286,7 @@ export default function HizmetlerPage() {
               </a>
 
               <a href="/hizmetler/arama-motoru-optimizasyonu-seo" className="service-card">
-                <img loading="lazy" decoding="async" src="/images/dies-markasi-2.png" alt="Optimizasyon" />
+                <img loading="lazy" decoding="async" src="/images/dies-markasi-2.webp" alt="Optimizasyon" />
                 <div className="card-content">
                   <div className="chips">
                     <span>Sürekli</span>
@@ -312,7 +312,7 @@ export default function HizmetlerPage() {
 
             <div className="service-cards">
               <article className="service-card">
-                <img loading="lazy" decoding="async" src="/images/dies-markasi.png" alt="Marka Konumlandırma" />
+                <img loading="lazy" decoding="async" src="/images/dies-markasi.webp" alt="Marka Konumlandırma" />
                 <div className="card-content">
                   <div className="chips">
                     <span>Konumlandırma</span>
@@ -325,7 +325,7 @@ export default function HizmetlerPage() {
               </article>
 
               <article className="service-card service-card-large">
-                <img loading="lazy" decoding="async" src="/images/dies-markasi-1.png" alt="Kreatif Strateji" />
+                <img loading="lazy" decoding="async" src="/images/dies-markasi-1.webp" alt="Kreatif Strateji" />
                 <div className="card-content">
                   <div className="chips">
                     <span>Kreatif</span>
@@ -338,7 +338,7 @@ export default function HizmetlerPage() {
               </article>
 
               <article className="service-card">
-                <img loading="lazy" decoding="async" src="/images/dies-markasi-2.png" alt="Kurumsal Kimlik" />
+                <img loading="lazy" decoding="async" src="/images/dies-markasi-2.webp" alt="Kurumsal Kimlik" />
                 <div className="card-content">
                   <div className="chips">
                     <span>Kimlik</span>

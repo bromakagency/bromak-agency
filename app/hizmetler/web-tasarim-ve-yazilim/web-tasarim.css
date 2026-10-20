@@ -99,7 +99,7 @@
 .browser-content {
   width: 100%;
   height: calc(100% - 40px);
-  background-image: url('/images/essen-markasi.png'); /* Placeholder, we'll use actual screenshot later */
+  background-image: url('/images/essen-markasi.webp'); /* Placeholder, we'll use actual screenshot later */
   background-size: cover;
   background-position: top center;
   transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);

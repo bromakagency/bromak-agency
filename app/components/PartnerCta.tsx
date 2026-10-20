@@ -14,11 +14,11 @@ export default function PartnerCta({ showImages = true }: { showImages?: boolean
   const toggleModal = () => setIsModalOpen(!isModalOpen);
 
   const images = [
-    "/images/dies-markasi.png",
-    "/images/dies-markasi-1.png",
-    "/images/dies-markasi-2.png",
-    "/images/essen-markasi.png",
-    "/images/essen-markasi-1.png",
+    "/images/dies-markasi.webp",
+    "/images/dies-markasi-1.webp",
+    "/images/dies-markasi-2.webp",
+    "/images/essen-markasi.webp",
+    "/images/essen-markasi-1.webp",
     "/images/hizmetler-banner.avif"
   ];
 

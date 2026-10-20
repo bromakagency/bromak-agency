@@ -105,12 +105,12 @@ export default function RootLayout({
     >
       <body data-scrolling-started="false" data-scrolling-direction="up" suppressHydrationWarning>
         <Script
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           src="https://www.googletagmanager.com/gtag/js?id=G-5Y4NVDVB0T"
         />
         <Script
           id="google-analytics"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];

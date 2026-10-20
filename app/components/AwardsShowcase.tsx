@@ -23,18 +23,18 @@ const baseImages = [
 const arcImages = [...baseImages, ...baseImages.slice(0, 9)];
 
 const awards = [
-  { src: "/assets/awards/trt-internet-sitesi-2024.svg", alt: "TRT İnternet Sitesi 2024" },
-  { src: "/assets/awards/trt_giy_2025.svg", alt: "TRT Geleceğin İletişimcileri 2025" },
-  { src: "/assets/awards/trt-radyo-belgesel-2023.svg", alt: "TRT Radyo Belgesel 2023" },
-  { src: "/assets/awards/aydın-dogan-2025.svg", alt: "Aydın Doğan 2025" },
-  { src: "/assets/awards/aydin-dogan-internet-sitesi-2025.svg", alt: "Aydın Doğan İnternet Sitesi 2025" },
-  { src: "/assets/awards/trt_giy_2024.svg", alt: "TRT Geleceğin İletişimcileri 2024" },
-  { src: "/assets/awards/trt-internet-sitesi-2025.svg", alt: "TRT İnternet Sitesi 2025" },
-  { src: "/assets/awards/trt_giy_2023-radyo.svg", alt: "TRT Geleceğin İletişimcileri 2023" },
-  { src: "/assets/awards/trt-radyo-2023.svg", alt: "TRT Radyo 2023" },
-  { src: "/assets/awards/trt_giy_2025.svg", alt: "TRT Geleceğin İletişimcileri 2025 " },
-  { src: "/assets/awards/trt-internet-sitesi-2024.svg", alt: "TRT İnternet Sitesi 2024 " },
-  { src: "/assets/awards/trt_giy_2024.svg", alt: "TRT Geleceğin İletişimcileri 2024 " },
+  { src: "/assets/awards/trt-internet-sitesi-2024.webp", alt: "TRT İnternet Sitesi 2024" },
+  { src: "/assets/awards/trt_giy_2025.webp", alt: "TRT Geleceğin İletişimcileri 2025" },
+  { src: "/assets/awards/trt-radyo-belgesel-2023.webp", alt: "TRT Radyo Belgesel 2023" },
+  { src: "/assets/awards/aydin-dogan-2025.webp", alt: "Aydın Doğan 2025" },
+  { src: "/assets/awards/aydin-dogan-internet-sitesi-2025.webp", alt: "Aydın Doğan İnternet Sitesi 2025" },
+  { src: "/assets/awards/trt_giy_2024.webp", alt: "TRT Geleceğin İletişimcileri 2024" },
+  { src: "/assets/awards/trt-internet-sitesi-2025.webp", alt: "TRT İnternet Sitesi 2025" },
+  { src: "/assets/awards/trt_giy_2023-radyo.webp", alt: "TRT Geleceğin İletişimcileri 2023" },
+  { src: "/assets/awards/trt-radyo-2023.webp", alt: "TRT Radyo 2023" },
+  { src: "/assets/awards/trt_giy_2025.webp", alt: "TRT Geleceğin İletişimcileri 2025 " },
+  { src: "/assets/awards/trt-internet-sitesi-2024.webp", alt: "TRT İnternet Sitesi 2024 " },
+  { src: "/assets/awards/trt_giy_2024.webp", alt: "TRT Geleceğin İletişimcileri 2024 " },
 ];
 
 export default function AwardsShowcase() {
@@ -52,10 +52,9 @@ export default function AwardsShowcase() {
               <Image 
                 src={img.src} 
                 alt={img.alt} 
-                loading={i < 8 ? undefined : "lazy"}
-                fetchPriority={i < 8 ? "high" : "auto"}
+                priority={i < 8}
                 fill
-                sizes="(max-width: 768px) 100vw, 33vw"
+                sizes="(max-width: 860px) 120px, 200px"
                 style={{ objectFit: "cover" }}
               />
             </div>
@@ -76,14 +75,13 @@ export default function AwardsShowcase() {
 
         <div className="awards-logos-row">
           {awards.map((award, i) => (
-            <Image
+            <img
               key={i}
               src={award.src}
               alt={award.alt}
               className="award-logo-img"
-              width={120}
               height={40}
-              style={{ width: 'auto' }}
+              loading="lazy"
             />
           ))}
         </div>

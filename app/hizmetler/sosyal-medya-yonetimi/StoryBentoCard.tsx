@@ -6,9 +6,9 @@ import Image from "next/image";
 const STORY_DURATION = 4000;
 
 const storyImages = [
-  "/images/dies-markasi-1.png",
-  "/images/dies-markasi.png",
-  "/images/essen-markasi-1.png",
+  "/images/dies-markasi-1.webp",
+  "/images/dies-markasi.webp",
+  "/images/essen-markasi-1.webp",
 ];
 
 export default function StoryBentoCard() {

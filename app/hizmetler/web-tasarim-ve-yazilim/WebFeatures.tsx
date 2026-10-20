@@ -4,10 +4,10 @@ import { useState } from "react";
 import "./web-features.css";
 
 const ADMIN_TABS = [
-  { label: "Dashboard", image: "/images/dies-markasi-2.png" },
-  { label: "İçerikler", image: "/images/dies-markasi-1.png" },
-  { label: "Ürünler", image: "/images/essen-markasi.png" },
-  { label: "Ayarlar", image: "/images/essen-markasi-3.png" },
+  { label: "Dashboard", image: "/images/dies-markasi-2.webp" },
+  { label: "İçerikler", image: "/images/dies-markasi-1.webp" },
+  { label: "Ürünler", image: "/images/essen-markasi.webp" },
+  { label: "Ayarlar", image: "/images/essen-markasi-3.webp" },
 ];
 
 export default function WebFeatures() {
@@ -21,7 +21,7 @@ export default function WebFeatures() {
         <div className="feature-row">
           <div className="feature-visual left-visual">
             <div className="visual-bg">
-              <img src="/images/dies-markasi.png" alt="UI UX Tasarım" loading="lazy" decoding="async" />
+              <img src="/images/dies-markasi.webp" alt="UI UX Tasarım" loading="lazy" decoding="async" />
             </div>
             <div className="floating-card float-right">
               <div className="fc-header">
@@ -57,7 +57,7 @@ export default function WebFeatures() {
           </div>
           <div className="feature-visual right-visual">
             <div className="visual-bg">
-              <img src="/images/essen-markasi.png" alt="SEO ve Hız" loading="lazy" decoding="async" />
+              <img src="/images/essen-markasi.webp" alt="SEO ve Hız" loading="lazy" decoding="async" />
             </div>
             <div className="floating-card float-left performance-card">
               <div className="perf-item">

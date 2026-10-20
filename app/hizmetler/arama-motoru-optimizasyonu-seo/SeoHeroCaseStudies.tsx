@@ -13,7 +13,7 @@ const CASES = [
       { value: "4x", label: "Organik Trafik Artışı" },
       { value: "%340", label: "Daha Yüksek Satış" }
     ],
-    image: "/images/essen-markasi.png",
+    image: "/images/essen-markasi.webp",
     blob1: "#e30613", // Brand Red
     blob2: "#800000", // Dark Red
     slug: "essen-organik-trafik-buyumesi"
@@ -26,7 +26,7 @@ const CASES = [
       { value: "#1", label: "Google Haritalar" },
       { value: "+200%", label: "Randevu Artışı" }
     ],
-    image: "/images/dies-markasi.png",
+    image: "/images/dies-markasi.webp",
     blob1: "#cc0000", 
     blob2: "#4d0000",
     slug: "klinik-harita-optimizasyonu"
@@ -39,7 +39,7 @@ const CASES = [
       { value: "1.2M", label: "Aylık Gösterim" },
       { value: "Top 3", label: "40+ Hedef Kelime" }
     ],
-    image: "/images/essen-markasi-4.png",
+    image: "/images/essen-markasi-4.webp",
     blob1: "#a30000",
     blob2: "#ff3333",
     slug: "saas-global-seo-basarisi"

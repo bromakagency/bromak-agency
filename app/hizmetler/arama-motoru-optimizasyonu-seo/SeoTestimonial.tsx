@@ -8,7 +8,7 @@ export default function SeoTestimonial() {
       <div className="sierra-test-inner">
         <div className="sierra-test-card">
           <div className="test-avatar">
-            <img loading="lazy" decoding="async" src="/images/essen-markasi.png" alt="Müşteri Logosu" />
+            <img loading="lazy" decoding="async" src="/images/essen-markasi.webp" alt="Müşteri Logosu" />
           </div>
           <div className="test-content">
             <div className="test-quote-icon">“</div>

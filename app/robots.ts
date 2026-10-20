@@ -5,6 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
+      disallow: ["/bromakhome/", "/api/", "/bultenden-ayril"],
     },
     sitemap: "https://bromakagency.com/sitemap.xml",
   };

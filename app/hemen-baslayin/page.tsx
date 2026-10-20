@@ -18,12 +18,12 @@ export const metadata: Metadata = {
 };
 
 const awardsList = [
-  { src: "/assets/awards/trt-internet-sitesi-2024.svg", alt: "TRT İnternet Sitesi 2024" },
-  { src: "/assets/awards/trt_giy_2025.svg", alt: "TRT Geleceğin İletişimcileri 2025" },
-  { src: "/assets/awards/trt-radyo-belgesel-2023.svg", alt: "TRT Radyo Belgesel 2023" },
-  { src: "/assets/awards/aydın-dogan-2025.svg", alt: "Aydın Doğan 2025" },
-  { src: "/assets/awards/aydin-dogan-internet-sitesi-2025.svg", alt: "Aydın Doğan İnternet Sitesi 2025" },
-  { src: "/assets/awards/trt_giy_2024.svg", alt: "TRT Geleceğin İletişimcileri 2024" },
+  { src: "/assets/awards/trt-internet-sitesi-2024.webp", alt: "TRT İnternet Sitesi 2024" },
+  { src: "/assets/awards/trt_giy_2025.webp", alt: "TRT Geleceğin İletişimcileri 2025" },
+  { src: "/assets/awards/trt-radyo-belgesel-2023.webp", alt: "TRT Radyo Belgesel 2023" },
+  { src: "/assets/awards/aydin-dogan-2025.webp", alt: "Aydın Doğan 2025" },
+  { src: "/assets/awards/aydin-dogan-internet-sitesi-2025.webp", alt: "Aydın Doğan İnternet Sitesi 2025" },
+  { src: "/assets/awards/trt_giy_2024.webp", alt: "TRT Geleceğin İletişimcileri 2024" },
 ];
 
 export default async function HemenBaslayin() {

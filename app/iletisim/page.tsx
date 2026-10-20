@@ -29,9 +29,10 @@ export default function ContactPage() {
         "email": "merhaba@bromakagency.com",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "Şeker Mh. Şefikcan Cd.",
+          "streetAddress": "Esenler Mh. Horasan Sk. Görgülü Center No:4/4",
           "addressLocality": "Selçuklu",
           "addressRegion": "Konya",
+          "postalCode": "42080",
           "addressCountry": "TR"
         },
         "url": "https://bromakagency.com/iletisim"

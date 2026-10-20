@@ -21,6 +21,7 @@ const staticRoutes: Array<{
   { path: "/hakkimizda", changeFrequency: "monthly", priority: 0.75 },
   { path: "/iletisim", changeFrequency: "monthly", priority: 0.9 },
   { path: "/sikca-sorulan-sorular", changeFrequency: "monthly", priority: 0.65 },
+  { path: "/kariyer", changeFrequency: "monthly", priority: 0.7 },
   { path: "/gizlilik-politikasi", changeFrequency: "yearly", priority: 0.3 },
   { path: "/kullanim-sartlari", changeFrequency: "yearly", priority: 0.3 },
   { path: "/cerez-politikasi", changeFrequency: "yearly", priority: 0.3 },

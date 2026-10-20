@@ -6,6 +6,10 @@ export const metadata = {
   alternates: { canonical: "/bultenden-ayril" },
   title: "Bültenden Ayrıl | Bromak Agency",
   description: "Bromak Agency e-bülten aboneliğinizi iptal edin.",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function UnsubscribePage() {

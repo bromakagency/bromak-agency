@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 const awards = [
   {
@@ -137,11 +138,16 @@ export default function AwardsCarousel() {
               key={`${award.year}-${award.category}-${index}`}
               onClick={() => scrollToIndex(index)}
             >
-              <img
+              <Image
                 src={award.image}
                 alt={`${award.title} ${award.category}`}
-                loading="lazy"
+                width={400}
+                height={400}
+                priority={index < 2}
+                loading={index < 2 ? "eager" : "lazy"}
                 decoding="async"
+                sizes="(max-width: 768px) 240px, 320px"
+                style={{ objectFit: "contain" }}
               />
               <div>
                 <h3>{award.title}</h3>

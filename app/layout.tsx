@@ -83,7 +83,11 @@ export const metadata: Metadata = {
     follow: true,
   },
   icons: {
-    icon: "/assets/logos/bromak-favicon.svg",
+    icon: [
+      { url: "/assets/logos/bromak-favicon.svg", type: "image/svg+xml" },
+      { url: "/icon.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: "/apple-icon.png",
   },
   verification: {
     other: {

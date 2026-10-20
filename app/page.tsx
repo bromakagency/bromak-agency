@@ -119,8 +119,8 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
       <Animations />
-      <div className="main-wrapper">
-        <Navbar />
+      <Navbar />
+      <main className="main-wrapper" id="main-content">
         <AwardsShowcase />
         <PreviewSection />
         <SliderSection />
@@ -130,8 +130,7 @@ export default function Home() {
         <HomeBlogSection />
         <SeoTextSection />
         <Footer />
-
-      </div>
+      </main>
     </div>
   );
 }

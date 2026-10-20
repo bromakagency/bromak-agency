@@ -63,7 +63,7 @@ export default function CookieBanner() {
           <div className="cookie-banner official-banner">
             <div className="cookie-content">
               <div className="cookie-text">
-                <h4>Gizlilik ve Çerez Tercihleri</h4>
+                <div className="cookie-title" role="heading" aria-level={2}>Gizlilik ve Çerez Tercihleri</div>
                 <p>
                   Sizlere daha iyi hizmet sunabilmek, site kullanımını analiz etmek ve pazarlama faaliyetlerini 
                   kişiselleştirmek amacıyla çerezler (cookies) kullanıyoruz. Devam ederek çerez kullanımını 
@@ -88,14 +88,14 @@ export default function CookieBanner() {
         ) : (
           <div className="cookie-settings-modal">
             <div className="cookie-settings-header">
-              <h4>Çerez Tercihlerinizi Yönetin</h4>
+              <div className="cookie-settings-title" role="heading" aria-level={2}>Çerez Tercihlerinizi Yönetin</div>
               <button onClick={() => setShowSettings(false)} className="cookie-btn-close">✕</button>
             </div>
             
             <div className="cookie-settings-body">
               <div className="cookie-setting-item">
                 <div className="setting-info">
-                  <h5>Zorunlu Çerezler</h5>
+                  <div className="setting-title" role="heading" aria-level={3}>Zorunlu Çerezler</div>
                   <p>Sitenin temel işlevlerini yerine getirebilmesi için gereklidir ve kapatılamaz.</p>
                 </div>
                 <div className="setting-toggle">
@@ -105,7 +105,7 @@ export default function CookieBanner() {
 
               <div className="cookie-setting-item">
                 <div className="setting-info">
-                  <h5>Analiz Çerezleri</h5>
+                  <div className="setting-title" role="heading" aria-level={3}>Analiz Çerezleri</div>
                   <p>Site trafiğini analiz etmemize ve performans iyileştirmeleri yapmamıza yardımcı olur.</p>
                 </div>
                 <div className="setting-toggle">
@@ -122,7 +122,7 @@ export default function CookieBanner() {
 
               <div className="cookie-setting-item">
                 <div className="setting-info">
-                  <h5>Pazarlama Çerezleri</h5>
+                  <div className="setting-title" role="heading" aria-level={3}>Pazarlama Çerezleri</div>
                   <p>İlgi alanlarınıza göre kişiselleştirilmiş reklamlar sunmamızı sağlar.</p>
                 </div>
                 <div className="setting-toggle">

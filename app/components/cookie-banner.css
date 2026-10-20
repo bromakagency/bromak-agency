@@ -45,7 +45,8 @@
   flex-shrink: 0;
 }
 
-.cookie-text h4 {
+.cookie-text h4,
+.cookie-text .cookie-title {
   color: #fff;
   margin: 0 0 6px 0;
   font-size: 16px;
@@ -186,7 +187,8 @@
   align-items: center;
 }
 
-.cookie-settings-header h4 {
+.cookie-settings-header h4,
+.cookie-settings-header .cookie-settings-title {
   color: #fff;
   margin: 0;
   font-size: 18px;
@@ -223,7 +225,8 @@
   gap: 16px;
 }
 
-.setting-info h5 {
+.setting-info h5,
+.setting-info .setting-title {
   color: #fff;
   margin: 0 0 6px 0;
   font-size: 15px;

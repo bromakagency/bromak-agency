@@ -84,7 +84,7 @@
 .awards-sub {
   font-size: 16px;
   line-height: 1.6;
-  color: #555;
+  color: #374151;
   margin-bottom: 56px;
   max-width: 640px;
   margin-left: auto;
@@ -96,7 +96,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: #999;
+  color: #4b5563;
   margin-bottom: 32px;
 }
 
@@ -130,9 +130,9 @@
 }
 
 .awards-fine-print {
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.5;
-  color: #a0a0a0;
+  color: #4b5563;
   max-width: 700px;
   margin: 0 auto;
 }

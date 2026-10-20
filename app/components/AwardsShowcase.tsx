@@ -52,9 +52,11 @@ export default function AwardsShowcase() {
               <Image 
                 src={img.src} 
                 alt={img.alt} 
-                priority={i < 8}
+                priority={i < 2}
+                loading={i < 2 ? "eager" : "lazy"}
+                fetchPriority={i < 2 ? "high" : "auto"}
                 fill
-                sizes="(max-width: 860px) 120px, 200px"
+                sizes="(max-width: 520px) 130px, (max-width: 860px) 120px, 180px"
                 style={{ objectFit: "cover" }}
               />
             </div>

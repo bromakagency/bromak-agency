@@ -5,6 +5,8 @@ import Animations from "@/app/components/Animations";
 import WebBentoWorks from "./WebBentoWorks";
 import WebFeatures from "./WebFeatures";
 import WebRoadmap from "./WebRoadmap";
+import WebPackages from "./WebPackages";
+import WebTechComparison from "./WebTechComparison";
 import MetaViewContentTracker from "@/app/components/MetaViewContentTracker";
 import "../arama-motoru-optimizasyonu-seo/detay.css";
 import "./web-tasarim.css";
@@ -100,6 +102,30 @@ export default async function WebTasarim() {
               "@type": "Answer",
               "text": "Evet. Sitenizle birlikte size özel tasarlanmış, kullanımı son derece kolay bir Yönetim Paneli (Admin) sunuyoruz. Teknik bilgiye ihtiyaç duymadan yazılarınızı, fotoğraflarınızı ve ürünlerinizi güncelleyebilirsiniz."
             }
+          },
+          {
+            "@type": "Question",
+            "name": "Konya Organize Sanayi ve B2B firmalarına özel web tasarımı yapıyor musunuz?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Evet. Konya Organize Sanayi Bölgeleri (Büsan, 1-5. OSB) bünyesindeki makine, tarım, otomotiv yan sanayi, gıda ve ihracatçı firmalara özel çok dilli kurumsal katalog ve B2B web çözümleri üretiyoruz."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Konya web tasarım fiyatları neye göre belirleniyor?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Web tasarım fiyatları; projenin sayfa sayısı, özel UI/UX tasarım gereksinimi, e-ticaret altyapısı, yabancı dil desteği ve ERP/CRM entegrasyonlarına göre şekillenir. Hazır şablon satmadığımız için her markaya ihtiyacına göre şeffaf ve net bir teklif sunuyoruz."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Web sitesi teslim edildikten sonra teknik destek veriyor musunuz?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Kesinlikle. Siteniz yayına alındıktan sonra güvenlik güncellemeleri, düzenli cloud yedekleme ve teknik destek hizmetlerimizle projenizin kesintisiz çalışmasını garanti altına alıyoruz."
+            }
           }
         ]
       }
@@ -160,6 +186,10 @@ export default async function WebTasarim() {
 
           <WebFeatures />
 
+          <WebTechComparison />
+
+          <WebPackages />
+
           <WebRoadmap />
 
           <WebBentoWorks works={works.slice(0, 5)} />
@@ -199,6 +229,27 @@ export default async function WebTasarim() {
                   <summary>Siteyi teslim aldıktan sonra kendim güncelleyebilir miyim?</summary>
                   <p>
                     Evet. Sitenizle birlikte size özel tasarlanmış, kullanımı son derece kolay bir Yönetim Paneli (Admin) sunuyoruz. Teknik bilgiye ihtiyaç duymadan yazılarınızı, fotoğraflarınızı ve ürünlerinizi güncelleyebilirsiniz.
+                  </p>
+                </details>
+
+                <details className="social-faq-item">
+                  <summary>Konya Organize Sanayi ve B2B firmalarına özel web tasarımı yapıyor musunuz?</summary>
+                  <p>
+                    Evet. Konya Organize Sanayi Bölgeleri (Büsan, 1-5. OSB) bünyesindeki makine, tarım, otomotiv yan sanayi, gıda ve ihracatçı firmalara özel çok dilli kurumsal katalog ve B2B web çözümleri üretiyoruz.
+                  </p>
+                </details>
+
+                <details className="social-faq-item">
+                  <summary>Konya web tasarım fiyatları neye göre belirleniyor?</summary>
+                  <p>
+                    Web tasarım fiyatları; projenin sayfa sayısı, özel UI/UX tasarım gereksinimi, e-ticaret altyapısı, yabancı dil desteği ve ERP/CRM entegrasyonlarına göre şekillenir. Hazır şablon satmadığımız için her markaya ihtiyacına göre şeffaf ve net bir teklif sunuyoruz.
+                  </p>
+                </details>
+
+                <details className="social-faq-item">
+                  <summary>Web sitesi teslim edildikten sonra teknik destek veriyor musunuz?</summary>
+                  <p>
+                    Kesinlikle. Siteniz yayına alındıktan sonra güvenlik güncellemeleri, düzenli cloud yedekleme ve teknik destek hizmetlerimizle projenizin kesintisiz çalışmasını garanti altına alıyoruz.
                   </p>
                 </details>
               </div>

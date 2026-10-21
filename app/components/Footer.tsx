@@ -50,8 +50,8 @@ function AccordionCol({ title, children }: { title: string; children: React.Reac
 
 const serviceLinks = (
   <>
-    <Link href="/hizmetler/web-tasarim-ve-yazilim">Web Tasarım & Yazılım</Link>
-    <Link href="/hizmetler/arama-motoru-optimizasyonu-seo">Arama Motoru Optimizasyonu</Link>
+    <Link href="/hizmetler/web-tasarim-ve-yazilim">Konya Web Tasarım & Yazılım</Link>
+    <Link href="/hizmetler/arama-motoru-optimizasyonu-seo">Konya SEO & Arama Motoru Optimizasyonu</Link>
     <Link href="/hizmetler/sosyal-medya-yonetimi">Sosyal Medya Yönetimi</Link>
     <Link href="/hizmetler/dijital-reklam-yonetimi">Dijital Reklam Yönetimi</Link>
   </>

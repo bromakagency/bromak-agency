@@ -149,10 +149,16 @@ export default function BlogForm({ post }: { post?: PostData }) {
       formData.append("file", file)
       formData.append("folder", "blog")
       const res = await fetch("/api/upload", { method: "POST", body: formData })
-      const data = await res.json().catch(() => ({}))
+      const text = await res.text()
+      let data: any = {}
+      try {
+        data = JSON.parse(text)
+      } catch {
+        // Response might be plain text or HTML
+      }
       
       if (!res.ok) {
-        throw new Error(data.error || `Yükleme sunucu hatası verdi (${res.status}).`)
+        throw new Error(data.error || `Sunucu hatası (${res.status}): ${text.substring(0, 90)}`)
       }
 
       if (data.url) {
@@ -183,10 +189,16 @@ export default function BlogForm({ post }: { post?: PostData }) {
       formData.append("file", file)
       formData.append("folder", "blog")
       const res = await fetch("/api/upload", { method: "POST", body: formData })
-      const data = await res.json().catch(() => ({}))
+      const text = await res.text()
+      let data: any = {}
+      try {
+        data = JSON.parse(text)
+      } catch {
+        // Response might be plain text or HTML
+      }
 
       if (!res.ok) {
-        throw new Error(data.error || `Yükleme sunucu hatası verdi (${res.status}).`)
+        throw new Error(data.error || `Sunucu hatası (${res.status}): ${text.substring(0, 90)}`)
       }
 
       if (data.url) {

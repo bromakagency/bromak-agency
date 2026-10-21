@@ -38,11 +38,11 @@ export default function PreviewSection() {
           <div className="preview_layout">
             {/* Header */}
             <div className="preview_head-wrap">
-              <h2 className="heading-2" style={{ color: "#111" }}>
-                Markanız İçin
+              <h1 className="heading-2" style={{ color: "#111" }}>
+                Konya Reklam Ajansı:
                 <br />
-                Stratejik Üretim Alanı
-              </h2>
+                Markanız İçin Stratejik Üretim Alanı
+              </h1>
               <p className="subhead" style={{ color: "#444" }}>
                 Öncü bir Konya reklam ajansı olarak; fikir, tasarım, içerik ve performans kararlarını aynı yaratıcı
                 akışta birleştirerek markanızın dijital varlığını güçlendiriyoruz.

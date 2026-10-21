@@ -10,7 +10,7 @@ export default function ReviewsSection() {
             {/* Desktop image */}
             <div className="reviews_img-wrap">
               <img src={A("68bc1a447e73b0da2a03295c_reviews-img.avif")}
-                alt=""
+                alt="Bromak Agency müşteri iş birlikleri ve referansları"
                 className="reviews_img"
                 loading="lazy"
                 decoding="async"
@@ -19,7 +19,7 @@ export default function ReviewsSection() {
             {/* Mobile top image */}
             <div className="reviews_m-img-wrap">
               <img src={A("68bc1a447e73b0da2a03296b_Reviews-M-Top.avif")}
-                alt=""
+                alt="Bromak Agency marka ortaklıkları"
                 className="reviews_m-img"
                 loading="lazy"
                 decoding="async"
@@ -41,7 +41,7 @@ export default function ReviewsSection() {
             {/* Mobile bottom image */}
             <div className="reviews_m-img-wrap is-bottom">
               <img src={A("68bc1a447e73b0da2a032965_Reviews-M-Bottom.avif")}
-                alt=""
+                alt="Bromak Agency dijital tasarım ve reklam projeleri"
                 className="reviews_m-img"
                 loading="lazy"
                 decoding="async"

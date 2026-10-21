@@ -33,7 +33,7 @@ export default function UsesSection() {
                     </div>
                   )}
                   <img src={A(u.img)}
-                    alt=""
+                    alt={u.title ? u.title.replace(/\n/g, ' ') : "Bromak Ajans Hizmeti"}
                     className="uses_img"
                     data-parallax="trigger"
                     data-parallax-start="0"

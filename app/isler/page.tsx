@@ -110,6 +110,7 @@ export default async function IslerPage(props: { searchParams: Promise<{ [key: s
         <Navbar />
 
         <main className="works-page">
+          <h1 className="sr-only">Bromak Agency Portfolyo ve Referans Projelerimiz</h1>
           <div className="featured-section">
             <FeaturedWorksSlider works={sliderWorks} />
           </div>

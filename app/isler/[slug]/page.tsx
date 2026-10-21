@@ -100,7 +100,7 @@ export default async function WorkDetailPage({ params }: WorkDetailPageProps) {
         </Link>
         <div className="work-detail-title">
           <span>{work.service}</span>
-          <strong>{work.title}</strong>
+          <h1>{work.title}</h1>
         </div>
       </div>
       

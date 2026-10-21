@@ -99,7 +99,7 @@ export default async function StoryDetailPage({ params }: StoryDetailPageProps) 
             <div className="story-hero-content wrapper">
               {story.logo && (
                 <div className="story-client-logo">
-                  <img src={story.logo} alt="Client Logo" />
+                  <img src={story.logo} alt={`${story.title} Logosu`} />
                 </div>
               )}
               
@@ -155,7 +155,7 @@ export default async function StoryDetailPage({ params }: StoryDetailPageProps) 
                     <div className="more-story-overlay"></div>
                     {item.logo && (
                       <div className="more-story-logo">
-                        <img src={item.logo} alt="" />
+                        <img src={item.logo} alt={`${item.title} Logosu`} />
                       </div>
                     )}
                   </Link>

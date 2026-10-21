@@ -50,7 +50,7 @@ export default function StoryBentoCard() {
           <Image
             key={src}
             src={src}
-            alt=""
+            alt={`Sosyal Medya İçerik Örneği ${index + 1}`}
             className={index === activeIndex ? "is-active" : ""}
             loading="lazy"
             decoding="async"

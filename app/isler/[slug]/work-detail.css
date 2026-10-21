@@ -58,9 +58,13 @@
   text-transform: uppercase;
 }
 
-.work-detail-title strong {
+.work-detail-title strong,
+.work-detail-title h1 {
   font-size: 15px;
   font-weight: 800;
+  margin: 0;
+  line-height: inherit;
+  color: inherit;
 }
 
 .work-detail-grid {

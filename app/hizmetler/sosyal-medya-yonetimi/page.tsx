@@ -20,14 +20,64 @@ export async function generateMetadata() {
 export default function SosyalMedyaDetay() {
   const schema = {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "@id": "https://bromakagency.com/hizmetler/sosyal-medya-yonetimi/#service",
-    "name": "Sosyal Medya Yönetimi",
-    "provider": {
-      "@id": "https://bromakagency.com/#organization"
-    },
-    "description": "Markanızın sosyal medyadaki tüm süreçlerini yönetiyor; içerik üretiminden iletişim stratejisine kadar dijital varlığınızı güçlendiriyoruz.",
-    "url": "https://bromakagency.com/hizmetler/sosyal-medya-yonetimi"
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": "https://bromakagency.com/hizmetler/sosyal-medya-yonetimi/#service",
+        "name": "Sosyal Medya Yönetimi",
+        "provider": {
+          "@id": "https://bromakagency.com/#organization"
+        },
+        "description": "Markanızın sosyal medyadaki tüm süreçlerini yönetiyor; içerik üretiminden iletişim stratejisine kadar dijital varlığınızı güçlendiriyoruz.",
+        "url": "https://bromakagency.com/hizmetler/sosyal-medya-yonetimi"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://bromakagency.com/hizmetler/sosyal-medya-yonetimi/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Sosyal medya yönetimi süreci nasıl başlıyor?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Önce markanızı, hedef kitlenizi ve mevcut hesap performansınızı analiz ediyoruz. Ardından içerik dili, paylaşım takvimi ve büyüme hedeflerini netleştiriyoruz."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "İçerik takvimi aylık mı hazırlanıyor?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Evet. Aylık içerik planı oluşturuyor, kampanya günlerini ve marka önceliklerini takvime işliyoruz. Onay sonrası içerikler üretim ve yayın akışına alınıyor."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Reels ve kısa video üretimi dahil mi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Paket kapsamına göre reels, story ve kısa video formatları planlanabilir. Çekim, kurgu ve yayın formatı markanın ihtiyaçlarına göre belirlenir."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Raporlama nasıl yapılıyor?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Her ay erişim, etkileşim, takipçi artışı ve içerik performansını yorumlayan okunabilir bir rapor sunuyoruz. Bir sonraki ayın aksiyonları bu verilere göre güncellenir."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Reklam yönetimi sosyal medya yönetimine dahil mi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Organik sosyal medya yönetimi ve reklam yönetimi ayrı planlanabilir. İhtiyaç varsa hedef kitle, bütçe ve kampanya kurgusunu birlikte yönetiyoruz."
+            }
+          }
+        ]
+      }
+    ]
   };
 
   return (

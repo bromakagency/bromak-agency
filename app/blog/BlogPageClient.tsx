@@ -191,6 +191,7 @@ export default function BlogPageClient({ posts }: { posts: Post[] }) {
       <Toaster position="top-right" />
       <Navbar />
       <main className="bromak-blog-page">
+        <h1 className="sr-only">Bromak Agency Blog - Dijital Pazarlama, SEO ve Tasarım Rehberi</h1>
         <BlogSlider posts={posts} />
 
         <div className="blog-layout">

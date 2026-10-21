@@ -62,7 +62,7 @@ export default async function BasariHikayeleriPage() {
                           <div className="story-card-logo">
                             <Image 
                               src={story.logo} 
-                              alt="Logo"
+                              alt={`${story.title} Logosu`}
                               fill
                               style={{ objectFit: 'contain' }}
                             />

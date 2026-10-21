@@ -21,14 +21,64 @@ export async function generateMetadata() {
 export default function DijitalReklamDetay() {
   const schema = {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "@id": "https://bromakagency.com/hizmetler/dijital-reklam-yonetimi/#service",
-    "name": "Dijital Reklam Yönetimi",
-    "provider": {
-      "@id": "https://bromakagency.com/#organization"
-    },
-    "description": "Google Ads, Meta Ads, TikTok ve diğer performans kanallarında veri odaklı kampanyalarla maksimum dönüşüm ve ROAS sağlıyoruz.",
-    "url": "https://bromakagency.com/hizmetler/dijital-reklam-yonetimi"
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": "https://bromakagency.com/hizmetler/dijital-reklam-yonetimi/#service",
+        "name": "Dijital Reklam Yönetimi",
+        "provider": {
+          "@id": "https://bromakagency.com/#organization"
+        },
+        "description": "Google Ads, Meta Ads, TikTok ve diğer performans kanallarında veri odaklı kampanyalarla maksimum dönüşüm ve ROAS sağlıyoruz.",
+        "url": "https://bromakagency.com/hizmetler/dijital-reklam-yonetimi"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://bromakagency.com/hizmetler/dijital-reklam-yonetimi/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Dijital reklam süreci nasıl başlıyor?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Önce hedeflerinizi (satış, lead vb.) ve geçmiş reklam verilerinizi analiz ediyoruz. Ardından bütçe planlaması, kullanılacak kanallar ve kampanya kurgularını netleştiriyoruz."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Hangi platformlara reklam veriyorsunuz?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Google Ads, Meta (Facebook & Instagram), TikTok ve LinkedIn başta olmak üzere hedef kitlenizin bulunduğu tüm dijital performans kanallarında kampanyalar kuruyoruz."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Aylık bütçe nasıl belirleniyor?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sektörünüzün rekabet durumuna ve hedeflerinize göre bir başlangıç test bütçesi belirliyor, veri geldikçe ve verim arttıkça bütçeyi ölçeklendiriyoruz."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Ne zaman sonuç alırım?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Kurulumlar tamamlandıktan sonraki ilk 2-4 hafta makine öğrenimi ve A/B test aşamasıdır. Çoğu durumda ilk aydan itibaren anlamlı ve ölçülebilir dönüşümler (satış/form) gelmeye başlar."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Reklam görsellerini kim hazırlıyor?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "İsterseniz mevcut materyallerinizi kullanabiliriz veya ajansımızın kreatif ekibi, performans ve dönüşüm odaklı özel banner ve video reklam tasarımlarınızı hazırlayabilir."
+            }
+          }
+        ]
+      }
+    ]
   };
 
   return (

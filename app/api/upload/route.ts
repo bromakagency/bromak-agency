@@ -27,12 +27,17 @@ export async function POST(request: NextRequest) {
 
     // Görsel optimizasyonu (SVG hariç)
     if (contentType.startsWith("image/") && contentType !== "image/svg+xml" && contentType !== "image/gif") {
-      finalBuffer = await sharp(rawBuffer)
-        .resize({ width: 1920, withoutEnlargement: true }) // Maksimum 1920px genişlik, küçükse büyütmez
-        .webp({ quality: 80 }) // %80 kalite ile webp formatına çevir (kalite bozulmaz, boyut aşırı küçülür)
-        .toBuffer()
-      ext = "webp"
-      contentType = "image/webp"
+      try {
+        finalBuffer = await sharp(rawBuffer)
+          .resize({ width: 1920, withoutEnlargement: true }) // Maksimum 1920px genişlik
+          .webp({ quality: 80 })
+          .toBuffer()
+        ext = "webp"
+        contentType = "image/webp"
+      } catch (sharpError) {
+        console.warn("Sharp görsel optimizasyonu atlandı (orijinal yükleniyor):", sharpError)
+        // Fallback: Orijinal buffer ile devam et
+      }
     }
 
     const fileName = `${folder}/${uuidv4()}.${ext}`
@@ -40,7 +45,10 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({ url })
   } catch (error: any) {
-    console.error("Upload hatası:", error)
-    return NextResponse.json({ error: error.message || "Yükleme başarısız." }, { status: 500 })
+    console.error("Upload API hatası:", error)
+    return NextResponse.json({ 
+      error: error?.message || "Görsel yüklenirken sunucu hatası oluştu.",
+      code: error?.code
+    }, { status: 500 })
   }
 }

@@ -137,20 +137,31 @@ export default function BlogForm({ post }: { post?: PostData }) {
   }
 
   const handleImageUpload = async (file: File) => {
+    if (file.size > 4.5 * 1024 * 1024) {
+      setError("Görsel boyutu çok büyük (Max 4.5 MB). Lütfen görseli sıkıştırıp tekrar deneyin.")
+      return
+    }
+
     setImageUploading(true)
+    setError("")
     try {
       const formData = new FormData()
       formData.append("file", file)
       formData.append("folder", "blog")
       const res = await fetch("/api/upload", { method: "POST", body: formData })
-      const data = await res.json()
+      const data = await res.json().catch(() => ({}))
+      
+      if (!res.ok) {
+        throw new Error(data.error || `Yükleme sunucu hatası verdi (${res.status}).`)
+      }
+
       if (data.url) {
         setImage(data.url)
       } else {
-        setError("Görsel yükleme başarısız.")
+        setError(data.error || "Görsel yükleme başarısız.")
       }
-    } catch {
-      setError("Görsel yükleme sırasında bir hata oluştu.")
+    } catch (err: any) {
+      setError(err?.message || "Görsel yükleme sırasında bir hata oluştu.")
     } finally {
       setImageUploading(false)
     }
@@ -160,20 +171,31 @@ export default function BlogForm({ post }: { post?: PostData }) {
     const file = e.target.files?.[0]
     if (!file) return
 
+    if (file.size > 4.5 * 1024 * 1024) {
+      setError("Görsel boyutu çok büyük (Max 4.5 MB). Lütfen görseli sıkıştırıp tekrar deneyin.")
+      return
+    }
+
     setEditorImageUploading(true)
+    setError("")
     try {
       const formData = new FormData()
       formData.append("file", file)
       formData.append("folder", "blog")
       const res = await fetch("/api/upload", { method: "POST", body: formData })
-      const data = await res.json()
+      const data = await res.json().catch(() => ({}))
+
+      if (!res.ok) {
+        throw new Error(data.error || `Yükleme sunucu hatası verdi (${res.status}).`)
+      }
+
       if (data.url) {
         editor?.chain().focus().setImage({ src: data.url }).run()
       } else {
-        setError("Görsel yükleme başarısız.")
+        setError(data.error || "Görsel yükleme başarısız.")
       }
-    } catch {
-      setError("Görsel yükleme sırasında bir hata oluştu.")
+    } catch (err: any) {
+      setError(err?.message || "Görsel yükleme sırasında bir hata oluştu.")
     } finally {
       setEditorImageUploading(false)
       // Reset input

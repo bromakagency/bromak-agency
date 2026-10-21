@@ -64,12 +64,15 @@ export default function RichTextEditor({ content, onChange }: RichTextEditorProp
         body: formData,
       })
 
-      if (!response.ok) throw new Error('Yükleme başarısız')
+      if (!response.ok) {
+        const errData = await response.json().catch(() => ({}))
+        throw new Error(errData.error || `Yükleme başarısız (Kod: ${response.status})`)
+      }
 
       const data = await response.json()
       editor.chain().focus().setImage({ src: data.url }).run()
-    } catch (error) {
-      alert('Görsel yüklenirken bir hata oluştu.')
+    } catch (error: any) {
+      alert(error?.message || 'Görsel yüklenirken bir hata oluştu.')
       console.error(error)
     } finally {
       setIsUploading(false)

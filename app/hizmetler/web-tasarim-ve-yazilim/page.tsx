@@ -54,14 +54,56 @@ export default async function WebTasarim() {
 
   const schema = {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "@id": "https://bromakagency.com/hizmetler/web-tasarim-ve-yazilim/#service",
-    "name": "Web Tasarım & Yazılım",
-    "provider": {
-      "@id": "https://bromakagency.com/#organization"
-    },
-    "description": "Markanızı dijitalde kusursuz temsil eden, hızlı, güvenli ve modern web siteleri tasarlıyor ve kodluyoruz.",
-    "url": "https://bromakagency.com/hizmetler/web-tasarim-ve-yazilim"
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": "https://bromakagency.com/hizmetler/web-tasarim-ve-yazilim/#service",
+        "name": "Konya Web Tasarım ve Yazılım Hizmeti",
+        "provider": {
+          "@id": "https://bromakagency.com/#organization"
+        },
+        "description": "Konya web tasarım firmaları arasında dönüşüm odaklı, SEO uyumlu ve ultra hızlı kurumsal web sitesi yapan ödüllü reklam ajansı.",
+        "url": "https://bromakagency.com/hizmetler/web-tasarim-ve-yazilim"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://bromakagency.com/hizmetler/web-tasarim-ve-yazilim/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Kurumsal bir web sitesinin yapım süreci ne kadar sürer?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Projenin kapsamına ve ihtiyaçlarınıza göre değişiklik gösterir. Kurumsal web siteleri genellikle 4-6 hafta, e-ticaret ve özel yazılım projeleri ise 8-12 hafta arasında tamamlanmaktadır. Konya web tasarım ajansı arayışınızda en hızlı ve şeffaf süreci sunuyoruz."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Tasarladığınız web siteleri mobil uyumlu mu?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Kesinlikle. Geliştirdiğimiz tüm kurumsal web sitesi projeleri %100 mobil uyumlu (responsive) olarak tasarlanır ve kodlanır. Siteniz akıllı telefonlar, tabletler ve dev ekranlarda kusursuz görünür."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Hazır şablon (tema) kullanıyor musunuz?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Hayır. Sizi rakiplerinizden ayırmak için markanıza tamamen özel UI/UX tasarımlar yapıyor ve projeyi sıfırdan sizin ihtiyaçlarınıza göre kodluyoruz. Gerçek bir web tasarım firması farkını kod kalitesinde gösterir."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Siteyi teslim aldıktan sonra kendim güncelleyebilir miyim?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Evet. Sitenizle birlikte size özel tasarlanmış, kullanımı son derece kolay bir Yönetim Paneli (Admin) sunuyoruz. Teknik bilgiye ihtiyaç duymadan yazılarınızı, fotoğraflarınızı ve ürünlerinizi güncelleyebilirsiniz."
+            }
+          }
+        ]
+      }
+    ]
   };
 
   return (

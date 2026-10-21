@@ -29,14 +29,56 @@ export default async function SeoDetay() {
 
   const schema = {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "@id": "https://bromakagency.com/hizmetler/arama-motoru-optimizasyonu-seo/#service",
-    "name": "Konya SEO Ajansı (Arama Motoru Optimizasyonu)",
-    "provider": {
-      "@id": "https://bromakagency.com/#organization"
-    },
-    "description": "Konya SEO uzmanı ekibimizle web sitenizin arama motorlarındaki sıralamasını yükseltiyor, organik trafiğinizi ve satışlarınızı kalıcı olarak artırıyoruz.",
-    "url": "https://bromakagency.com/hizmetler/arama-motoru-optimizasyonu-seo"
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": "https://bromakagency.com/hizmetler/arama-motoru-optimizasyonu-seo/#service",
+        "name": "Konya SEO Ajansı (Arama Motoru Optimizasyonu)",
+        "provider": {
+          "@id": "https://bromakagency.com/#organization"
+        },
+        "description": "Konya SEO uzmanı ekibimizle web sitenizin arama motorlarındaki sıralamasını yükseltiyor, organik trafiğinizi ve satışlarınızı kalıcı olarak artırıyoruz.",
+        "url": "https://bromakagency.com/hizmetler/arama-motoru-optimizasyonu-seo"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://bromakagency.com/hizmetler/arama-motoru-optimizasyonu-seo/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "SEO ne kadar sürede etki gösterir?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "SEO uzun vadeli bir yatırımdır. Sektördeki rekabet durumuna ve web sitenizin mevcut otoritesine bağlı olarak, belirgin sonuçlar görmeye genellikle 3 ila 6 ay içerisinde başlarız."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Garanti 1. sıra sözü veriyor musunuz?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Hiçbir profesyonel SEO ajansı veya uzmanı Google'da garanti 1. sıra sözü veremez. Çünkü Google'ın algoritması bağımsızdır. Bizim garantimiz, teknik olarak kusursuz, Google yönergelerine %100 uyumlu, güvenilir ve sürdürülebilir yükseliş sağlayan bir çalışmadır."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Lokal (Yerel) SEO nedir?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Eğer fiziksel bir mağazanız veya bölgesel hizmet veren bir işletmeniz varsa, 'Konya SEO' veya 'Konya reklam ajansı' gibi bölgesel aramalarda sizi Haritalar'da ve arama sonuçlarında üst sıralara çıkaran özel optimizasyondur."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Çalışmalar bitince sıram düşer mi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "SEO bir kerede yapılıp biten bir işlem değil, sürekli bir yarıştır. Rakipleriniz de çalışmaya devam edeceği için, SEO faaliyetleri durduğunda zamanla sıralamalarda gerileme yaşanması doğaldır. Sürdürülebilirlik esastır."
+            }
+          }
+        ]
+      }
+    ]
   };
 
   return (

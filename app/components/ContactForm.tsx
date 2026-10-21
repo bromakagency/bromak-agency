@@ -54,7 +54,7 @@ export default function ContactForm() {
         phone: data.phone as string,
         first_name: firstName,
         last_name: lastName,
-        event_source_url: typeof window !== 'undefined' ? window.location.href : 'https://www.bromakagency.com/iletisim'
+        event_source_url: typeof window !== 'undefined' ? window.location.href : 'https://bromakagency.com/iletisim'
       });
 
       (e.target as HTMLFormElement).reset();

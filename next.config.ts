@@ -19,6 +19,21 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [
+          {
+            type: "host",
+            value: "www.bromakagency.com",
+          },
+        ],
+        destination: "https://bromakagency.com/:path*",
+        statusCode: 301,
+      },
+    ];
+  },
   async headers() {
     return [
       {

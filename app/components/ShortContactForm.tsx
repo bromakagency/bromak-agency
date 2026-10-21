@@ -49,7 +49,7 @@ export default function ShortContactForm() {
         phone: data.phone as string,
         first_name: nameParts[0] || "",
         last_name: nameParts.length > 1 ? nameParts.slice(1).join(" ") : "",
-        event_source_url: typeof window !== 'undefined' ? window.location.href : 'https://www.bromakagency.com/hemen-baslayin'
+        event_source_url: typeof window !== 'undefined' ? window.location.href : 'https://bromakagency.com/hemen-baslayin'
       });
 
       (e.target as HTMLFormElement).reset();
